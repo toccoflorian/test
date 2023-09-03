@@ -1,4 +1,4 @@
-@use '../fonts/fonts';
+@use '../fonts/fonts.scss';
 @use 'assets/styles/variables' as variables;
 
 :root {
@@ -6,14 +6,48 @@
     font-weight: normal;
     cursor: default;
 
+    .content {
+        * .blue-word {
+            color: var(--blue-primary);
+        }
+
+        p {
+            text-align: center;
+        }
+
+    }
+
     a {
         text-decoration: none;
         color: var(--text-color-primary);
     }
 
+    ul {
+        text-decoration: none;
+        padding: 0 0 0 0;
+
+        li {
+            margin-bottom: 1.7rem;
+            list-style-type: none;
+            padding-bottom: 1rem;
+        }
+    }
+
     h1 {
         font-size: 3rem;
+        margin-top: 10rem;
+        text-align: center;
+    }
 
+
+
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
     }
 
 
@@ -51,21 +85,31 @@ body {
             height: 80px;
             margin-top: 1rem;
             margin-left: 4rem;
+            cursor: pointer;
         }
 
         .menu-container {
             width: 65%;
             display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
             align-items: center;
 
-            p,
-            a {
+            nav {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            p {
+                width: fit-content;
                 padding: 0 15px;
                 margin: .5rem 0;
                 cursor: pointer;
 
+                a {
+                    margin: 0;
+                }
 
 
                 & a:hover {
@@ -118,12 +162,21 @@ body {
         }
     }
 
+    // content
+    .content {
+        padding: 0 2.5rem 4rem 2.5rem;
+
+        section {
+            margin-top: 8rem;
+        }
+    }
+
     // footer
     footer {
         padding: 1rem 2rem;
 
         .footer-container {
-            padding: 5rem 0;
+            padding: 2rem 0;
             display: flex;
             flex-wrap: wrap;
 
@@ -164,11 +217,6 @@ body {
             .footer-coordonnees {
                 flex: 0.3;
 
-                li {
-
-                    margin-bottom: 1.7rem;
-                }
-
                 span {
                     p {
                         margin: 0;
@@ -178,18 +226,14 @@ body {
 
             .footer-services {
                 flex: .3;
+
+                li {
+                    margin-bottom: 0;
+                }
             }
 
-            .footer-coordonnees ul,
-            .footer-services ul {
-                padding: 0 0 0 0;
-            }
 
-            .footer-coordonnees li,
-            .footer-services li {
-                list-style-type: none;
-                padding-bottom: 1rem;
-            }
+
         }
 
         .footer-separator {
@@ -230,6 +274,8 @@ body {
                 text-align: center;
                 margin-top: auto;
                 margin-bottom: auto;
+
+
             }
         }
 
