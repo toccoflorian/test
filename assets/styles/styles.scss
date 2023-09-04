@@ -7,6 +7,11 @@
     cursor: default;
 
     .content {
+
+
+
+        margin-top: 120px;
+
         * .blue-word {
             color: var(--blue-primary);
         }
@@ -65,25 +70,28 @@ body {
     background-color: var(--background-color-primary);
     color: var(--text-color-primary);
 
+
+
     // header
 
 
     header {
-        height: 118px;
+        height: 120px;
         color: white;
         display: flex;
         font-family: 'Prompt';
         letter-spacing: 3px;
         justify-content: space-between;
 
-
-
-        // .logo-container {
-        //     background-color: yellow;
-        //     width: 200px;
-        //     height: 200px;
-        //     background: url('../images/cropped-image_2023-08-10_142556159-removebg-preview.png') center/cover;
-        // }
+        &.down-scroll {
+            // apparition/disparition de la top-bar
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            transition: top 0.3s;
+            background-color: var(--background-color-primary-opacity);
+            backdrop-filter: blur(5px);
+        }
 
         img {
             height: 80px;
