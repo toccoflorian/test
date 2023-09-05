@@ -20,7 +20,7 @@
             <nav>
                 <p><a href="cybersecurite.html">CYBERSECURITE</a></p>
                 <p><a href="infogerance.html">INFOGERANCE ET CLOUD COMPUTING</a></p>
-                <p><a href="">PRESTATIONS COMPLEMENTAIRES</a></p>
+                <p><a href="index.html">PRESTATIONS COMPLEMENTAIRES</a></p>
             </nav>
         </div>
         <div class="nous-rejoindre">
@@ -131,7 +131,8 @@
                         <p>🗓️ Pour prendre rendez-vous c'est en visio et elle se fait par Google Meet :</p>
                         <div>
                             <span>
-                                <p>prendre un rendez-vous</p> <img src="assets/icons/google.svg" alt="Icon grand 'G'">
+                                <p>prendre un rendez-vous</p>
+                                <img src="assets/icons/google.svg" alt="Icon grand 'G'">
 
                             </span>
                         </div>
@@ -155,7 +156,7 @@
         <section class="section-4" id="section-4">
             <script>
                 // classes
-                section4IconsClass = ['fa-solid fa-people-group', 'fa-brands fa-cloudflare', 'fa-regular fa-calendar', 'fa-regular fa-keyboard', 'fa-regular fa-compass', 'fa-solid fa-phone-volume', 'fa-regular fa-lightbulb', 'fa-solid fa-chart-column', 'fa-solid fa-shield-halved'];
+                section4IconsClass = ['people-group-solid.svg', 'cloudflare.svg', 'lightbulb-regular.svg', 'calendar-regular.svg', 'keyboard-regular.svg', 'chart-column-solid.svg', 'compass-regular.svg', 'phone-volume-solid.svg', 'shield-halved-solid.svg'];
                 // titres
                 section4Titles = ['Audit Informatique', 'Cloud Computing', 'Maintenance Informatique', 'Conception De Site Internet', 'Vente De Matériel', 'Infogérance', 'Support Informatique', 'Ligne Internet Et Téléphonie', 'Cybersécurité'];
                 // texte
@@ -165,20 +166,21 @@
 
                 for (let i = 0; i < section4Titles.length; i++) {
                     const containerElement = document.createElement('div');
-                    const iElement = document.createElement('i');
+                    const spanImageElement = document.createElement('span');
                     const virginDivElement = document.createElement('div');
                     const h3Element = document.createElement('h3');
                     const pElement = document.createElement('p');
 
                     containerElement.className = 'container';
 
-                    iElement.className = section4IconsClass[i];
+                    spanImageElement.className = 'span-image';
+                    spanImageElement.style = `background: url('../assets/icons/${section4IconsClass[i]}') top no-repeat`
                     h3Element.textContent = section4Titles[i];
                     pElement.textContent = section4Texts[i];
 
                     virginDivElement.append(h3Element, pElement)
 
-                    containerElement.append(iElement, virginDivElement);
+                    containerElement.append(spanImageElement, virginDivElement);
                     sectionElement.appendChild(containerElement);
 
                 }

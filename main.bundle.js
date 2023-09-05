@@ -63,22 +63,22 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 {
   background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center/cover no-repeat;
   opacity: 0.6;
 }
-.content section.section-2 .section2-container {
+.content .section-2 .section2-container {
   display: flex;
 }
-.content section.section-2 .section2-container .mot-du-dirigeant {
+.content .section-2 .section2-container .mot-du-dirigeant {
   flex: 6;
   padding: 0 2rem;
 }
-.content section.section-2 .section2-container .mot-du-dirigeant h2 {
+.content .section-2 .section2-container .mot-du-dirigeant h2 {
   font-size: 3rem;
   font-weight: 700;
   margin-top: 0;
 }
-.content section.section-2 .section2-container .mot-du-dirigeant p {
+.content .section-2 .section2-container .mot-du-dirigeant p {
   text-align: left;
 }
-.content section.section-2 .section2-container .victor {
+.content .section-2 .section2-container .victor {
   flex: 4;
   border-left: 1px solid var(--blue-primary);
   display: flex;
@@ -87,19 +87,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 {
   align-items: center;
   padding-left: 4rem;
 }
-.content section.section-2 .section2-container .victor .image {
+.content .section-2 .section2-container .victor .image {
   background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center no-repeat;
   height: 25rem;
   width: 25rem;
 }
-.content section.section-2 .section2-container .victor .prendre-rdv {
+.content .section-2 .section2-container .victor .prendre-rdv {
   padding: 4rem;
   text-align: center;
 }
-.content section.section-2 .section2-container .victor .prendre-rdv .sous-titre {
+.content .section-2 .section2-container .victor .prendre-rdv .sous-titre {
   color: var(--blue-primary);
 }
-.content section.section-2 .section2-container .victor .prendre-rdv div {
+.content .section-2 .section2-container .victor .prendre-rdv div {
   min-width: max-content;
   background-color: #F4F4F4;
   padding: 5px 5px;
@@ -109,18 +109,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 {
   margin-right: auto;
   cursor: pointer;
 }
-.content section.section-2 .section2-container .victor .prendre-rdv div span {
+.content .section-2 .section2-container .victor .prendre-rdv div span {
   display: flex;
   align-items: center;
   border: 2px solid var(--background-color-primary);
   border-radius: 3px;
 }
-.content section.section-2 .section2-container .victor .prendre-rdv div span p {
+.content .section-2 .section2-container .victor .prendre-rdv div span p {
   margin: 0;
   padding: 0.6rem 0.5rem 0.6rem 2rem;
   color: var(--background-color-primary);
 }
-.content section.section-2 .section2-container .victor .prendre-rdv div span img {
+.content .section-2 .section2-container .victor .prendre-rdv div span img {
   height: 1.2rem;
   padding-right: 2rem;
 }
@@ -147,10 +147,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 {
   margin-right: 5rem;
   display: flex;
 }
-.content .section-4 .container i {
-  font-size: 7rem;
-  color: var(--blue-primary);
-  padding-right: 1rem;
+.content .section-4 .container .span-image {
+  background-size: contain;
+  min-width: 5rem;
+  margin-right: 1rem;
 }
 .content .section-4 .container h3 {
   font-size: 2rem;
@@ -160,7 +160,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 {
 }
 .content .section-4 .container p {
   text-align: left;
-}`, "",{"version":3,"sources":["webpack://./src/index.scss"],"names":[],"mappings":"AAGI;EACI,aAAA;EACA,uBAAA;AAFR;AAIQ;EAEI,aAAA;AAHZ;AAMQ;EACI,OAAA;EACA,aAAA;EACA,sBAAA;AAJZ;AAMY;EACI,WAAA;EACA,aAAA;EACA,sBAAA;EACA,8BAAA;AAJhB;AAMgB;EACI,cAAA;AAJpB;AAQY;EACI,gBAAA;AANhB;AAWQ;EACI,OAAA;EACA,aAAA;EACA,sBAAA;EACA,2BAAA;AATZ;AAYQ;EACI,OAAA;EACA,0EAAA;EACA,YAAA;AAVZ;AAiBQ;EACI,aAAA;AAfZ;AAiBY;EACI,OAAA;EACA,eAAA;AAfhB;AAiBgB;EACI,eAAA;EACA,gBAAA;EACA,aAAA;AAfpB;AAkBgB;EACI,gBAAA;AAhBpB;AAoBY;EACI,OAAA;EACA,0CAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AAlBhB;AAoBgB;EACI,oEAAA;EAEA,aAAA;EACA,YAAA;AAnBpB;AAsBgB;EACI,aAAA;EACA,kBAAA;AApBpB;AAsBoB;EACI,0BAAA;AApBxB;AAwBoB;EACI,sBAAA;EACA,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,eAAA;AAtBxB;AAwBwB;EACI,aAAA;EACA,mBAAA;EACA,iDAAA;EACA,kBAAA;AAtB5B;AAwB4B;EACI,SAAA;EAEA,kCAAA;EACA,sCAAA;AAvBhC;AA0B4B;EACI,cAAA;EACA,mBAAA;AAxBhC;AAuCI;EACI,kBAAA;AArCR;AAuCQ;EACI,cAAA;EACA,qBAAA;AArCZ;AAwCQ;EACI,iBAAA;AAtCZ;AA2CI;EACI,aAAA;EACA,6BAAA;EACA,eAAA;AAzCR;AA2CQ;EACI,aAAA;EACA,YAAA;EACA,sBAAA;EACA,gBAAA;EACA,kBAAA;EACA,aAAA;AAzCZ;AA2CY;EACI,eAAA;EACA,0BAAA;EACA,mBAAA;AAzChB;AA4CY;EACI,eAAA;EACA,SAAA;EACA,mBAAA;EACA,iBAAA;AA1ChB;AA6CY;EACI,gBAAA;AA3ChB","sourcesContent":[".content {\r\n\r\n    // section 1\r\n    .section-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        &>div {\r\n\r\n            height: 35rem;\r\n        }\r\n\r\n        .section1-c1 {\r\n            flex: 1;\r\n            display: flex;\r\n            flex-direction: column;\r\n\r\n            .icons {\r\n                height: 50%;\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: space-between;\r\n\r\n                img {\r\n                    height: 2.5rem;\r\n                }\r\n            }\r\n\r\n            .defiler {\r\n                margin-top: auto;\r\n            }\r\n\r\n        }\r\n\r\n        .section1-c2 {\r\n            flex: 4;\r\n            display: flex;\r\n            flex-direction: column;\r\n            justify-content: flex-start;\r\n        }\r\n\r\n        .section1-c3 {\r\n            flex: 6;\r\n            background: url('../assets/images/Sll-1536x1347.jpg') center/cover no-repeat;\r\n            opacity: .6;\r\n        }\r\n    }\r\n\r\n\r\n    // section 2\r\n    section.section-2 {\r\n        .section2-container {\r\n            display: flex;\r\n\r\n            .mot-du-dirigeant {\r\n                flex: 6;\r\n                padding: 0 2rem;\r\n\r\n                h2 {\r\n                    font-size: 3rem;\r\n                    font-weight: 700;\r\n                    margin-top: 0;\r\n                }\r\n\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n\r\n            .victor {\r\n                flex: 4;\r\n                border-left: 1px solid var(--blue-primary);\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: center;\r\n                align-items: center;\r\n                padding-left: 4rem;\r\n\r\n                .image {\r\n                    background: url('../assets/images/victor.png') center no-repeat;\r\n\r\n                    height: 25rem;\r\n                    width: 25rem;\r\n                }\r\n\r\n                .prendre-rdv {\r\n                    padding: 4rem;\r\n                    text-align: center;\r\n\r\n                    .sous-titre {\r\n                        color: var(--blue-primary);\r\n\r\n                    }\r\n\r\n                    div {\r\n                        min-width: max-content;\r\n                        background-color: #F4F4F4;\r\n                        padding: 5px 5px;\r\n                        width: fit-content;\r\n                        border-radius: 3px;\r\n                        margin-left: auto;\r\n                        margin-right: auto;\r\n                        cursor: pointer;\r\n\r\n                        span {\r\n                            display: flex;\r\n                            align-items: center;\r\n                            border: 2px solid var(--background-color-primary);\r\n                            border-radius: 3px;\r\n\r\n                            p {\r\n                                margin: 0;\r\n\r\n                                padding: .6rem .5rem .6rem 2rem;\r\n                                color: var(--background-color-primary);\r\n                            }\r\n\r\n                            img {\r\n                                height: 1.2rem;\r\n                                padding-right: 2rem;\r\n                            }\r\n\r\n                        }\r\n\r\n\r\n                    }\r\n\r\n\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 3\r\n    .section-3 {\r\n        text-align: center;\r\n\r\n        h1 {\r\n            max-width: 70%;\r\n            margin: 0 auto 0 auto;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n        }\r\n    }\r\n\r\n    // section 4\r\n    .section-4 {\r\n        display: flex;\r\n        justify-content: space-around;\r\n        flex-wrap: wrap;\r\n\r\n        .container {\r\n            height: 340px;\r\n            width: 340px;\r\n            padding-bottom: 3.5rem;\r\n            margin-top: 5rem;\r\n            margin-right: 5rem;\r\n            display: flex;\r\n\r\n            i {\r\n                font-size: 7rem;\r\n                color: var(--blue-primary);\r\n                padding-right: 1rem;\r\n            }\r\n\r\n            h3 {\r\n                font-size: 2rem;\r\n                margin: 0;\r\n                margin-bottom: 1rem;\r\n                line-height: 2rem;\r\n            }\r\n\r\n            p {\r\n                text-align: left;\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/index.scss"],"names":[],"mappings":"AAGI;EACI,aAAA;EACA,uBAAA;AAFR;AAIQ;EAEI,aAAA;AAHZ;AAMQ;EACI,OAAA;EACA,aAAA;EACA,sBAAA;AAJZ;AAMY;EACI,WAAA;EACA,aAAA;EACA,sBAAA;EACA,8BAAA;AAJhB;AAMgB;EACI,cAAA;AAJpB;AAQY;EACI,gBAAA;AANhB;AAWQ;EACI,OAAA;EACA,aAAA;EACA,sBAAA;EACA,2BAAA;AATZ;AAYQ;EACI,OAAA;EACA,0EAAA;EACA,YAAA;AAVZ;AAiBQ;EACI,aAAA;AAfZ;AAiBY;EACI,OAAA;EACA,eAAA;AAfhB;AAiBgB;EACI,eAAA;EACA,gBAAA;EACA,aAAA;AAfpB;AAkBgB;EACI,gBAAA;AAhBpB;AAoBY;EACI,OAAA;EACA,0CAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AAlBhB;AAoBgB;EACI,oEAAA;EAEA,aAAA;EACA,YAAA;AAnBpB;AAsBgB;EACI,aAAA;EACA,kBAAA;AApBpB;AAsBoB;EACI,0BAAA;AApBxB;AAwBoB;EACI,sBAAA;EACA,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,eAAA;AAtBxB;AAwBwB;EACI,aAAA;EACA,mBAAA;EACA,iDAAA;EACA,kBAAA;AAtB5B;AAwB4B;EACI,SAAA;EAEA,kCAAA;EACA,sCAAA;AAvBhC;AA0B4B;EACI,cAAA;EACA,mBAAA;AAxBhC;AAuCI;EACI,kBAAA;AArCR;AAuCQ;EACI,cAAA;EACA,qBAAA;AArCZ;AAwCQ;EACI,iBAAA;AAtCZ;AA2CI;EACI,aAAA;EACA,6BAAA;EACA,eAAA;AAzCR;AA2CQ;EACI,aAAA;EACA,YAAA;EACA,sBAAA;EACA,gBAAA;EACA,kBAAA;EACA,aAAA;AAzCZ;AA2CY;EACI,wBAAA;EACA,eAAA;EACA,kBAAA;AAzChB;AA6CY;EACI,eAAA;EACA,SAAA;EACA,mBAAA;EACA,iBAAA;AA3ChB;AA8CY;EACI,gBAAA;AA5ChB","sourcesContent":[".content {\r\n\r\n    // section 1\r\n    .section-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        &>div {\r\n\r\n            height: 35rem;\r\n        }\r\n\r\n        .section1-c1 {\r\n            flex: 1;\r\n            display: flex;\r\n            flex-direction: column;\r\n\r\n            .icons {\r\n                height: 50%;\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: space-between;\r\n\r\n                img {\r\n                    height: 2.5rem;\r\n                }\r\n            }\r\n\r\n            .defiler {\r\n                margin-top: auto;\r\n            }\r\n\r\n        }\r\n\r\n        .section1-c2 {\r\n            flex: 4;\r\n            display: flex;\r\n            flex-direction: column;\r\n            justify-content: flex-start;\r\n        }\r\n\r\n        .section1-c3 {\r\n            flex: 6;\r\n            background: url('../assets/images/Sll-1536x1347.jpg') center/cover no-repeat;\r\n            opacity: .6;\r\n        }\r\n    }\r\n\r\n\r\n    // section 2\r\n    .section-2 {\r\n        .section2-container {\r\n            display: flex;\r\n\r\n            .mot-du-dirigeant {\r\n                flex: 6;\r\n                padding: 0 2rem;\r\n\r\n                h2 {\r\n                    font-size: 3rem;\r\n                    font-weight: 700;\r\n                    margin-top: 0;\r\n                }\r\n\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n\r\n            .victor {\r\n                flex: 4;\r\n                border-left: 1px solid var(--blue-primary);\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: center;\r\n                align-items: center;\r\n                padding-left: 4rem;\r\n\r\n                .image {\r\n                    background: url('../assets/images/victor.png') center no-repeat;\r\n\r\n                    height: 25rem;\r\n                    width: 25rem;\r\n                }\r\n\r\n                .prendre-rdv {\r\n                    padding: 4rem;\r\n                    text-align: center;\r\n\r\n                    .sous-titre {\r\n                        color: var(--blue-primary);\r\n\r\n                    }\r\n\r\n                    div {\r\n                        min-width: max-content;\r\n                        background-color: #F4F4F4;\r\n                        padding: 5px 5px;\r\n                        width: fit-content;\r\n                        border-radius: 3px;\r\n                        margin-left: auto;\r\n                        margin-right: auto;\r\n                        cursor: pointer;\r\n\r\n                        span {\r\n                            display: flex;\r\n                            align-items: center;\r\n                            border: 2px solid var(--background-color-primary);\r\n                            border-radius: 3px;\r\n\r\n                            p {\r\n                                margin: 0;\r\n\r\n                                padding: .6rem .5rem .6rem 2rem;\r\n                                color: var(--background-color-primary);\r\n                            }\r\n\r\n                            img {\r\n                                height: 1.2rem;\r\n                                padding-right: 2rem;\r\n                            }\r\n\r\n                        }\r\n\r\n\r\n                    }\r\n\r\n\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 3\r\n    .section-3 {\r\n        text-align: center;\r\n\r\n        h1 {\r\n            max-width: 70%;\r\n            margin: 0 auto 0 auto;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n        }\r\n    }\r\n\r\n    // section 4\r\n    .section-4 {\r\n        display: flex;\r\n        justify-content: space-around;\r\n        flex-wrap: wrap;\r\n\r\n        .container {\r\n            height: 340px;\r\n            width: 340px;\r\n            padding-bottom: 3.5rem;\r\n            margin-top: 5rem;\r\n            margin-right: 5rem;\r\n            display: flex;\r\n\r\n            .span-image {\r\n                background-size: contain;\r\n                min-width: 5rem;\r\n                margin-right: 1rem;\r\n\r\n            }\r\n\r\n            h3 {\r\n                font-size: 2rem;\r\n                margin: 0;\r\n                margin-bottom: 1rem;\r\n                line-height: 2rem;\r\n            }\r\n\r\n            p {\r\n                text-align: left;\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
