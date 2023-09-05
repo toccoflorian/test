@@ -848,7 +848,6 @@ window.addEventListener('DOMContentLoaded', event => {
     }
     if (scrollY > lastScrollY) {
       DScrollElement.style.top = '0px';
-      console.log(DScrollElement);
     } else if (scrollY < lastScrollY) {
       DScrollElement.style.top = '-120px';
     }
