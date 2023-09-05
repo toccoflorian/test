@@ -1,5 +1,6 @@
 @use '../fonts/fonts.scss';
-@use 'assets/styles/variables' as variables;
+@use 'variables';
+@use 'classes';
 
 :root {
     font-family: 'Prompt';
@@ -12,12 +13,11 @@
 
         margin-top: 120px;
 
-        * .blue-word {
-            color: var(--blue-primary);
-        }
+
 
         p {
             text-align: center;
+            letter-spacing: 2px;
         }
 
     }
@@ -32,14 +32,13 @@
         padding: 0 0 0 0;
 
         li {
-            margin-bottom: 1.7rem;
+
             list-style-type: none;
-            padding-bottom: 1rem;
         }
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-top: 10rem;
         text-align: center;
     }
@@ -56,12 +55,7 @@
     }
 
 
-    h1,
-    h2,
-    h3 {
-        color: white;
 
-    }
 }
 
 body {
@@ -241,6 +235,7 @@ body {
 
                 li {
                     margin-bottom: 0;
+                    padding-bottom: 1rem;
                 }
             }
 
