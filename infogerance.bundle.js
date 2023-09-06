@@ -23,10 +23,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/wallhaven-r7z7z1.jpg */ "./assets/images/wallhaven-r7z7z1.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/wallhaven.png */ "./assets/images/wallhaven.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/programme.jpg */ "./assets/images/programme.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 div {
+___CSS_LOADER_EXPORT___.push([module.id, `.content section .span-image,
+.content section .span-text {
+  flex: 1;
+}
+.content section .span-text * {
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+.content section .span-text * .blue-word {
+  margin: 1rem -1rem;
+  padding: 0;
+}
+.content .section-1 {
+  margin-top: 7rem;
+}
+.content .section-1 div {
   display: flex;
 }
 .content .section-1 .container-1 h2 {
@@ -37,16 +56,31 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 div {
   flex: 1;
   border-left: 1px solid var(--blue-primary);
 }
-.content .section-1 .container-2 span {
-  flex: 1;
-}
 .content .section-1 .container-2 .span-image {
   background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center/cover;
-  border-radius: 3px;
 }
-.content .section-1 .container-2 .span-text * {
-  padding: 0 1rem;
-}`, "",{"version":3,"sources":["webpack://./src/infogerance_et_cloud_computing/infogerance/infogerance.scss"],"names":[],"mappings":"AAIQ;EACI,aAAA;AAHZ;AAOY;EACI,OAAA;EACA,kBAAA;AALhB;AAQY;EACI,OAAA;EACA,0CAAA;AANhB;AAWY;EACI,OAAA;AAThB;AAYY;EACI,gEAAA;EACA,kBAAA;AAVhB;AAaY;EACI,eAAA;AAXhB","sourcesContent":[".content {\r\n\r\n\r\n    .section-1 {\r\n        div {\r\n            display: flex;\r\n        }\r\n\r\n        .container-1 {\r\n            h2 {\r\n                flex: 1;\r\n                text-align: center;\r\n            }\r\n\r\n            p {\r\n                flex: 1;\r\n                border-left: 1px solid var(--blue-primary);\r\n            }\r\n        }\r\n\r\n        .container-2 {\r\n            span {\r\n                flex: 1;\r\n            }\r\n\r\n            .span-image {\r\n                background: url('../../../assets/images/wallhaven-r7z7z1.jpg') center/cover;\r\n                border-radius: 3px;\r\n            }\r\n\r\n            .span-text * {\r\n                padding: 0 1rem;\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
+.content .section-2 .container-1 {
+  display: flex;
+}
+.content .section-2 .container-1 .span-text {
+  padding-right: 1rem;
+}
+.content .section-2 .container-1 .span-text h2,
+.content .section-2 .container-1 .span-text h3 {
+  text-align: center;
+}
+.content .section-2 .container-1 .span-text ul li {
+  margin: 1rem;
+}
+.content .section-2 .container-1 .span-image {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center/cover;
+}
+.content .section-3 .container-1 {
+  display: flex;
+}
+.content .section-3 .container-1 .span-image {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center/cover;
+}`, "",{"version":3,"sources":["webpack://./src/infogerance_et_cloud_computing/infogerance/infogerance.scss"],"names":[],"mappings":"AAKQ;;EAEI,OAAA;AAJZ;AAOQ;EACI,eAAA;EACA,cAAA;AALZ;AAOY;EACI,kBAAA;EACA,UAAA;AALhB;AAWI;EACI,gBAAA;AATR;AAWQ;EACI,aAAA;AATZ;AAaY;EACI,OAAA;EACA,kBAAA;AAXhB;AAcY;EACI,OAAA;EACA,0CAAA;AAZhB;AAkBY;EACI,gEAAA;AAhBhB;AAwBQ;EACI,aAAA;AAtBZ;AAwBY;EACI,mBAAA;AAtBhB;AAwBgB;;EAEI,kBAAA;AAtBpB;AA0BoB;EACI,YAAA;AAxBxB;AA6BY;EACI,gEAAA;AA3BhB;AAiCQ;EACI,aAAA;AA/BZ;AAiCY;EACI,gEAAA;AA/BhB","sourcesContent":[".content {\r\n\r\n    // toutes les sections de la page\r\n    section {\r\n\r\n        .span-image,\r\n        .span-text {\r\n            flex: 1;\r\n        }\r\n\r\n        .span-text * {\r\n            padding: 0 1rem;\r\n            margin: 1rem 0;\r\n\r\n            .blue-word {\r\n                margin: 1rem -1rem;\r\n                padding: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 1\r\n    .section-1 {\r\n        margin-top: 7rem;\r\n\r\n        div {\r\n            display: flex;\r\n        }\r\n\r\n        .container-1 {\r\n            h2 {\r\n                flex: 1;\r\n                text-align: center;\r\n            }\r\n\r\n            p {\r\n                flex: 1;\r\n                border-left: 1px solid var(--blue-primary);\r\n            }\r\n        }\r\n\r\n        .container-2 {\r\n\r\n            .span-image {\r\n                background: url('../../../assets/images/wallhaven-r7z7z1.jpg') center/cover;\r\n\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 2\r\n    .section-2 {\r\n        .container-1 {\r\n            display: flex;\r\n\r\n            .span-text {\r\n                padding-right: 1rem;\r\n\r\n                h2,\r\n                h3 {\r\n                    text-align: center;\r\n                }\r\n\r\n                ul {\r\n                    li {\r\n                        margin: 1rem;\r\n                    }\r\n                }\r\n            }\r\n\r\n            .span-image {\r\n                background: url('../../../assets/images/wallhaven.png') center/cover;\r\n            }\r\n        }\r\n    }\r\n\r\n    .section-3 {\r\n        .container-1 {\r\n            display: flex;\r\n\r\n            .span-image {\r\n                background: url('../../../assets/images/programme.jpg') center/cover;\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -528,6 +562,16 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./assets/images/programme.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/programme.jpg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "e2867d3c40812abf66d4.jpg";
+
+/***/ }),
+
 /***/ "./assets/images/wallhaven-r7z7z1.jpg":
 /*!********************************************!*\
   !*** ./assets/images/wallhaven-r7z7z1.jpg ***!
@@ -535,6 +579,16 @@ module.exports = styleTagTransform;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "881ee25d6c82bad2bd38.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/wallhaven.png":
+/*!*************************************!*\
+  !*** ./assets/images/wallhaven.png ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "0360f7c8294a32f38ba9.png";
 
 /***/ })
 

@@ -16,22 +16,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2 */ "./assets/fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `/* thai */
-/* latin */
-@font-face {
-  font-display: swap;
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/prompt/v10/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-:root {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
   --background-color-primary: #15171C;
   --background-color-primary-opacity: #15171ccb;
   --text-color-primary: #e9e5e5;
@@ -88,6 +83,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* thai */
   color: var(--blue-primary);
 }
 
+/* thai */
+/* latin */
+@font-face {
+  font-display: swap;
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 300;
+  src: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 :root {
   font-family: "Prompt";
   font-weight: normal;
@@ -111,6 +116,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* thai */
 :root ul li {
   list-style-type: none;
 }
+:root ul.with-blue-puce li {
+  list-style-type: disc;
+}
+:root ul.with-blue-puce li::marker {
+  color: var(--blue-primary);
+}
 :root h1 {
   font-size: 4rem;
   margin-top: 10rem;
@@ -127,9 +138,10 @@ body {
   margin: 0;
   display: grid;
   background-color: var(--background-color-primary);
-  color: var(--text-color-primary);
+  color: white;
 }
 body header {
+  z-index: 1;
   height: 120px;
   color: white;
   display: flex;
@@ -146,11 +158,15 @@ body header.down-scroll {
   backdrop-filter: blur(5px);
 }
 body header img {
+  cursor: pointer;
   height: 5rem;
   height: 5rem;
   margin-top: 1rem;
   margin-left: 4rem;
-  cursor: pointer;
+  transition: transform 0.3s;
+}
+body header img:hover {
+  transform: scale(1.05);
 }
 body header .menu-container {
   width: 65%;
@@ -215,7 +231,11 @@ body .content {
   padding: 0 2.5rem 4rem 2.5rem;
 }
 body .content section {
-  margin-top: 8rem;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+body .content section .span-image {
+  border-radius: 5px;
 }
 body footer {
   padding: 1rem 2rem;
@@ -256,7 +276,10 @@ body footer .footer-container .footer-register .footer-submit {
 body footer .footer-container .footer-coordonnees {
   flex: 0.3;
 }
-body footer .footer-container .footer-coordonnees span p {
+body footer .footer-container .footer-coordonnees li {
+  margin-bottom: 2rem;
+}
+body footer .footer-container .footer-coordonnees li span p {
   margin: 0;
 }
 body footer .footer-container .footer-services {
@@ -299,7 +322,7 @@ body footer .footer-container2 .footer-mention {
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-}`, "",{"version":3,"sources":["webpack://./assets/fonts/fonts.scss","webpack://./assets/styles/styles.scss","webpack://./assets/styles/_variables.scss","webpack://./assets/styles/_classes.scss"],"names":[],"mappings":"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","sourcesContent":["/* thai */\r\n/* latin */\r\n@font-face {\r\n    font-display: swap;\r\n    font-family: 'Prompt';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    src: url(https://fonts.gstatic.com/s/prompt/v10/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2) format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\r\n}","@use '../fonts/fonts.scss';\r\n@use 'variables';\r\n@use 'classes';\r\n\r\n:root {\r\n    font-family: 'Prompt';\r\n    font-weight: normal;\r\n    cursor: default;\r\n\r\n    .content {\r\n\r\n\r\n\r\n        margin-top: 120px;\r\n\r\n\r\n\r\n        p {\r\n            text-align: center;\r\n            letter-spacing: 2px;\r\n        }\r\n\r\n    }\r\n\r\n    a {\r\n        text-decoration: none;\r\n        color: var(--text-color-primary);\r\n    }\r\n\r\n    ul {\r\n        text-decoration: none;\r\n        padding: 0 0 0 0;\r\n\r\n        li {\r\n\r\n            list-style-type: none;\r\n        }\r\n    }\r\n\r\n    h1 {\r\n        font-size: 4rem;\r\n        margin-top: 10rem;\r\n        text-align: center;\r\n    }\r\n\r\n\r\n\r\n\r\n    h2 {\r\n        font-size: 3rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n\r\n\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    display: grid;\r\n    background-color: var(--background-color-primary);\r\n    color: var(--text-color-primary);\r\n\r\n\r\n\r\n    // header\r\n\r\n\r\n    header {\r\n        height: 120px;\r\n        color: white;\r\n        display: flex;\r\n        font-family: 'Prompt';\r\n        letter-spacing: 3px;\r\n        justify-content: space-between;\r\n\r\n        &.down-scroll {\r\n            // apparition/disparition de la top-bar\r\n            position: fixed;\r\n            top: 0px;\r\n            width: 100%;\r\n            transition: top 0.3s;\r\n            background-color: var(--background-color-primary-opacity);\r\n            backdrop-filter: blur(5px);\r\n        }\r\n\r\n        img {\r\n            height: 5rem;\r\n            height: 5rem;\r\n            margin-top: 1rem;\r\n            margin-left: 4rem;\r\n            cursor: pointer;\r\n        }\r\n\r\n        .menu-container {\r\n            width: 65%;\r\n            display: flex;\r\n            align-items: center;\r\n\r\n            nav {\r\n                width: 100%;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                flex-wrap: wrap;\r\n                align-items: center;\r\n            }\r\n\r\n            p {\r\n                width: fit-content;\r\n                padding: 0 15px;\r\n                margin: .5rem 0;\r\n                cursor: pointer;\r\n\r\n                a {\r\n                    margin: 0;\r\n                }\r\n\r\n\r\n                & a:hover {\r\n                    transition: 0.5s;\r\n                    color: var(--blue-primary);\r\n                }\r\n            }\r\n        }\r\n\r\n        .nous-rejoindre {\r\n            border: rgba(255, 255, 255, 0.699) solid 1px;\r\n            letter-spacing: normal;\r\n            height: fit-content;\r\n            padding: 0 0 0 2rem;\r\n            display: flex;\r\n            margin-top: auto;\r\n            margin-bottom: auto;\r\n            margin-right: 3rem;\r\n\r\n            &,\r\n            & * {\r\n                cursor: pointer;\r\n            }\r\n\r\n\r\n            span.point {\r\n                background-color: var(--blue-primary);\r\n                border-radius: 50%;\r\n                height: 12px;\r\n                width: 12px;\r\n                margin-right: 10px;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n            }\r\n\r\n            p {\r\n                min-width: 10rem;\r\n            }\r\n\r\n            &:hover {\r\n                transition: 0.2s;\r\n                border: var(--blue-primary) solid 1px;\r\n                color: var(--blue-primary);\r\n\r\n                span.point {\r\n                    transition: 1.2s;\r\n                    background-color: rgba(255, 255, 255, 0.699);\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // content\r\n    .content {\r\n        padding: 0 2.5rem 4rem 2.5rem;\r\n\r\n        section {\r\n            margin-top: 8rem;\r\n        }\r\n    }\r\n\r\n    // footer\r\n    footer {\r\n        padding: 1rem 2rem;\r\n\r\n        .footer-container {\r\n            padding: 2rem 0;\r\n            display: flex;\r\n            flex-wrap: wrap;\r\n\r\n            div {\r\n                margin-right: 6rem;\r\n            }\r\n\r\n            h3 {\r\n                font-size: 1.8rem;\r\n                max-width: 50px;\r\n            }\r\n\r\n            .footer-register {\r\n                flex: 0.4;\r\n\r\n                input {\r\n                    width: 99%;\r\n                    background-color: var(--background-color-general);\r\n                    border: none;\r\n                    border-bottom: var(--input-border-color) solid 1px;\r\n                    font-size: 20px;\r\n                    margin: 3rem 0 0 0;\r\n                    color: var(--text-color-primary);\r\n\r\n                    &:focus {\r\n                        outline: none;\r\n                    }\r\n                }\r\n\r\n                .footer-submit {\r\n                    background-color: var(--blue-primary);\r\n                    padding: .75rem 20rem;\r\n                    border-radius: 15px;\r\n                    margin: 3rem 0 0 0;\r\n                }\r\n            }\r\n\r\n            .footer-coordonnees {\r\n                flex: 0.3;\r\n\r\n                span {\r\n                    p {\r\n                        margin: 0;\r\n                    }\r\n                }\r\n            }\r\n\r\n            .footer-services {\r\n                flex: .3;\r\n\r\n                li {\r\n                    margin-bottom: 0;\r\n                    padding-bottom: 1rem;\r\n                }\r\n            }\r\n\r\n\r\n\r\n        }\r\n\r\n        .footer-separator {\r\n            height: 2px;\r\n            background-color: var(--text-color-primary);\r\n        }\r\n\r\n        .footer-container2 {\r\n            display: flex;\r\n            padding-top: 2rem;\r\n\r\n            .footer-links {\r\n                flex: .4;\r\n                display: flex;\r\n                /* align-items: center; */\r\n                flex-wrap: wrap;\r\n\r\n                p {\r\n                    margin: 0;\r\n                    padding: 0 2rem;\r\n                }\r\n            }\r\n\r\n            .footer-icons {\r\n                flex: .2;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                align-items: center;\r\n\r\n                img {\r\n                    height: 2rem;\r\n                    width: 2rem;\r\n                }\r\n            }\r\n\r\n\r\n            .footer-mention {\r\n                flex: .4;\r\n                text-align: center;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n\r\n\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n}",":root {\r\n    --background-color-primary: #15171C;\r\n    --background-color-primary-opacity: #15171ccb;\r\n    --text-color-primary: #e9e5e5;\r\n    --input-border-color: #6A6B6D;\r\n    --blue-primary: #4A81F7;\r\n}",".point-bleu-avec-trait {\r\n\r\n    /* Style pour le conteneur de point et de trait */\r\n    .point-et-trait {\r\n        height: fit-content;\r\n        display: flex;\r\n        align-items: center;\r\n\r\n        /* Style pour la ligne grise */\r\n        .trait {\r\n            width: 3rem;\r\n            height: 1px;\r\n            background-color: var(--input-border-color);\r\n\r\n            &-column {\r\n                width: 1px;\r\n                height: 3rem;\r\n                margin-top: 1rem;\r\n            }\r\n        }\r\n\r\n        /* Style pour le point bleu */\r\n        .point-bleu {\r\n            min-width: 10px;\r\n            min-height: 10px;\r\n            background-color: var(--blue-primary);\r\n            border-radius: 50%;\r\n            margin-left: 1rem;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n            margin-left: 1rem;\r\n        }\r\n    }\r\n\r\n    .column {\r\n        flex-direction: column;\r\n\r\n        .point-bleu {\r\n            margin-left: 0;\r\n            margin-top: 1rem;\r\n        }\r\n\r\n        &>p {\r\n            // writing-mode: vertical-rl;\r\n            rotate: -90deg;\r\n            margin-top: 2rem;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n.blue-word {\r\n    color: var(--blue-primary);\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./assets/styles/_variables.scss","webpack://./assets/styles/styles.scss","webpack://./assets/styles/_classes.scss"],"names":[],"mappings":"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","sourcesContent":[":root {\r\n    --background-color-primary: #15171C;\r\n    --background-color-primary-opacity: #15171ccb;\r\n    --text-color-primary: #e9e5e5;\r\n    --input-border-color: #6A6B6D;\r\n    --blue-primary: #4A81F7;\r\n}","@use 'variables';\r\n@use 'classes';\r\n\r\n/* thai */\r\n/* latin */\r\n@font-face {\r\n    font-display: swap;\r\n    font-family: 'Prompt';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    src: url('../fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2') format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\r\n}\r\n\r\n:root {\r\n    font-family: 'Prompt';\r\n    font-weight: normal;\r\n    cursor: default;\r\n\r\n    .content {\r\n\r\n\r\n\r\n        margin-top: 120px;\r\n\r\n\r\n\r\n        p {\r\n            text-align: center;\r\n            letter-spacing: 2px;\r\n        }\r\n\r\n    }\r\n\r\n    a {\r\n        text-decoration: none;\r\n        color: var(--text-color-primary);\r\n    }\r\n\r\n    ul {\r\n        text-decoration: none;\r\n        padding: 0 0 0 0;\r\n\r\n        li {\r\n\r\n            list-style-type: none;\r\n        }\r\n\r\n        &.with-blue-puce {\r\n            li {\r\n                list-style-type: disc;\r\n            }\r\n\r\n            li::marker {\r\n                color: var(--blue-primary);\r\n            }\r\n        }\r\n    }\r\n\r\n    h1 {\r\n        font-size: 4rem;\r\n        margin-top: 10rem;\r\n        text-align: center;\r\n    }\r\n\r\n\r\n\r\n\r\n    h2 {\r\n        font-size: 3rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n\r\n\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    display: grid;\r\n    background-color: var(--background-color-primary);\r\n    color: white;\r\n\r\n\r\n\r\n    // header\r\n\r\n\r\n    header {\r\n        z-index: 1;\r\n        height: 120px;\r\n        color: white;\r\n        display: flex;\r\n        font-family: 'Prompt';\r\n        letter-spacing: 3px;\r\n        justify-content: space-between;\r\n\r\n        &.down-scroll {\r\n            // apparition/disparition de la top-bar\r\n            position: fixed;\r\n            top: 0px;\r\n            width: 100%;\r\n            transition: top 0.3s;\r\n            background-color: var(--background-color-primary-opacity);\r\n            backdrop-filter: blur(5px);\r\n        }\r\n\r\n        img {\r\n            cursor: pointer;\r\n            height: 5rem;\r\n            height: 5rem;\r\n            margin-top: 1rem;\r\n            margin-left: 4rem;\r\n            transition: transform 0.3s;\r\n\r\n            &:hover {\r\n                transform: scale(1.05);\r\n            }\r\n        }\r\n\r\n        .menu-container {\r\n            width: 65%;\r\n            display: flex;\r\n            align-items: center;\r\n\r\n            nav {\r\n                width: 100%;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                flex-wrap: wrap;\r\n                align-items: center;\r\n            }\r\n\r\n            p {\r\n                width: fit-content;\r\n                padding: 0 15px;\r\n                margin: .5rem 0;\r\n                cursor: pointer;\r\n\r\n                a {\r\n                    margin: 0;\r\n                }\r\n\r\n\r\n                & a:hover {\r\n                    transition: 0.5s;\r\n                    color: var(--blue-primary);\r\n                }\r\n            }\r\n        }\r\n\r\n        .nous-rejoindre {\r\n            border: rgba(255, 255, 255, 0.699) solid 1px;\r\n            letter-spacing: normal;\r\n            height: fit-content;\r\n            padding: 0 0 0 2rem;\r\n            display: flex;\r\n            margin-top: auto;\r\n            margin-bottom: auto;\r\n            margin-right: 3rem;\r\n\r\n            &,\r\n            & * {\r\n                cursor: pointer;\r\n            }\r\n\r\n\r\n            span.point {\r\n                background-color: var(--blue-primary);\r\n                border-radius: 50%;\r\n                height: 12px;\r\n                width: 12px;\r\n                margin-right: 10px;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n            }\r\n\r\n            p {\r\n                min-width: 10rem;\r\n            }\r\n\r\n            &:hover {\r\n                transition: 0.2s;\r\n                border: var(--blue-primary) solid 1px;\r\n                color: var(--blue-primary);\r\n\r\n                span.point {\r\n                    transition: 1.2s;\r\n                    background-color: rgba(255, 255, 255, 0.699);\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // content\r\n    .content {\r\n        padding: 0 2.5rem 4rem 2.5rem;\r\n\r\n        section {\r\n            margin-top: 2rem;\r\n            margin-bottom: 6rem;\r\n\r\n            .span-image {\r\n                border-radius: 5px;\r\n            }\r\n        }\r\n    }\r\n\r\n    // footer\r\n    footer {\r\n        padding: 1rem 2rem;\r\n\r\n        .footer-container {\r\n            padding: 2rem 0;\r\n            display: flex;\r\n            flex-wrap: wrap;\r\n\r\n            div {\r\n                margin-right: 6rem;\r\n            }\r\n\r\n            h3 {\r\n                font-size: 1.8rem;\r\n                max-width: 50px;\r\n            }\r\n\r\n            .footer-register {\r\n                flex: 0.4;\r\n\r\n                input {\r\n                    width: 99%;\r\n                    background-color: var(--background-color-general);\r\n                    border: none;\r\n                    border-bottom: var(--input-border-color) solid 1px;\r\n                    font-size: 20px;\r\n                    margin: 3rem 0 0 0;\r\n                    color: var(--text-color-primary);\r\n\r\n                    &:focus {\r\n                        outline: none;\r\n                    }\r\n                }\r\n\r\n                .footer-submit {\r\n                    background-color: var(--blue-primary);\r\n                    padding: .75rem 20rem;\r\n                    border-radius: 15px;\r\n                    margin: 3rem 0 0 0;\r\n                }\r\n            }\r\n\r\n            .footer-coordonnees {\r\n                flex: 0.3;\r\n\r\n                li {\r\n                    margin-bottom: 2rem;\r\n\r\n                    span {\r\n\r\n                        p {\r\n                            margin: 0;\r\n                        }\r\n                    }\r\n                }\r\n\r\n            }\r\n\r\n            .footer-services {\r\n                flex: .3;\r\n\r\n                li {\r\n                    margin-bottom: 0;\r\n                    padding-bottom: 1rem;\r\n                }\r\n            }\r\n\r\n\r\n\r\n        }\r\n\r\n        .footer-separator {\r\n            height: 2px;\r\n            background-color: var(--text-color-primary);\r\n        }\r\n\r\n        .footer-container2 {\r\n            display: flex;\r\n            padding-top: 2rem;\r\n\r\n            .footer-links {\r\n                flex: .4;\r\n                display: flex;\r\n                /* align-items: center; */\r\n                flex-wrap: wrap;\r\n\r\n                p {\r\n                    margin: 0;\r\n                    padding: 0 2rem;\r\n                }\r\n            }\r\n\r\n            .footer-icons {\r\n                flex: .2;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                align-items: center;\r\n\r\n                img {\r\n                    height: 2rem;\r\n                    width: 2rem;\r\n                }\r\n            }\r\n\r\n\r\n            .footer-mention {\r\n                flex: .4;\r\n                text-align: center;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n\r\n\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n}",".point-bleu-avec-trait {\r\n\r\n    /* Style pour le conteneur de point et de trait */\r\n    .point-et-trait {\r\n        height: fit-content;\r\n        display: flex;\r\n        align-items: center;\r\n\r\n        /* Style pour la ligne grise */\r\n        .trait {\r\n            width: 3rem;\r\n            height: 1px;\r\n            background-color: var(--input-border-color);\r\n\r\n            &-column {\r\n                width: 1px;\r\n                height: 3rem;\r\n                margin-top: 1rem;\r\n            }\r\n        }\r\n\r\n        /* Style pour le point bleu */\r\n        .point-bleu {\r\n            min-width: 10px;\r\n            min-height: 10px;\r\n            background-color: var(--blue-primary);\r\n            border-radius: 50%;\r\n            margin-left: 1rem;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n            margin-left: 1rem;\r\n        }\r\n    }\r\n\r\n    .column {\r\n        flex-direction: column;\r\n\r\n        .point-bleu {\r\n            margin-left: 0;\r\n            margin-top: 1rem;\r\n        }\r\n\r\n        &>p {\r\n            // writing-mode: vertical-rl;\r\n            rotate: -90deg;\r\n            margin-top: 2rem;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n.blue-word {\r\n    color: var(--blue-primary);\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -396,6 +419,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "../../node_modules/css-loader/dist/runtime/getUrl.js":
+/*!************************************************************!*\
+  !*** ../../node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \************************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -744,6 +802,16 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./assets/fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2":
+/*!*****************************************************!*\
+  !*** ./assets/fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2 ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "5676c5c1b806f8aa695f.woff2";
+
 /***/ })
 
 /******/ 	});
@@ -772,6 +840,9 @@ module.exports = styleTagTransform;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -797,6 +868,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -811,6 +894,55 @@ module.exports = styleTagTransform;
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"commun": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

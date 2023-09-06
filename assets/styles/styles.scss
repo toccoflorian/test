@@ -1,6 +1,16 @@
-@use '../fonts/fonts.scss';
 @use 'variables';
 @use 'classes';
+
+/* thai */
+/* latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 :root {
     font-family: 'Prompt';
@@ -35,6 +45,16 @@
 
             list-style-type: none;
         }
+
+        &.with-blue-puce {
+            li {
+                list-style-type: disc;
+            }
+
+            li::marker {
+                color: var(--blue-primary);
+            }
+        }
     }
 
     h1 {
@@ -62,7 +82,7 @@ body {
     margin: 0;
     display: grid;
     background-color: var(--background-color-primary);
-    color: var(--text-color-primary);
+    color: white;
 
 
 
@@ -70,6 +90,7 @@ body {
 
 
     header {
+        z-index: 1;
         height: 120px;
         color: white;
         display: flex;
@@ -88,11 +109,16 @@ body {
         }
 
         img {
+            cursor: pointer;
             height: 5rem;
             height: 5rem;
             margin-top: 1rem;
             margin-left: 4rem;
-            cursor: pointer;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
 
         .menu-container {
@@ -174,7 +200,12 @@ body {
         padding: 0 2.5rem 4rem 2.5rem;
 
         section {
-            margin-top: 8rem;
+            margin-top: 2rem;
+            margin-bottom: 6rem;
+
+            .span-image {
+                border-radius: 5px;
+            }
         }
     }
 
@@ -224,11 +255,17 @@ body {
             .footer-coordonnees {
                 flex: 0.3;
 
-                span {
-                    p {
-                        margin: 0;
+                li {
+                    margin-bottom: 2rem;
+
+                    span {
+
+                        p {
+                            margin: 0;
+                        }
                     }
                 }
+
             }
 
             .footer-services {
