@@ -3420,8 +3420,9 @@ const createHeaderItemBarHTML = function () {
     elements[_key] = arguments[_key];
   }
   for (const element of elements) {
+    var _location;
     const location = window.location.href.split('/');
-    const currentPage = location[location.length - 1];
+    const currentPage = (_location = location[location.length - 1]) !== null && _location !== void 0 ? _location : 'index.html';
     console.log(currentPage, element.includes(currentPage));
     // verifier si l'item correspond à la page actuelle
     if (element.includes(currentPage)) {
