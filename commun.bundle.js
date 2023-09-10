@@ -3437,21 +3437,31 @@ const createHeaderItemBarHTML = function () {
 // construction de la top-bar
 class TopBar extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = "\n            <header class=\"down-scroll\">\n                <div class=\"container-1\">\n                    <div class=\"logo-container\">\n                        <img id=\"header-logo\" src=\"assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png\"\n                            alt=\"logo de l'entreprise ParlonsPC\">\n                    </div>\n                    <div class=\"menu-container\">\n                        \n                        <p id=\"services\">NOS SERVICES</p>\n                        <p id=\"materiel\">ACHETER DU MATERIEL</p>\n                        <p id=\"entreprise\">L'ENTREPRISE</p>\n                        <p id=\"question\">EN SAVOIR PLUS</p>\n                        \n                    </div>\n                    <div class=\"nous-rejoindre\">\n                        <span class=\"point\"></span>\n                        <p>CONTACTEZ-NOUS<br>contact@parlonspc.fr</p>\n                    </div>\n                </div>\n                <div class=\"container-2\" id=\"container-2\">\n                </div>\n            </header>\n      ";
+    this.innerHTML = "\n        <header class=\"down-scroll\">\n            <div class=\"container-1\">\n                <div id=\"logo-container\" class=\"logo-container\">\n                </div>\n                <div class=\"menu-container\">\n                    \n                    <p id=\"services\">NOS SERVICES</p>\n                    <p id=\"materiel\">ACHETER DU MATERIEL</p>\n                    <p id=\"entreprise\">L'ENTREPRISE</p>\n                    <p id=\"question\">EN SAVOIR PLUS</p>\n                    \n                </div>\n                <div class=\"nous-rejoindre\">\n                    <span class=\"point\"></span>\n                    <p>CONTACTEZ-NOUS<br>contact@parlonspc.fr</p>\n                </div>\n            </div>\n            <div class=\"container-2\" id=\"container-2\">\n            </div>\n        </header>\n        ";
   }
 }
 
 // balyse pour la top-bar
 customElements.define('top-bar', TopBar);
-
-// top-bar - redirection du logo
-const headerlogoElement = document.querySelector('#header-logo');
-headerlogoElement.addEventListener('click', event => {
-  location = './index.html';
-});
+{/* <img id="header-logo" src="assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png"
+    alt="logo de l'entreprise ParlonsPC"> */}
 
 // une fois la page chargée
 window.addEventListener('DOMContentLoaded', event => {
+  // met l'image dans la top-bar
+  const headerLogoElement = document.createElement('img');
+  headerLogoElement.id = 'header-logo';
+  headerLogoElement.src = '../assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png';
+  headerLogoElement.alt = 'logo de l\'entreprise ParlonsPC';
+  const logoContainerElement = document.getElementById('logo-container');
+  logoContainerElement.appendChild(headerLogoElement);
+
+  // top-bar - redirection du logo
+  const headerlogoElement = document.querySelector('#header-logo');
+  headerlogoElement.addEventListener('click', event => {
+    location = './index.html';
+  });
+
   // detection du scroll vers le bas pour afficher la top-bar
   const headerElement = document.querySelector('header');
   const DScrollElement = document.querySelector('.down-scroll');
