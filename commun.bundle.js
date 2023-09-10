@@ -3446,16 +3446,16 @@ customElements.define('top-bar', TopBar);
 {/* <img id="header-logo" src="assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png"
     alt="logo de l'entreprise ParlonsPC"> */}
 
+// met l'image dans la top-bar
+const headerLogoElement = document.createElement('img');
+headerLogoElement.id = 'header-logo';
+headerLogoElement.src = '../assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png';
+headerLogoElement.alt = 'logo de l\'entreprise ParlonsPC';
+const logoContainerElement = document.getElementById('logo-container');
+logoContainerElement.appendChild(headerLogoElement);
+
 // une fois la page chargée
 window.addEventListener('DOMContentLoaded', event => {
-  // met l'image dans la top-bar
-  const headerLogoElement = document.createElement('img');
-  headerLogoElement.id = 'header-logo';
-  headerLogoElement.src = '../assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png';
-  headerLogoElement.alt = 'logo de l\'entreprise ParlonsPC';
-  const logoContainerElement = document.getElementById('logo-container');
-  logoContainerElement.appendChild(headerLogoElement);
-
   // top-bar - redirection du logo
   const headerlogoElement = document.querySelector('#header-logo');
   headerlogoElement.addEventListener('click', event => {
@@ -3490,11 +3490,11 @@ window.addEventListener('DOMContentLoaded', event => {
   const questionElement = document.getElementById('question');
   const itemsBarElement = document.getElementById('container-2');
 
-  // active par default:
+  // active par default dans la bar d'items:
   servicesElement.classList.add('active');
   itemsBarElement.innerHTML = createHeaderItemBarHTML('<a id="audit">Audit</a>', '<a id ="cybersecurite" href="cybersecurite.html">Cybersécurité</a>', '<a id="infogerance" href="infogerance.html">Infogérance</a>', '<a id="cloud-computing" href="cloud_computing.html">Cloud Computing</a>', '<a>Maintenance informatique</a>', '<a>Site internet</a>', '<a>Téléphonie et Internet</a>', '<a>Support informatique</a>');
 
-  // services
+  // top-bar menu: services
   servicesElement.addEventListener('click', event => {
     if (servicesElement.classList.contains('active')) {
       itemsBarElement.innerHTML = null;
@@ -3506,7 +3506,7 @@ window.addEventListener('DOMContentLoaded', event => {
     }
   });
 
-  // acheter du materiel
+  // top-bar menu: acheter du materiel
   materielElement.addEventListener('click', event => {
     if (materielElement.classList.contains('active')) {
       itemsBarElement.innerHTML = null;
@@ -3517,7 +3517,7 @@ window.addEventListener('DOMContentLoaded', event => {
       itemsBarElement.innerHTML = createHeaderItemBarHTML('<a>Mac OS</a>', '<a>Windows</a>', '<a>Configuration sur Mesure</a>', '<a>Reconditionné</a>', '<a>Service après-vente et livraison</a>');
     }
   });
-  // l'entreprise
+  // top-bar menu: l'entreprise
   entrepriseElement.addEventListener('click', event => {
     if (entrepriseElement.classList.contains('active')) {
       itemsBarElement.innerHTML = null;
@@ -3528,7 +3528,7 @@ window.addEventListener('DOMContentLoaded', event => {
       itemsBarElement.innerHTML = createHeaderItemBarHTML('<p>Nos Valeurs</p>', '<p>Fonctionnement</p>', '<p>Témoignages de nos clients</p>', '<p>Victor, le dirigeant</p>', '<p>Notre brochure</p>');
     }
   });
-  // en savoir plus
+  // top-bar menu: en savoir plus
   questionElement.addEventListener('click', event => {
     if (questionElement.classList.contains('active')) {
       itemsBarElement.innerHTML = null;
