@@ -3420,12 +3420,11 @@ const createHeaderItemBarHTML = function () {
     elements[_key] = arguments[_key];
   }
   for (const element of elements) {
-    var _location;
     const location = window.location.href.split('/');
-    const currentPage = (_location = location[location.length - 1]) !== null && _location !== void 0 ? _location : 'index.html';
+    const currentPage = location[location.length - 1];
     console.log(currentPage, element.includes(currentPage));
     // verifier si l'item correspond à la page actuelle
-    if (element.includes(currentPage)) {
+    if (currentPage.includes('.html') && element.includes(currentPage)) {
       html += "<span style=\"background-color:var(--blue-primary)\">".concat(element, "</span>");
     } else {
       html += "<span>".concat(element, "</span>");
