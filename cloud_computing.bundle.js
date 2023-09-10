@@ -2,181 +2,97 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/index.scss":
-/*!*************************************************************************************************************!*\
-  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************/
+/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss ***!
+  \**********************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/Sll3.jpg */ "./assets/images/Sll3.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/victor.png */ "./assets/images/victor.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/wallhaven-0jw8g5-768x480.jpg */ "./assets/images/wallhaven-0jw8g5-768x480.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/lignes_rouges.jpg */ "./assets/images/lignes_rouges.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/wallhaven-k7d7xm.jpg */ "./assets/images/wallhaven-k7d7xm.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 {
-  display: flex;
-  justify-content: center;
-}
-.content .section-1 > div {
-  height: 35rem;
-}
-.content .section-1 .section1-c1 {
+___CSS_LOADER_EXPORT___.push([module.id, `.content section .span-image,
+.content section .span-text {
   flex: 1;
-  display: flex;
-  flex-direction: column;
 }
-.content .section-1 .section1-c1 .icons {
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.content section .span-text * {
+  padding: 0 1rem;
+  margin: 1rem 0;
 }
-.content .section-1 .section1-c1 .icons img {
-  cursor: pointer;
-  height: 2.5rem;
-  width: 2.5rem;
-  transition: 0.3s;
+.content section .span-text * .blue-word {
+  margin: 1rem -1rem;
+  padding: 0;
 }
-.content .section-1 .section1-c1 .icons img:hover {
-  transform: scale(1.15);
-}
-.content .section-1 .section1-c1 .defiler {
-  margin-top: auto;
-}
-.content .section-1 .section1-c2 {
-  flex: 10;
-  padding-left: 2rem;
-  text-align: center;
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center/cover no-repeat;
-  border-radius: 5px;
-  height: 35rem;
-  width: 100%;
-  transition: transform 0.3s;
-  overflow: initial;
-  display: block;
-}
-.content .section-1 .section1-c2 h1 {
-  text-align: left;
-  margin: 0;
-}
-.content .section-1 .section1-c2:hover {
-  transform: scale(1.01);
-}
-.content .section-2 .section2-container {
-  display: flex;
-}
-.content .section-2 .section2-container .mot-du-dirigeant {
-  flex: 6;
-  padding: 0 2rem;
-}
-.content .section-2 .section2-container .mot-du-dirigeant h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 0;
-}
-.content .section-2 .section2-container .mot-du-dirigeant p {
-  text-align: left;
-}
-.content .section-2 .section2-container .victor {
-  flex: 4;
-  border-left: 1px solid var(--blue-primary);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 4rem;
-}
-.content .section-2 .section2-container .victor .image {
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center no-repeat;
-  height: 25rem;
-  width: 25rem;
-}
-.content .section-2 .section2-container .victor .prendre-rdv {
-  padding: 4rem;
-  text-align: center;
-}
-.content .section-2 .section2-container .victor .prendre-rdv .sous-titre {
-  color: var(--blue-primary);
-}
-.content .section-2 .section2-container .victor .prendre-rdv div {
-  min-width: max-content;
-  background-color: #F4F4F4;
-  padding: 5px 5px;
-  width: fit-content;
-  border-radius: 3px;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-}
-.content .section-2 .section2-container .victor .prendre-rdv div span {
-  display: flex;
-  align-items: center;
-  border: 2px solid var(--background-color-primary);
-  border-radius: 3px;
-}
-.content .section-2 .section2-container .victor .prendre-rdv div span p {
-  margin: 0;
-  padding: 0.6rem 0.5rem 0.6rem 2rem;
-  color: var(--background-color-primary);
-}
-.content .section-2 .section2-container .victor .prendre-rdv div span img {
-  height: 1.2rem;
-  width: 1.2rem;
-  padding-right: 2rem;
-}
+.content .section-1,
+.content .section-2,
 .content .section-3 {
+  margin-top: 10rem;
+}
+.content .section-1 div,
+.content .section-2 div,
+.content .section-3 div {
+  display: flex;
+}
+.content .section-1 .container-1,
+.content .section-2 .container-1,
+.content .section-3 .container-1 {
+  margin-bottom: 5rem;
+}
+.content .section-1 .container-1 h2,
+.content .section-2 .container-1 h2,
+.content .section-3 .container-1 h2 {
+  margin-top: 0;
+  width: 50%;
   text-align: center;
 }
-.content .section-3 h1 {
-  max-width: 70%;
-  margin: 0 auto 0 auto;
-}
-.content .section-3 p {
-  font-size: 1.5rem;
-}
-.content .section-4 {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.content .section-4 .container {
-  height: 340px;
-  width: 340px;
-  padding-bottom: 3.5rem;
-  margin-top: 5rem;
-  margin-right: 5rem;
-  display: flex;
-}
-.content .section-4 .container .span-image {
-  background-size: contain;
-  min-width: 5rem;
-  margin-right: 1rem;
-}
-.content .section-4 .container h3 {
-  font-size: 2rem;
-  margin: 0;
-  margin-bottom: 1rem;
-  line-height: 2rem;
-}
-.content .section-4 .container p {
+.content .section-1 .container-1 p,
+.content .section-2 .container-1 p,
+.content .section-3 .container-1 p {
+  box-sizing: border-box;
+  width: 50%;
+  border-left: 1px solid var(--blue-primary);
+  padding-left: 1rem;
   text-align: left;
-}`, "",{"version":3,"sources":["webpack://./src/index.scss"],"names":[],"mappings":"AAGI;EACI,aAAA;EACA,uBAAA;AAFR;AAIQ;EACI,aAAA;AAFZ;AAKQ;EACI,OAAA;EACA,aAAA;EACA,sBAAA;AAHZ;AAKY;EACI,WAAA;EACA,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;AAHhB;AAKgB;EACI,eAAA;EACA,cAAA;EACA,aAAA;EACA,gBAAA;AAHpB;AAKoB;EACI,sBAAA;AAHxB;AAQY;EACI,gBAAA;AANhB;AAYQ;EACI,QAAA;EACA,kBAAA;EACA,kBAAA;EAEA,0EAAA;EACA,kBAAA;EAQA,aAAA;EACA,WAAA;EACA,0BAAA;EACA,iBAAA;EACA,cAAA;AAlBZ;AASY;EACI,gBAAA;EACA,SAAA;AAPhB;AAgBY;EACI,sBAAA;AAdhB;AA0CQ;EACI,aAAA;AAxCZ;AA0CY;EACI,OAAA;EACA,eAAA;AAxChB;AA0CgB;EACI,eAAA;EACA,gBAAA;EACA,aAAA;AAxCpB;AA2CgB;EACI,gBAAA;AAzCpB;AA6CY;EACI,OAAA;EACA,0CAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AA3ChB;AA6CgB;EACI,oEAAA;EAEA,aAAA;EACA,YAAA;AA5CpB;AA+CgB;EACI,aAAA;EACA,kBAAA;AA7CpB;AA+CoB;EACI,0BAAA;AA7CxB;AAiDoB;EACI,sBAAA;EACA,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,eAAA;AA/CxB;AAiDwB;EACI,aAAA;EACA,mBAAA;EACA,iDAAA;EACA,kBAAA;AA/C5B;AAiD4B;EACI,SAAA;EAEA,kCAAA;EACA,sCAAA;AAhDhC;AAmD4B;EACI,cAAA;EACA,aAAA;EACA,mBAAA;AAjDhC;AA2DI;EACI,kBAAA;AAzDR;AA2DQ;EACI,cAAA;EACA,qBAAA;AAzDZ;AA4DQ;EACI,iBAAA;AA1DZ;AA+DI;EACI,aAAA;EACA,6BAAA;EACA,eAAA;AA7DR;AA+DQ;EACI,aAAA;EACA,YAAA;EACA,sBAAA;EACA,gBAAA;EACA,kBAAA;EACA,aAAA;AA7DZ;AA+DY;EACI,wBAAA;EACA,eAAA;EACA,kBAAA;AA7DhB;AAiEY;EACI,eAAA;EACA,SAAA;EACA,mBAAA;EACA,iBAAA;AA/DhB;AAkEY;EACI,gBAAA;AAhEhB","sourcesContent":[".content {\r\n\r\n    // section 1\r\n    .section-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        &>div {\r\n            height: 35rem;\r\n        }\r\n\r\n        .section1-c1 {\r\n            flex: 1;\r\n            display: flex;\r\n            flex-direction: column;\r\n\r\n            .icons {\r\n                height: 50%;\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: space-between;\r\n                align-items: center;\r\n\r\n                img {\r\n                    cursor: pointer;\r\n                    height: 2.5rem;\r\n                    width: 2.5rem;\r\n                    transition: 0.3s;\r\n\r\n                    &:hover {\r\n                        transform: scale(1.15);\r\n                    }\r\n                }\r\n            }\r\n\r\n            .defiler {\r\n                margin-top: auto;\r\n            }\r\n\r\n\r\n        }\r\n\r\n        .section1-c2 {\r\n            flex: 10;\r\n            padding-left: 2rem;\r\n            text-align: center;\r\n\r\n            background: url('../assets/images/Sll3.jpg') center/cover no-repeat;\r\n            border-radius: 5px;\r\n\r\n\r\n            h1 {\r\n                text-align: left;\r\n                margin: 0;\r\n            }\r\n\r\n            height: 35rem;\r\n            width: 100%;\r\n            transition: transform 0.3s;\r\n            overflow: initial;\r\n            display: block;\r\n\r\n            &:hover {\r\n                transform: scale(1.01);\r\n            }\r\n        }\r\n\r\n        // .section1-c2 {\r\n        //     flex: 4;\r\n        //     display: flex;\r\n        //     flex-direction: column;\r\n        //     justify-content: flex-start;\r\n\r\n        //     p {\r\n        //         margin-top: 0;\r\n        //         margin-bottom: 0;\r\n        //     }\r\n        // }\r\n\r\n        // .section1-c3 {\r\n        //     flex: 6;\r\n        //     background: url('../assets/images/Sll-1536x1347.jpg') center/cover no-repeat;\r\n        //     opacity: .6;\r\n        // }\r\n\r\n\r\n    }\r\n\r\n\r\n    // section 2\r\n    .section-2 {\r\n        .section2-container {\r\n            display: flex;\r\n\r\n            .mot-du-dirigeant {\r\n                flex: 6;\r\n                padding: 0 2rem;\r\n\r\n                h2 {\r\n                    font-size: 3rem;\r\n                    font-weight: 700;\r\n                    margin-top: 0;\r\n                }\r\n\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n\r\n            .victor {\r\n                flex: 4;\r\n                border-left: 1px solid var(--blue-primary);\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: center;\r\n                align-items: center;\r\n                padding-left: 4rem;\r\n\r\n                .image {\r\n                    background: url('../assets/images/victor.png') center no-repeat;\r\n\r\n                    height: 25rem;\r\n                    width: 25rem;\r\n                }\r\n\r\n                .prendre-rdv {\r\n                    padding: 4rem;\r\n                    text-align: center;\r\n\r\n                    .sous-titre {\r\n                        color: var(--blue-primary);\r\n\r\n                    }\r\n\r\n                    div {\r\n                        min-width: max-content;\r\n                        background-color: #F4F4F4;\r\n                        padding: 5px 5px;\r\n                        width: fit-content;\r\n                        border-radius: 3px;\r\n                        margin-left: auto;\r\n                        margin-right: auto;\r\n                        cursor: pointer;\r\n\r\n                        span {\r\n                            display: flex;\r\n                            align-items: center;\r\n                            border: 2px solid var(--background-color-primary);\r\n                            border-radius: 3px;\r\n\r\n                            p {\r\n                                margin: 0;\r\n\r\n                                padding: .6rem .5rem .6rem 2rem;\r\n                                color: var(--background-color-primary);\r\n                            }\r\n\r\n                            img {\r\n                                height: 1.2rem;\r\n                                width: 1.2rem;\r\n                                padding-right: 2rem;\r\n                            }\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 3\r\n    .section-3 {\r\n        text-align: center;\r\n\r\n        h1 {\r\n            max-width: 70%;\r\n            margin: 0 auto 0 auto;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n        }\r\n    }\r\n\r\n    // section 4\r\n    .section-4 {\r\n        display: flex;\r\n        justify-content: space-around;\r\n        flex-wrap: wrap;\r\n\r\n        .container {\r\n            height: 340px;\r\n            width: 340px;\r\n            padding-bottom: 3.5rem;\r\n            margin-top: 5rem;\r\n            margin-right: 5rem;\r\n            display: flex;\r\n\r\n            .span-image {\r\n                background-size: contain;\r\n                min-width: 5rem;\r\n                margin-right: 1rem;\r\n\r\n            }\r\n\r\n            h3 {\r\n                font-size: 2rem;\r\n                margin: 0;\r\n                margin-bottom: 1rem;\r\n                line-height: 2rem;\r\n            }\r\n\r\n            p {\r\n                text-align: left;\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
+}
+.content .section-1 .container-2 .span-text p,
+.content .section-2 .container-2 .span-text p,
+.content .section-3 .container-2 .span-text p {
+  text-align: left;
+}
+.content .section-1 .span-image {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+.content .section-2 .container-2 .span-text h2 {
+  text-align: center;
+}
+.content .section-2 .container-2 .span-text p {
+  text-align: left;
+}
+.content .section-2 .container-2 .span-image {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center/cover;
+}
+.content .section-3 .span-image {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center/cover;
+}`, "",{"version":3,"sources":["webpack://./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss"],"names":[],"mappings":"AAKQ;;EAEI,OAAA;AAJZ;AAOQ;EACI,eAAA;EACA,cAAA;AALZ;AAOY;EACI,kBAAA;EACA,UAAA;AALhB;AAUI;;;EAGI,iBAAA;AARR;AAUQ;;;EACI,aAAA;AANZ;AASQ;;;EACI,mBAAA;AALZ;AAOY;;;EACI,aAAA;EACA,UAAA;EACA,kBAAA;AAHhB;AAMY;;;EACI,sBAAA;EACA,UAAA;EACA,0CAAA;EACA,kBAAA;EACA,gBAAA;AAFhB;AAWgB;;;EACI,gBAAA;AAPpB;AAeQ;EACI,mDAAA;AAbZ;AAsBgB;EACI,kBAAA;AApBpB;AAuBgB;EACI,gBAAA;AArBpB;AAyBY;EACI,gEAAA;AAvBhB;AAiCQ;EACI,gEAAA;AA/BZ","sourcesContent":[".content {\r\n\r\n    // toutes les sections de la page\r\n    section {\r\n\r\n        .span-image,\r\n        .span-text {\r\n            flex: 1;\r\n        }\r\n\r\n        .span-text * {\r\n            padding: 0 1rem;\r\n            margin: 1rem 0;\r\n\r\n            .blue-word {\r\n                margin: 1rem -1rem;\r\n                padding: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n    .section-1,\r\n    .section-2,\r\n    .section-3 {\r\n        margin-top: 10rem;\r\n\r\n        div {\r\n            display: flex;\r\n        }\r\n\r\n        .container-1 {\r\n            margin-bottom: 5rem;\r\n\r\n            h2 {\r\n                margin-top: 0;\r\n                width: 50%;\r\n                text-align: center;\r\n            }\r\n\r\n            p {\r\n                box-sizing: border-box;\r\n                width: 50%;\r\n                border-left: 1px solid var(--blue-primary);\r\n                padding-left: 1rem;\r\n                text-align: left;\r\n            }\r\n        }\r\n\r\n        .container-2 {\r\n\r\n\r\n\r\n            .span-text {\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 1\r\n    .section-1 {\r\n        .span-image {\r\n            background: url('../../../assets/images/wallhaven-0jw8g5-768x480.jpg');\r\n        }\r\n    }\r\n\r\n    // section-2\r\n    .section-2 {\r\n\r\n        .container-2 {\r\n            .span-text {\r\n                h2 {\r\n                    text-align: center;\r\n                }\r\n\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n\r\n            .span-image {\r\n                background: url('../../../assets/images/lignes_rouges.jpg') center/cover;\r\n            }\r\n\r\n\r\n        }\r\n\r\n    }\r\n\r\n    // section 3\r\n    .section-3 {\r\n        .span-image {\r\n            background: url('../../../assets/images/wallhaven-k7d7xm.jpg') center/cover;\r\n        }\r\n    }\r\n\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -337,29 +253,29 @@ module.exports = function (item) {
 
 /***/ }),
 
-/***/ "./src/index.scss":
-/*!************************!*\
-  !*** ./src/index.scss ***!
-  \************************/
+/***/ "./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss":
+/*!*********************************************************************************!*\
+  !*** ./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss ***!
+  \*********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./index.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/index.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cloud_computing_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js!./cloud_computing.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss");
 
       
       
@@ -381,12 +297,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cloud_computing_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cloud_computing_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cloud_computing_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cloud_computing_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -658,23 +574,33 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./assets/images/Sll3.jpg":
-/*!********************************!*\
-  !*** ./assets/images/Sll3.jpg ***!
-  \********************************/
+/***/ "./assets/images/lignes_rouges.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/lignes_rouges.jpg ***!
+  \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "10dc5a317910e50003ed.jpg";
+module.exports = __webpack_require__.p + "27d24c50076926ea3ae2.jpg";
 
 /***/ }),
 
-/***/ "./assets/images/victor.png":
-/*!**********************************!*\
-  !*** ./assets/images/victor.png ***!
-  \**********************************/
+/***/ "./assets/images/wallhaven-0jw8g5-768x480.jpg":
+/*!****************************************************!*\
+  !*** ./assets/images/wallhaven-0jw8g5-768x480.jpg ***!
+  \****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "351b2019c2e1f75449dd.png";
+module.exports = __webpack_require__.p + "58deaf55e447627131ed.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/wallhaven-k7d7xm.jpg":
+/*!********************************************!*\
+  !*** ./assets/images/wallhaven-k7d7xm.jpg ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "38a9f6b1331645807c62.jpg";
 
 /***/ })
 
@@ -791,7 +717,7 @@ module.exports = __webpack_require__.p + "351b2019c2e1f75449dd.png";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"main": 0
+/******/ 			"cloud_computing": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -818,14 +744,14 @@ module.exports = __webpack_require__.p + "351b2019c2e1f75449dd.png";
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/*!*******************************************************************************!*\
+  !*** ./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.js ***!
+  \*******************************************************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "./src/index.scss");
+/* harmony import */ var _cloud_computing_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cloud_computing.scss */ "./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss");
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.bundle.js.map
+//# sourceMappingURL=cloud_computing.bundle.js.map
