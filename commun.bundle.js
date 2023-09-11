@@ -74,6 +74,25 @@ module.exports = function (key) {
 
 /***/ }),
 
+/***/ "../../node_modules/core-js/internals/an-instance.js":
+/*!***********************************************************!*\
+  !*** ../../node_modules/core-js/internals/an-instance.js ***!
+  \***********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var isPrototypeOf = __webpack_require__(/*! ../internals/object-is-prototype-of */ "../../node_modules/core-js/internals/object-is-prototype-of.js");
+
+var $TypeError = TypeError;
+
+module.exports = function (it, Prototype) {
+  if (isPrototypeOf(Prototype, it)) return it;
+  throw $TypeError('Incorrect invocation');
+};
+
+
+/***/ }),
+
 /***/ "../../node_modules/core-js/internals/an-object.js":
 /*!*********************************************************!*\
   !*** ../../node_modules/core-js/internals/an-object.js ***!
@@ -138,6 +157,89 @@ module.exports = {
 
 /***/ }),
 
+/***/ "../../node_modules/core-js/internals/array-slice-simple.js":
+/*!******************************************************************!*\
+  !*** ../../node_modules/core-js/internals/array-slice-simple.js ***!
+  \******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var toAbsoluteIndex = __webpack_require__(/*! ../internals/to-absolute-index */ "../../node_modules/core-js/internals/to-absolute-index.js");
+var lengthOfArrayLike = __webpack_require__(/*! ../internals/length-of-array-like */ "../../node_modules/core-js/internals/length-of-array-like.js");
+var createProperty = __webpack_require__(/*! ../internals/create-property */ "../../node_modules/core-js/internals/create-property.js");
+
+var $Array = Array;
+var max = Math.max;
+
+module.exports = function (O, start, end) {
+  var length = lengthOfArrayLike(O);
+  var k = toAbsoluteIndex(start, length);
+  var fin = toAbsoluteIndex(end === undefined ? length : end, length);
+  var result = $Array(max(fin - k, 0));
+  var n = 0;
+  for (; k < fin; k++, n++) createProperty(result, n, O[k]);
+  result.length = n;
+  return result;
+};
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/internals/array-sort.js":
+/*!**********************************************************!*\
+  !*** ../../node_modules/core-js/internals/array-sort.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var arraySlice = __webpack_require__(/*! ../internals/array-slice-simple */ "../../node_modules/core-js/internals/array-slice-simple.js");
+
+var floor = Math.floor;
+
+var mergeSort = function (array, comparefn) {
+  var length = array.length;
+  var middle = floor(length / 2);
+  return length < 8 ? insertionSort(array, comparefn) : merge(
+    array,
+    mergeSort(arraySlice(array, 0, middle), comparefn),
+    mergeSort(arraySlice(array, middle), comparefn),
+    comparefn
+  );
+};
+
+var insertionSort = function (array, comparefn) {
+  var length = array.length;
+  var i = 1;
+  var element, j;
+
+  while (i < length) {
+    j = i;
+    element = array[i];
+    while (j && comparefn(array[j - 1], element) > 0) {
+      array[j] = array[--j];
+    }
+    if (j !== i++) array[j] = element;
+  } return array;
+};
+
+var merge = function (array, left, right, comparefn) {
+  var llength = left.length;
+  var rlength = right.length;
+  var lindex = 0;
+  var rindex = 0;
+
+  while (lindex < llength || rindex < rlength) {
+    array[lindex + rindex] = (lindex < llength && rindex < rlength)
+      ? comparefn(left[lindex], right[rindex]) <= 0 ? left[lindex++] : right[rindex++]
+      : lindex < llength ? left[lindex++] : right[rindex++];
+  } return array;
+};
+
+module.exports = mergeSort;
+
+
+/***/ }),
+
 /***/ "../../node_modules/core-js/internals/classof-raw.js":
 /*!***********************************************************!*\
   !*** ../../node_modules/core-js/internals/classof-raw.js ***!
@@ -152,6 +254,46 @@ var stringSlice = uncurryThis(''.slice);
 
 module.exports = function (it) {
   return stringSlice(toString(it), 8, -1);
+};
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/internals/classof.js":
+/*!*******************************************************!*\
+  !*** ../../node_modules/core-js/internals/classof.js ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var TO_STRING_TAG_SUPPORT = __webpack_require__(/*! ../internals/to-string-tag-support */ "../../node_modules/core-js/internals/to-string-tag-support.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "../../node_modules/core-js/internals/is-callable.js");
+var classofRaw = __webpack_require__(/*! ../internals/classof-raw */ "../../node_modules/core-js/internals/classof-raw.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../../node_modules/core-js/internals/well-known-symbol.js");
+
+var TO_STRING_TAG = wellKnownSymbol('toStringTag');
+var $Object = Object;
+
+// ES3 wrong here
+var CORRECT_ARGUMENTS = classofRaw(function () { return arguments; }()) === 'Arguments';
+
+// fallback for IE11 Script Access Denied error
+var tryGet = function (it, key) {
+  try {
+    return it[key];
+  } catch (error) { /* empty */ }
+};
+
+// getting tag from ES6+ `Object.prototype.toString`
+module.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
+  var O, tag, result;
+  return it === undefined ? 'Undefined' : it === null ? 'Null'
+    // @@toStringTag case
+    : typeof (tag = tryGet(O = $Object(it), TO_STRING_TAG)) == 'string' ? tag
+    // builtinTag case
+    : CORRECT_ARGUMENTS ? classofRaw(O)
+    // ES3 arguments fallback
+    : (result = classofRaw(O)) === 'Object' && isCallable(O.callee) ? 'Arguments' : result;
 };
 
 
@@ -259,6 +401,45 @@ module.exports = function (bitmap, value) {
 
 /***/ }),
 
+/***/ "../../node_modules/core-js/internals/create-property.js":
+/*!***************************************************************!*\
+  !*** ../../node_modules/core-js/internals/create-property.js ***!
+  \***************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var toPropertyKey = __webpack_require__(/*! ../internals/to-property-key */ "../../node_modules/core-js/internals/to-property-key.js");
+var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "../../node_modules/core-js/internals/object-define-property.js");
+var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-property-descriptor */ "../../node_modules/core-js/internals/create-property-descriptor.js");
+
+module.exports = function (object, key, value) {
+  var propertyKey = toPropertyKey(key);
+  if (propertyKey in object) definePropertyModule.f(object, propertyKey, createPropertyDescriptor(0, value));
+  else object[propertyKey] = value;
+};
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/internals/define-built-in-accessor.js":
+/*!************************************************************************!*\
+  !*** ../../node_modules/core-js/internals/define-built-in-accessor.js ***!
+  \************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var makeBuiltIn = __webpack_require__(/*! ../internals/make-built-in */ "../../node_modules/core-js/internals/make-built-in.js");
+var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "../../node_modules/core-js/internals/object-define-property.js");
+
+module.exports = function (target, name, descriptor) {
+  if (descriptor.get) makeBuiltIn(descriptor.get, name, { getter: true });
+  if (descriptor.set) makeBuiltIn(descriptor.set, name, { setter: true });
+  return defineProperty.f(target, name, descriptor);
+};
+
+
+/***/ }),
+
 /***/ "../../node_modules/core-js/internals/define-built-in.js":
 /*!***************************************************************!*\
   !*** ../../node_modules/core-js/internals/define-built-in.js ***!
@@ -292,6 +473,23 @@ module.exports = function (O, key, value, options) {
       writable: !options.nonWritable
     });
   } return O;
+};
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/internals/define-built-ins.js":
+/*!****************************************************************!*\
+  !*** ../../node_modules/core-js/internals/define-built-ins.js ***!
+  \****************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "../../node_modules/core-js/internals/define-built-in.js");
+
+module.exports = function (target, src, options) {
+  for (var key in src) defineBuiltIn(target, key, src[key], options);
+  return target;
 };
 
 
@@ -598,6 +796,30 @@ module.exports = function (exec) {
 
 /***/ }),
 
+/***/ "../../node_modules/core-js/internals/function-bind-context.js":
+/*!*********************************************************************!*\
+  !*** ../../node_modules/core-js/internals/function-bind-context.js ***!
+  \*********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this-clause */ "../../node_modules/core-js/internals/function-uncurry-this-clause.js");
+var aCallable = __webpack_require__(/*! ../internals/a-callable */ "../../node_modules/core-js/internals/a-callable.js");
+var NATIVE_BIND = __webpack_require__(/*! ../internals/function-bind-native */ "../../node_modules/core-js/internals/function-bind-native.js");
+
+var bind = uncurryThis(uncurryThis.bind);
+
+// optional / simple context binding
+module.exports = function (fn, that) {
+  aCallable(fn);
+  return that === undefined ? fn : NATIVE_BIND ? bind(fn, that) : function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+
 /***/ "../../node_modules/core-js/internals/function-bind-native.js":
 /*!********************************************************************!*\
   !*** ../../node_modules/core-js/internals/function-bind-native.js ***!
@@ -683,6 +905,26 @@ module.exports = function (object, key, method) {
 
 /***/ }),
 
+/***/ "../../node_modules/core-js/internals/function-uncurry-this-clause.js":
+/*!****************************************************************************!*\
+  !*** ../../node_modules/core-js/internals/function-uncurry-this-clause.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var classofRaw = __webpack_require__(/*! ../internals/classof-raw */ "../../node_modules/core-js/internals/classof-raw.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "../../node_modules/core-js/internals/function-uncurry-this.js");
+
+module.exports = function (fn) {
+  // Nashorn bug:
+  //   https://github.com/zloirock/core-js/issues/1128
+  //   https://github.com/zloirock/core-js/issues/1130
+  if (classofRaw(fn) === 'Function') return uncurryThis(fn);
+};
+
+
+/***/ }),
+
 /***/ "../../node_modules/core-js/internals/function-uncurry-this.js":
 /*!*********************************************************************!*\
   !*** ../../node_modules/core-js/internals/function-uncurry-this.js ***!
@@ -721,6 +963,54 @@ var aFunction = function (argument) {
 
 module.exports = function (namespace, method) {
   return arguments.length < 2 ? aFunction(global[namespace]) : global[namespace] && global[namespace][method];
+};
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/internals/get-iterator-method.js":
+/*!*******************************************************************!*\
+  !*** ../../node_modules/core-js/internals/get-iterator-method.js ***!
+  \*******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var classof = __webpack_require__(/*! ../internals/classof */ "../../node_modules/core-js/internals/classof.js");
+var getMethod = __webpack_require__(/*! ../internals/get-method */ "../../node_modules/core-js/internals/get-method.js");
+var isNullOrUndefined = __webpack_require__(/*! ../internals/is-null-or-undefined */ "../../node_modules/core-js/internals/is-null-or-undefined.js");
+var Iterators = __webpack_require__(/*! ../internals/iterators */ "../../node_modules/core-js/internals/iterators.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../../node_modules/core-js/internals/well-known-symbol.js");
+
+var ITERATOR = wellKnownSymbol('iterator');
+
+module.exports = function (it) {
+  if (!isNullOrUndefined(it)) return getMethod(it, ITERATOR)
+    || getMethod(it, '@@iterator')
+    || Iterators[classof(it)];
+};
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/internals/get-iterator.js":
+/*!************************************************************!*\
+  !*** ../../node_modules/core-js/internals/get-iterator.js ***!
+  \************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var call = __webpack_require__(/*! ../internals/function-call */ "../../node_modules/core-js/internals/function-call.js");
+var aCallable = __webpack_require__(/*! ../internals/a-callable */ "../../node_modules/core-js/internals/a-callable.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "../../node_modules/core-js/internals/an-object.js");
+var tryToString = __webpack_require__(/*! ../internals/try-to-string */ "../../node_modules/core-js/internals/try-to-string.js");
+var getIteratorMethod = __webpack_require__(/*! ../internals/get-iterator-method */ "../../node_modules/core-js/internals/get-iterator-method.js");
+
+var $TypeError = TypeError;
+
+module.exports = function (argument, usingIterator) {
+  var iteratorMethod = arguments.length < 2 ? getIteratorMethod(argument) : usingIterator;
+  if (aCallable(iteratorMethod)) return anObject(call(iteratorMethod, argument));
+  throw $TypeError(tryToString(argument) + ' is not iterable');
 };
 
 
@@ -2157,6 +2447,44 @@ module.exports = function (argument) {
 
 /***/ }),
 
+/***/ "../../node_modules/core-js/internals/to-string-tag-support.js":
+/*!*********************************************************************!*\
+  !*** ../../node_modules/core-js/internals/to-string-tag-support.js ***!
+  \*********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../../node_modules/core-js/internals/well-known-symbol.js");
+
+var TO_STRING_TAG = wellKnownSymbol('toStringTag');
+var test = {};
+
+test[TO_STRING_TAG] = 'z';
+
+module.exports = String(test) === '[object z]';
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/internals/to-string.js":
+/*!*********************************************************!*\
+  !*** ../../node_modules/core-js/internals/to-string.js ***!
+  \*********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var classof = __webpack_require__(/*! ../internals/classof */ "../../node_modules/core-js/internals/classof.js");
+
+var $String = String;
+
+module.exports = function (argument) {
+  if (classof(argument) === 'Symbol') throw TypeError('Cannot convert a Symbol value to a string');
+  return $String(argument);
+};
+
+
+/***/ }),
+
 /***/ "../../node_modules/core-js/internals/try-to-string.js":
 /*!*************************************************************!*\
   !*** ../../node_modules/core-js/internals/try-to-string.js ***!
@@ -2197,6 +2525,58 @@ module.exports = function (key) {
 
 /***/ }),
 
+/***/ "../../node_modules/core-js/internals/url-constructor-detection.js":
+/*!*************************************************************************!*\
+  !*** ../../node_modules/core-js/internals/url-constructor-detection.js ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+var fails = __webpack_require__(/*! ../internals/fails */ "../../node_modules/core-js/internals/fails.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../../node_modules/core-js/internals/well-known-symbol.js");
+var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "../../node_modules/core-js/internals/descriptors.js");
+var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "../../node_modules/core-js/internals/is-pure.js");
+
+var ITERATOR = wellKnownSymbol('iterator');
+
+module.exports = !fails(function () {
+  // eslint-disable-next-line unicorn/relative-url-style -- required for testing
+  var url = new URL('b?a=1&b=2&c=3', 'http://a');
+  var params = url.searchParams;
+  var params2 = new URLSearchParams('a=1&a=2&b=3');
+  var result = '';
+  url.pathname = 'c%20d';
+  params.forEach(function (value, key) {
+    params['delete']('b');
+    result += key + value;
+  });
+  params2['delete']('a', 2);
+  // `undefined` case is a Chromium 117 bug
+  // https://bugs.chromium.org/p/v8/issues/detail?id=14222
+  params2['delete']('b', undefined);
+  return (IS_PURE && (!url.toJSON || !params2.has('a', 1) || params2.has('a', 2) || !params2.has('a', undefined) || params2.has('b')))
+    || (!params.size && (IS_PURE || !DESCRIPTORS))
+    || !params.sort
+    || url.href !== 'http://a/c%20d?a=1&c=3'
+    || params.get('c') !== '3'
+    || String(new URLSearchParams('?a=1')) !== 'a=1'
+    || !params[ITERATOR]
+    // throws in Edge
+    || new URL('https://a@b').username !== 'a'
+    || new URLSearchParams(new URLSearchParams('a=b')).get('a') !== 'b'
+    // not punycoded in Edge
+    || new URL('http://тест').host !== 'xn--e1aybc'
+    // not escaped in Chrome 62-
+    || new URL('http://a#б').hash !== '#%D0%B1'
+    // fails in Chrome 66-
+    || result !== 'a1c3'
+    // throws in Safari
+    || new URL('http://x', undefined).host !== 'x';
+});
+
+
+/***/ }),
+
 /***/ "../../node_modules/core-js/internals/use-symbol-as-uid.js":
 /*!*****************************************************************!*\
   !*** ../../node_modules/core-js/internals/use-symbol-as-uid.js ***!
@@ -2233,6 +2613,23 @@ module.exports = DESCRIPTORS && fails(function () {
     writable: false
   }).prototype !== 42;
 });
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/internals/validate-arguments-length.js":
+/*!*************************************************************************!*\
+  !*** ../../node_modules/core-js/internals/validate-arguments-length.js ***!
+  \*************************************************************************/
+/***/ ((module) => {
+
+
+var $TypeError = TypeError;
+
+module.exports = function (passed, required) {
+  if (passed < required) throw $TypeError('Not enough arguments');
+  return passed;
+};
 
 
 /***/ }),
@@ -2401,6 +2798,444 @@ for (var COLLECTION_NAME in DOMIterables) {
 }
 
 handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/modules/web.url-search-params.constructor.js":
+/*!*******************************************************************************!*\
+  !*** ../../node_modules/core-js/modules/web.url-search-params.constructor.js ***!
+  \*******************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+// TODO: in core-js@4, move /modules/ dependencies to public entries for better optimization by tools like `preset-env`
+__webpack_require__(/*! ../modules/es.array.iterator */ "../../node_modules/core-js/modules/es.array.iterator.js");
+var $ = __webpack_require__(/*! ../internals/export */ "../../node_modules/core-js/internals/export.js");
+var global = __webpack_require__(/*! ../internals/global */ "../../node_modules/core-js/internals/global.js");
+var call = __webpack_require__(/*! ../internals/function-call */ "../../node_modules/core-js/internals/function-call.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "../../node_modules/core-js/internals/function-uncurry-this.js");
+var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "../../node_modules/core-js/internals/descriptors.js");
+var USE_NATIVE_URL = __webpack_require__(/*! ../internals/url-constructor-detection */ "../../node_modules/core-js/internals/url-constructor-detection.js");
+var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "../../node_modules/core-js/internals/define-built-in.js");
+var defineBuiltInAccessor = __webpack_require__(/*! ../internals/define-built-in-accessor */ "../../node_modules/core-js/internals/define-built-in-accessor.js");
+var defineBuiltIns = __webpack_require__(/*! ../internals/define-built-ins */ "../../node_modules/core-js/internals/define-built-ins.js");
+var setToStringTag = __webpack_require__(/*! ../internals/set-to-string-tag */ "../../node_modules/core-js/internals/set-to-string-tag.js");
+var createIteratorConstructor = __webpack_require__(/*! ../internals/iterator-create-constructor */ "../../node_modules/core-js/internals/iterator-create-constructor.js");
+var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "../../node_modules/core-js/internals/internal-state.js");
+var anInstance = __webpack_require__(/*! ../internals/an-instance */ "../../node_modules/core-js/internals/an-instance.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "../../node_modules/core-js/internals/is-callable.js");
+var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "../../node_modules/core-js/internals/has-own-property.js");
+var bind = __webpack_require__(/*! ../internals/function-bind-context */ "../../node_modules/core-js/internals/function-bind-context.js");
+var classof = __webpack_require__(/*! ../internals/classof */ "../../node_modules/core-js/internals/classof.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "../../node_modules/core-js/internals/an-object.js");
+var isObject = __webpack_require__(/*! ../internals/is-object */ "../../node_modules/core-js/internals/is-object.js");
+var $toString = __webpack_require__(/*! ../internals/to-string */ "../../node_modules/core-js/internals/to-string.js");
+var create = __webpack_require__(/*! ../internals/object-create */ "../../node_modules/core-js/internals/object-create.js");
+var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-property-descriptor */ "../../node_modules/core-js/internals/create-property-descriptor.js");
+var getIterator = __webpack_require__(/*! ../internals/get-iterator */ "../../node_modules/core-js/internals/get-iterator.js");
+var getIteratorMethod = __webpack_require__(/*! ../internals/get-iterator-method */ "../../node_modules/core-js/internals/get-iterator-method.js");
+var validateArgumentsLength = __webpack_require__(/*! ../internals/validate-arguments-length */ "../../node_modules/core-js/internals/validate-arguments-length.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "../../node_modules/core-js/internals/well-known-symbol.js");
+var arraySort = __webpack_require__(/*! ../internals/array-sort */ "../../node_modules/core-js/internals/array-sort.js");
+
+var ITERATOR = wellKnownSymbol('iterator');
+var URL_SEARCH_PARAMS = 'URLSearchParams';
+var URL_SEARCH_PARAMS_ITERATOR = URL_SEARCH_PARAMS + 'Iterator';
+var setInternalState = InternalStateModule.set;
+var getInternalParamsState = InternalStateModule.getterFor(URL_SEARCH_PARAMS);
+var getInternalIteratorState = InternalStateModule.getterFor(URL_SEARCH_PARAMS_ITERATOR);
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+
+// Avoid NodeJS experimental warning
+var safeGetBuiltIn = function (name) {
+  if (!DESCRIPTORS) return global[name];
+  var descriptor = getOwnPropertyDescriptor(global, name);
+  return descriptor && descriptor.value;
+};
+
+var nativeFetch = safeGetBuiltIn('fetch');
+var NativeRequest = safeGetBuiltIn('Request');
+var Headers = safeGetBuiltIn('Headers');
+var RequestPrototype = NativeRequest && NativeRequest.prototype;
+var HeadersPrototype = Headers && Headers.prototype;
+var RegExp = global.RegExp;
+var TypeError = global.TypeError;
+var decodeURIComponent = global.decodeURIComponent;
+var encodeURIComponent = global.encodeURIComponent;
+var charAt = uncurryThis(''.charAt);
+var join = uncurryThis([].join);
+var push = uncurryThis([].push);
+var replace = uncurryThis(''.replace);
+var shift = uncurryThis([].shift);
+var splice = uncurryThis([].splice);
+var split = uncurryThis(''.split);
+var stringSlice = uncurryThis(''.slice);
+
+var plus = /\+/g;
+var sequences = Array(4);
+
+var percentSequence = function (bytes) {
+  return sequences[bytes - 1] || (sequences[bytes - 1] = RegExp('((?:%[\\da-f]{2}){' + bytes + '})', 'gi'));
+};
+
+var percentDecode = function (sequence) {
+  try {
+    return decodeURIComponent(sequence);
+  } catch (error) {
+    return sequence;
+  }
+};
+
+var deserialize = function (it) {
+  var result = replace(it, plus, ' ');
+  var bytes = 4;
+  try {
+    return decodeURIComponent(result);
+  } catch (error) {
+    while (bytes) {
+      result = replace(result, percentSequence(bytes--), percentDecode);
+    }
+    return result;
+  }
+};
+
+var find = /[!'()~]|%20/g;
+
+var replacements = {
+  '!': '%21',
+  "'": '%27',
+  '(': '%28',
+  ')': '%29',
+  '~': '%7E',
+  '%20': '+'
+};
+
+var replacer = function (match) {
+  return replacements[match];
+};
+
+var serialize = function (it) {
+  return replace(encodeURIComponent(it), find, replacer);
+};
+
+var URLSearchParamsIterator = createIteratorConstructor(function Iterator(params, kind) {
+  setInternalState(this, {
+    type: URL_SEARCH_PARAMS_ITERATOR,
+    iterator: getIterator(getInternalParamsState(params).entries),
+    kind: kind
+  });
+}, 'Iterator', function next() {
+  var state = getInternalIteratorState(this);
+  var kind = state.kind;
+  var step = state.iterator.next();
+  var entry = step.value;
+  if (!step.done) {
+    step.value = kind === 'keys' ? entry.key : kind === 'values' ? entry.value : [entry.key, entry.value];
+  } return step;
+}, true);
+
+var URLSearchParamsState = function (init) {
+  this.entries = [];
+  this.url = null;
+
+  if (init !== undefined) {
+    if (isObject(init)) this.parseObject(init);
+    else this.parseQuery(typeof init == 'string' ? charAt(init, 0) === '?' ? stringSlice(init, 1) : init : $toString(init));
+  }
+};
+
+URLSearchParamsState.prototype = {
+  type: URL_SEARCH_PARAMS,
+  bindURL: function (url) {
+    this.url = url;
+    this.update();
+  },
+  parseObject: function (object) {
+    var iteratorMethod = getIteratorMethod(object);
+    var iterator, next, step, entryIterator, entryNext, first, second;
+
+    if (iteratorMethod) {
+      iterator = getIterator(object, iteratorMethod);
+      next = iterator.next;
+      while (!(step = call(next, iterator)).done) {
+        entryIterator = getIterator(anObject(step.value));
+        entryNext = entryIterator.next;
+        if (
+          (first = call(entryNext, entryIterator)).done ||
+          (second = call(entryNext, entryIterator)).done ||
+          !call(entryNext, entryIterator).done
+        ) throw TypeError('Expected sequence with length 2');
+        push(this.entries, { key: $toString(first.value), value: $toString(second.value) });
+      }
+    } else for (var key in object) if (hasOwn(object, key)) {
+      push(this.entries, { key: key, value: $toString(object[key]) });
+    }
+  },
+  parseQuery: function (query) {
+    if (query) {
+      var attributes = split(query, '&');
+      var index = 0;
+      var attribute, entry;
+      while (index < attributes.length) {
+        attribute = attributes[index++];
+        if (attribute.length) {
+          entry = split(attribute, '=');
+          push(this.entries, {
+            key: deserialize(shift(entry)),
+            value: deserialize(join(entry, '='))
+          });
+        }
+      }
+    }
+  },
+  serialize: function () {
+    var entries = this.entries;
+    var result = [];
+    var index = 0;
+    var entry;
+    while (index < entries.length) {
+      entry = entries[index++];
+      push(result, serialize(entry.key) + '=' + serialize(entry.value));
+    } return join(result, '&');
+  },
+  update: function () {
+    this.entries.length = 0;
+    this.parseQuery(this.url.query);
+  },
+  updateURL: function () {
+    if (this.url) this.url.update();
+  }
+};
+
+// `URLSearchParams` constructor
+// https://url.spec.whatwg.org/#interface-urlsearchparams
+var URLSearchParamsConstructor = function URLSearchParams(/* init */) {
+  anInstance(this, URLSearchParamsPrototype);
+  var init = arguments.length > 0 ? arguments[0] : undefined;
+  var state = setInternalState(this, new URLSearchParamsState(init));
+  if (!DESCRIPTORS) this.size = state.entries.length;
+};
+
+var URLSearchParamsPrototype = URLSearchParamsConstructor.prototype;
+
+defineBuiltIns(URLSearchParamsPrototype, {
+  // `URLSearchParams.prototype.append` method
+  // https://url.spec.whatwg.org/#dom-urlsearchparams-append
+  append: function append(name, value) {
+    var state = getInternalParamsState(this);
+    validateArgumentsLength(arguments.length, 2);
+    push(state.entries, { key: $toString(name), value: $toString(value) });
+    if (!DESCRIPTORS) this.length++;
+    state.updateURL();
+  },
+  // `URLSearchParams.prototype.delete` method
+  // https://url.spec.whatwg.org/#dom-urlsearchparams-delete
+  'delete': function (name /* , value */) {
+    var state = getInternalParamsState(this);
+    var length = validateArgumentsLength(arguments.length, 1);
+    var entries = state.entries;
+    var key = $toString(name);
+    var $value = length < 2 ? undefined : arguments[1];
+    var value = $value === undefined ? $value : $toString($value);
+    var index = 0;
+    while (index < entries.length) {
+      var entry = entries[index];
+      if (entry.key === key && (value === undefined || entry.value === value)) {
+        splice(entries, index, 1);
+        if (value !== undefined) break;
+      } else index++;
+    }
+    if (!DESCRIPTORS) this.size = entries.length;
+    state.updateURL();
+  },
+  // `URLSearchParams.prototype.get` method
+  // https://url.spec.whatwg.org/#dom-urlsearchparams-get
+  get: function get(name) {
+    var entries = getInternalParamsState(this).entries;
+    validateArgumentsLength(arguments.length, 1);
+    var key = $toString(name);
+    var index = 0;
+    for (; index < entries.length; index++) {
+      if (entries[index].key === key) return entries[index].value;
+    }
+    return null;
+  },
+  // `URLSearchParams.prototype.getAll` method
+  // https://url.spec.whatwg.org/#dom-urlsearchparams-getall
+  getAll: function getAll(name) {
+    var entries = getInternalParamsState(this).entries;
+    validateArgumentsLength(arguments.length, 1);
+    var key = $toString(name);
+    var result = [];
+    var index = 0;
+    for (; index < entries.length; index++) {
+      if (entries[index].key === key) push(result, entries[index].value);
+    }
+    return result;
+  },
+  // `URLSearchParams.prototype.has` method
+  // https://url.spec.whatwg.org/#dom-urlsearchparams-has
+  has: function has(name /* , value */) {
+    var entries = getInternalParamsState(this).entries;
+    var length = validateArgumentsLength(arguments.length, 1);
+    var key = $toString(name);
+    var $value = length < 2 ? undefined : arguments[1];
+    var value = $value === undefined ? $value : $toString($value);
+    var index = 0;
+    while (index < entries.length) {
+      var entry = entries[index++];
+      if (entry.key === key && (value === undefined || entry.value === value)) return true;
+    }
+    return false;
+  },
+  // `URLSearchParams.prototype.set` method
+  // https://url.spec.whatwg.org/#dom-urlsearchparams-set
+  set: function set(name, value) {
+    var state = getInternalParamsState(this);
+    validateArgumentsLength(arguments.length, 1);
+    var entries = state.entries;
+    var found = false;
+    var key = $toString(name);
+    var val = $toString(value);
+    var index = 0;
+    var entry;
+    for (; index < entries.length; index++) {
+      entry = entries[index];
+      if (entry.key === key) {
+        if (found) splice(entries, index--, 1);
+        else {
+          found = true;
+          entry.value = val;
+        }
+      }
+    }
+    if (!found) push(entries, { key: key, value: val });
+    if (!DESCRIPTORS) this.size = entries.length;
+    state.updateURL();
+  },
+  // `URLSearchParams.prototype.sort` method
+  // https://url.spec.whatwg.org/#dom-urlsearchparams-sort
+  sort: function sort() {
+    var state = getInternalParamsState(this);
+    arraySort(state.entries, function (a, b) {
+      return a.key > b.key ? 1 : -1;
+    });
+    state.updateURL();
+  },
+  // `URLSearchParams.prototype.forEach` method
+  forEach: function forEach(callback /* , thisArg */) {
+    var entries = getInternalParamsState(this).entries;
+    var boundFunction = bind(callback, arguments.length > 1 ? arguments[1] : undefined);
+    var index = 0;
+    var entry;
+    while (index < entries.length) {
+      entry = entries[index++];
+      boundFunction(entry.value, entry.key, this);
+    }
+  },
+  // `URLSearchParams.prototype.keys` method
+  keys: function keys() {
+    return new URLSearchParamsIterator(this, 'keys');
+  },
+  // `URLSearchParams.prototype.values` method
+  values: function values() {
+    return new URLSearchParamsIterator(this, 'values');
+  },
+  // `URLSearchParams.prototype.entries` method
+  entries: function entries() {
+    return new URLSearchParamsIterator(this, 'entries');
+  }
+}, { enumerable: true });
+
+// `URLSearchParams.prototype[@@iterator]` method
+defineBuiltIn(URLSearchParamsPrototype, ITERATOR, URLSearchParamsPrototype.entries, { name: 'entries' });
+
+// `URLSearchParams.prototype.toString` method
+// https://url.spec.whatwg.org/#urlsearchparams-stringification-behavior
+defineBuiltIn(URLSearchParamsPrototype, 'toString', function toString() {
+  return getInternalParamsState(this).serialize();
+}, { enumerable: true });
+
+// `URLSearchParams.prototype.size` getter
+// https://github.com/whatwg/url/pull/734
+if (DESCRIPTORS) defineBuiltInAccessor(URLSearchParamsPrototype, 'size', {
+  get: function size() {
+    return getInternalParamsState(this).entries.length;
+  },
+  configurable: true,
+  enumerable: true
+});
+
+setToStringTag(URLSearchParamsConstructor, URL_SEARCH_PARAMS);
+
+$({ global: true, constructor: true, forced: !USE_NATIVE_URL }, {
+  URLSearchParams: URLSearchParamsConstructor
+});
+
+// Wrap `fetch` and `Request` for correct work with polyfilled `URLSearchParams`
+if (!USE_NATIVE_URL && isCallable(Headers)) {
+  var headersHas = uncurryThis(HeadersPrototype.has);
+  var headersSet = uncurryThis(HeadersPrototype.set);
+
+  var wrapRequestOptions = function (init) {
+    if (isObject(init)) {
+      var body = init.body;
+      var headers;
+      if (classof(body) === URL_SEARCH_PARAMS) {
+        headers = init.headers ? new Headers(init.headers) : new Headers();
+        if (!headersHas(headers, 'content-type')) {
+          headersSet(headers, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+        }
+        return create(init, {
+          body: createPropertyDescriptor(0, $toString(body)),
+          headers: createPropertyDescriptor(0, headers)
+        });
+      }
+    } return init;
+  };
+
+  if (isCallable(nativeFetch)) {
+    $({ global: true, enumerable: true, dontCallGetSet: true, forced: true }, {
+      fetch: function fetch(input /* , init */) {
+        return nativeFetch(input, arguments.length > 1 ? wrapRequestOptions(arguments[1]) : {});
+      }
+    });
+  }
+
+  if (isCallable(NativeRequest)) {
+    var RequestConstructor = function Request(input /* , init */) {
+      anInstance(this, RequestPrototype);
+      return new NativeRequest(input, arguments.length > 1 ? wrapRequestOptions(arguments[1]) : {});
+    };
+
+    RequestPrototype.constructor = RequestConstructor;
+    RequestConstructor.prototype = RequestPrototype;
+
+    $({ global: true, constructor: true, dontCallGetSet: true, forced: true }, {
+      Request: RequestConstructor
+    });
+  }
+}
+
+module.exports = {
+  URLSearchParams: URLSearchParamsConstructor,
+  getState: getInternalParamsState
+};
+
+
+/***/ }),
+
+/***/ "../../node_modules/core-js/modules/web.url-search-params.js":
+/*!*******************************************************************!*\
+  !*** ../../node_modules/core-js/modules/web.url-search-params.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+
+// TODO: Remove this module from `core-js@4` since it's replaced to module below
+__webpack_require__(/*! ../modules/web.url-search-params.constructor */ "../../node_modules/core-js/modules/web.url-search-params.constructor.js");
 
 
 /***/ }),
@@ -2597,10 +3432,10 @@ body header .container-1 .menu-container p a:hover {
   color: var(--blue-primary);
 }
 body header .container-1 .nous-rejoindre {
-  border-top: var(--blue-primary) solid 2px;
-  border-left: var(--blue-primary) solid 2px;
-  border-bottom: #FF3131 solid 2px;
-  border-right: #FF3131 solid 2px;
+  border-top: var(--blue-primary) solid 1px;
+  border-left: var(--blue-primary) solid 1px;
+  border-bottom: #ff3131 solid 1px;
+  border-right: #ff3131 solid 1px;
   border-radius: 5px;
   letter-spacing: normal;
   height: fit-content;
@@ -2628,7 +3463,7 @@ body header .container-1 .nous-rejoindre p {
 }
 body header .container-1 .nous-rejoindre:hover {
   transition: 0.2s;
-  border: var(--blue-primary) solid 2px;
+  border: var(--blue-primary) solid 1px;
   color: var(--blue-primary);
 }
 body header .container-1 .nous-rejoindre:hover span.point {
@@ -2765,7 +3600,7 @@ body footer .footer-container2 .footer-mention {
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-}`, "",{"version":3,"sources":["webpack://./assets/styles/_variables.scss","webpack://./assets/styles/styles.scss","webpack://./assets/styles/_classes.scss"],"names":[],"mappings":"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","sourcesContent":[":root {\r\n    --background-color-primary: #15171C;\r\n    --background-color-primary-opacity: #15171ccb;\r\n    --text-color-primary: #e9e5e5;\r\n    --input-border-color: #6A6B6D;\r\n    --blue-primary: #4A81F7;\r\n}","@use 'variables';\r\n@use 'classes';\r\n\r\n/* thai */\r\n/* latin */\r\n@font-face {\r\n    font-display: swap;\r\n    font-family: 'Prompt';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    src: url('../fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2') format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\r\n}\r\n\r\n:root {\r\n    font-family: 'Prompt';\r\n    font-weight: normal;\r\n    cursor: default;\r\n\r\n\r\n    .content {\r\n\r\n\r\n\r\n        margin-top: 170px;\r\n\r\n\r\n\r\n        p {\r\n            text-align: center;\r\n            letter-spacing: 2px;\r\n        }\r\n\r\n    }\r\n\r\n    a {\r\n        text-decoration: none;\r\n    }\r\n\r\n    ul {\r\n        text-decoration: none;\r\n        padding: 0 0 0 0;\r\n\r\n        li {\r\n\r\n            list-style-type: none;\r\n        }\r\n\r\n        &.with-blue-puce {\r\n            li {\r\n                list-style-type: disc;\r\n            }\r\n\r\n            li::marker {\r\n                color: var(--blue-primary);\r\n            }\r\n        }\r\n    }\r\n\r\n    h1 {\r\n        font-size: 4rem;\r\n        margin-top: 8rem;\r\n        text-align: center;\r\n    }\r\n\r\n\r\n\r\n\r\n    h2 {\r\n        font-size: 3rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n\r\n\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    display: grid;\r\n    background-color: var(--background-color-primary);\r\n    color: white;\r\n\r\n\r\n\r\n    // header\r\n\r\n\r\n    header {\r\n        z-index: 1;\r\n        height: 120px;\r\n        color: white;\r\n\r\n        &.down-scroll {\r\n            // apparition/disparition de la top-bar\r\n            position: fixed;\r\n            top: 0px;\r\n            width: 100%;\r\n            transition: top 0.3s;\r\n            background-color: var(--background-color-primary-opacity);\r\n            backdrop-filter: blur(5px);\r\n        }\r\n\r\n\r\n        .container-1 {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: flex;\r\n            font-family: 'Prompt';\r\n            letter-spacing: 3px;\r\n            justify-content: space-between;\r\n\r\n\r\n            img {\r\n                cursor: pointer;\r\n                height: 5rem;\r\n                margin-top: 1rem;\r\n                margin-left: 4rem;\r\n                transition: transform 0.3s;\r\n\r\n                &:hover {\r\n                    transform: scale(1.05);\r\n                }\r\n            }\r\n\r\n            .menu-container {\r\n                width: 70%;\r\n                display: flex;\r\n                align-items: center;\r\n                width: 100%;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                flex-wrap: wrap;\r\n                align-items: center;\r\n\r\n\r\n                p {\r\n                    width: fit-content;\r\n                    padding: 0 15px;\r\n                    margin: .5rem 0;\r\n                    cursor: pointer;\r\n\r\n                    a {\r\n                        margin: 0;\r\n                    }\r\n\r\n\r\n                    & a:hover {\r\n                        transition: 0.5s;\r\n                        color: var(--blue-primary);\r\n                    }\r\n                }\r\n            }\r\n\r\n            .nous-rejoindre {\r\n                border-top: var(--blue-primary) solid 2px;\r\n                border-left: var(--blue-primary) solid 2px;\r\n                border-bottom: #FF3131 solid 2px;\r\n                border-right: #FF3131 solid 2px;\r\n                border-radius: 5px;\r\n                letter-spacing: normal;\r\n                height: fit-content;\r\n                padding: 0 2rem 0 2rem;\r\n                display: flex;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n                margin-right: 3rem;\r\n\r\n\r\n                &,\r\n                & * {\r\n                    cursor: pointer;\r\n                }\r\n\r\n\r\n                span.point {\r\n                    background-color: var(--blue-primary);\r\n                    border-radius: 50%;\r\n                    height: 12px;\r\n                    width: 12px;\r\n                    margin-right: 10px;\r\n                    margin-top: auto;\r\n                    margin-bottom: auto;\r\n                }\r\n\r\n                p {\r\n                    min-width: 10rem;\r\n                    margin: 0;\r\n                }\r\n\r\n                &:hover {\r\n                    transition: 0.2s;\r\n                    border: var(--blue-primary) solid 2px;\r\n                    color: var(--blue-primary);\r\n\r\n                    span.point {\r\n                        transition: 1.2s;\r\n                        background-color: white;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n        .container-2 {\r\n            // border-top: 1px solid var(--text-color-primary);\r\n            // border-bottom: 1px solid var(--text-color-primary);\r\n            // display: none;\r\n\r\n            nav {\r\n                transition: 0.5s;\r\n                display: flex;\r\n                justify-content: center;\r\n                align-items: center;\r\n\r\n                span {\r\n                    cursor: pointer;\r\n                    display: flex;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n                    height: 3rem;\r\n                    width: auto;\r\n                    background-color: #252629;\r\n                    flex: 1;\r\n                    align-items: center;\r\n                    border-left: 2px solid var(--background-color-primary);\r\n                    border-right: 2px solid var(--background-color-primary);\r\n                    border-radius: 5px;\r\n                    overflow: hidden;\r\n\r\n                    p,\r\n                    a {\r\n                        padding: 50% 0;\r\n                        text-align: center;\r\n                        font-size: 0.9rem;\r\n                        color: white;\r\n                        width: 100%;\r\n                    }\r\n\r\n                    &:hover {\r\n                        background-color: var(--blue-primary);\r\n                    }\r\n                }\r\n\r\n\r\n            }\r\n        }\r\n\r\n        // general header\r\n        .active {\r\n            color: var(--blue-primary);\r\n        }\r\n\r\n    }\r\n\r\n    // content\r\n    .content {\r\n        padding: 0 2.5rem 4rem 2.5rem;\r\n\r\n        section {\r\n            margin-top: 2rem;\r\n            margin-bottom: 6rem;\r\n\r\n            .span-image {\r\n                border-radius: 5px;\r\n            }\r\n        }\r\n    }\r\n\r\n    // footer\r\n    footer {\r\n        padding: 1rem 2rem;\r\n\r\n        .footer-container {\r\n            padding: 2rem 0;\r\n            display: flex;\r\n            flex-wrap: wrap;\r\n\r\n            div {\r\n                margin-right: 6rem;\r\n            }\r\n\r\n            h3 {\r\n                font-size: 1.8rem;\r\n                max-width: 50px;\r\n            }\r\n\r\n            .footer-register {\r\n                flex: 0.4;\r\n\r\n                input {\r\n                    width: 99%;\r\n                    background-color: var(--background-color-general);\r\n                    border: none;\r\n                    border-bottom: var(--input-border-color) solid 1px;\r\n                    font-size: 20px;\r\n                    margin: 3rem 0 0 0;\r\n                    color: var(--text-color-primary);\r\n\r\n                    &:focus {\r\n                        outline: none;\r\n                    }\r\n                }\r\n\r\n                .footer-submit {\r\n                    background-color: var(--blue-primary);\r\n                    padding: .75rem 20rem;\r\n                    border-radius: 15px;\r\n                    margin: 3rem 0 0 0;\r\n                }\r\n            }\r\n\r\n            .footer-coordonnees {\r\n                flex: 0.3;\r\n\r\n                li {\r\n                    margin-bottom: 2rem;\r\n\r\n                    span {\r\n\r\n                        p {\r\n                            margin: 0;\r\n                        }\r\n                    }\r\n                }\r\n\r\n            }\r\n\r\n            .footer-services {\r\n                flex: .3;\r\n\r\n                li {\r\n                    margin-bottom: 0;\r\n                    padding-bottom: 1rem;\r\n                }\r\n            }\r\n\r\n\r\n\r\n        }\r\n\r\n        .footer-separator {\r\n            height: 2px;\r\n            background-color: var(--text-color-primary);\r\n        }\r\n\r\n        .footer-container2 {\r\n            display: flex;\r\n            padding-top: 2rem;\r\n\r\n            .footer-links {\r\n                flex: .4;\r\n                display: flex;\r\n                /* align-items: center; */\r\n                flex-wrap: wrap;\r\n\r\n                p {\r\n                    margin: 0;\r\n                    padding: 0 2rem;\r\n                }\r\n            }\r\n\r\n            .footer-icons {\r\n                flex: .2;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                align-items: center;\r\n\r\n                img {\r\n                    height: 2rem;\r\n                    width: 2rem;\r\n                }\r\n            }\r\n\r\n\r\n            .footer-mention {\r\n                flex: .4;\r\n                text-align: center;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n\r\n\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n}",".point-bleu-avec-trait {\r\n\r\n    /* Style pour le conteneur de point et de trait */\r\n    .point-et-trait {\r\n        height: fit-content;\r\n        display: flex;\r\n        align-items: center;\r\n\r\n        /* Style pour la ligne grise */\r\n        .trait {\r\n            width: 3rem;\r\n            height: 1px;\r\n            background-color: var(--input-border-color);\r\n\r\n            &-column {\r\n                width: 1px;\r\n                height: 3rem;\r\n                margin-top: 1rem;\r\n            }\r\n        }\r\n\r\n        /* Style pour le point bleu */\r\n        .point-bleu {\r\n            min-width: 10px;\r\n            min-height: 10px;\r\n            background-color: var(--blue-primary);\r\n            border-radius: 50%;\r\n            margin-left: 1rem;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n            margin-left: 1rem;\r\n        }\r\n    }\r\n\r\n    .column {\r\n        flex-direction: column;\r\n\r\n        .point-bleu {\r\n            margin-left: 0;\r\n            margin-top: 1rem;\r\n        }\r\n\r\n        &>p {\r\n            // writing-mode: vertical-rl;\r\n            rotate: -90deg;\r\n            margin-top: 2rem;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n.blue-word {\r\n    color: var(--blue-primary);\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./assets/styles/_variables.scss","webpack://./assets/styles/styles.scss","webpack://./assets/styles/_classes.scss"],"names":[],"mappings":"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","sourcesContent":[":root {\r\n    --background-color-primary: #15171C;\r\n    --background-color-primary-opacity: #15171ccb;\r\n    --text-color-primary: #e9e5e5;\r\n    --input-border-color: #6A6B6D;\r\n    --blue-primary: #4A81F7;\r\n}","@use 'variables';\r\n@use 'classes';\r\n\r\n/* thai */\r\n/* latin */\r\n@font-face {\r\n    font-display: swap;\r\n    font-family: 'Prompt';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    src: url('../fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2') format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\r\n}\r\n\r\n:root {\r\n    font-family: 'Prompt';\r\n    font-weight: normal;\r\n    cursor: default;\r\n\r\n\r\n    .content {\r\n\r\n\r\n\r\n        margin-top: 170px;\r\n\r\n\r\n\r\n        p {\r\n            text-align: center;\r\n            letter-spacing: 2px;\r\n        }\r\n\r\n    }\r\n\r\n    a {\r\n        text-decoration: none;\r\n    }\r\n\r\n    ul {\r\n        text-decoration: none;\r\n        padding: 0 0 0 0;\r\n\r\n        li {\r\n\r\n            list-style-type: none;\r\n        }\r\n\r\n        &.with-blue-puce {\r\n            li {\r\n                list-style-type: disc;\r\n            }\r\n\r\n            li::marker {\r\n                color: var(--blue-primary);\r\n            }\r\n        }\r\n    }\r\n\r\n    h1 {\r\n        font-size: 4rem;\r\n        margin-top: 8rem;\r\n        text-align: center;\r\n    }\r\n\r\n\r\n\r\n\r\n    h2 {\r\n        font-size: 3rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n\r\n\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    display: grid;\r\n    background-color: var(--background-color-primary);\r\n    color: white;\r\n\r\n\r\n\r\n    // header\r\n\r\n\r\n    header {\r\n        z-index: 1;\r\n        height: 120px;\r\n        color: white;\r\n\r\n        &.down-scroll {\r\n            // apparition/disparition de la top-bar\r\n            position: fixed;\r\n            top: 0px;\r\n            width: 100%;\r\n            transition: top 0.3s;\r\n            background-color: var(--background-color-primary-opacity);\r\n            backdrop-filter: blur(5px);\r\n        }\r\n\r\n\r\n        .container-1 {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: flex;\r\n            font-family: 'Prompt';\r\n            letter-spacing: 3px;\r\n            justify-content: space-between;\r\n\r\n\r\n            img {\r\n                cursor: pointer;\r\n                height: 5rem;\r\n                margin-top: 1rem;\r\n                margin-left: 4rem;\r\n                transition: transform 0.3s;\r\n\r\n                &:hover {\r\n                    transform: scale(1.05);\r\n                }\r\n            }\r\n\r\n            .menu-container {\r\n                width: 70%;\r\n                display: flex;\r\n                align-items: center;\r\n                width: 100%;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                flex-wrap: wrap;\r\n                align-items: center;\r\n\r\n\r\n                p {\r\n                    width: fit-content;\r\n                    padding: 0 15px;\r\n                    margin: .5rem 0;\r\n                    cursor: pointer;\r\n\r\n                    a {\r\n                        margin: 0;\r\n                    }\r\n\r\n\r\n                    & a:hover {\r\n                        transition: 0.5s;\r\n                        color: var(--blue-primary);\r\n                    }\r\n                }\r\n            }\r\n\r\n            .nous-rejoindre {\r\n                border-top: var(--blue-primary) solid 1px;\r\n                border-left: var(--blue-primary) solid 1px;\r\n                border-bottom: #ff3131 solid 1px;\r\n                border-right: #ff3131 solid 1px;\r\n                border-radius: 5px;\r\n                letter-spacing: normal;\r\n                height: fit-content;\r\n                padding: 0 2rem 0 2rem;\r\n                display: flex;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n                margin-right: 3rem;\r\n\r\n\r\n                &,\r\n                & * {\r\n                    cursor: pointer;\r\n                }\r\n\r\n\r\n                span.point {\r\n                    background-color: var(--blue-primary);\r\n                    border-radius: 50%;\r\n                    height: 12px;\r\n                    width: 12px;\r\n                    margin-right: 10px;\r\n                    margin-top: auto;\r\n                    margin-bottom: auto;\r\n                }\r\n\r\n                p {\r\n                    min-width: 10rem;\r\n                    margin: 0;\r\n                }\r\n\r\n                &:hover {\r\n                    transition: 0.2s;\r\n                    border: var(--blue-primary) solid 1px;\r\n                    color: var(--blue-primary);\r\n\r\n                    span.point {\r\n                        transition: 1.2s;\r\n                        background-color: white;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n        .container-2 {\r\n            // border-top: 1px solid var(--text-color-primary);\r\n            // border-bottom: 1px solid var(--text-color-primary);\r\n            // display: none;\r\n\r\n            nav {\r\n                transition: 0.5s;\r\n                display: flex;\r\n                justify-content: center;\r\n                align-items: center;\r\n\r\n                span {\r\n                    cursor: pointer;\r\n                    display: flex;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n                    height: 3rem;\r\n                    width: auto;\r\n                    background-color: #252629;\r\n                    flex: 1;\r\n                    align-items: center;\r\n                    border-left: 2px solid var(--background-color-primary);\r\n                    border-right: 2px solid var(--background-color-primary);\r\n                    border-radius: 5px;\r\n                    overflow: hidden;\r\n\r\n                    p,\r\n                    a {\r\n                        padding: 50% 0;\r\n                        text-align: center;\r\n                        font-size: 0.9rem;\r\n                        color: white;\r\n                        width: 100%;\r\n                    }\r\n\r\n                    &:hover {\r\n                        background-color: var(--blue-primary);\r\n                    }\r\n                }\r\n\r\n\r\n            }\r\n        }\r\n\r\n        // general header\r\n        .active {\r\n            color: var(--blue-primary);\r\n        }\r\n\r\n    }\r\n\r\n    // content\r\n    .content {\r\n        padding: 0 2.5rem 4rem 2.5rem;\r\n\r\n        section {\r\n            margin-top: 2rem;\r\n            margin-bottom: 6rem;\r\n\r\n            .span-image {\r\n                border-radius: 5px;\r\n            }\r\n        }\r\n    }\r\n\r\n    // footer\r\n    footer {\r\n        padding: 1rem 2rem;\r\n\r\n        .footer-container {\r\n            padding: 2rem 0;\r\n            display: flex;\r\n            flex-wrap: wrap;\r\n\r\n            div {\r\n                margin-right: 6rem;\r\n            }\r\n\r\n            h3 {\r\n                font-size: 1.8rem;\r\n                max-width: 50px;\r\n            }\r\n\r\n            .footer-register {\r\n                flex: 0.4;\r\n\r\n                input {\r\n                    width: 99%;\r\n                    background-color: var(--background-color-general);\r\n                    border: none;\r\n                    border-bottom: var(--input-border-color) solid 1px;\r\n                    font-size: 20px;\r\n                    margin: 3rem 0 0 0;\r\n                    color: var(--text-color-primary);\r\n\r\n                    &:focus {\r\n                        outline: none;\r\n                    }\r\n                }\r\n\r\n                .footer-submit {\r\n                    background-color: var(--blue-primary);\r\n                    padding: .75rem 20rem;\r\n                    border-radius: 15px;\r\n                    margin: 3rem 0 0 0;\r\n                }\r\n            }\r\n\r\n            .footer-coordonnees {\r\n                flex: 0.3;\r\n\r\n                li {\r\n                    margin-bottom: 2rem;\r\n\r\n                    span {\r\n\r\n                        p {\r\n                            margin: 0;\r\n                        }\r\n                    }\r\n                }\r\n\r\n            }\r\n\r\n            .footer-services {\r\n                flex: .3;\r\n\r\n                li {\r\n                    margin-bottom: 0;\r\n                    padding-bottom: 1rem;\r\n                }\r\n            }\r\n\r\n\r\n\r\n        }\r\n\r\n        .footer-separator {\r\n            height: 2px;\r\n            background-color: var(--text-color-primary);\r\n        }\r\n\r\n        .footer-container2 {\r\n            display: flex;\r\n            padding-top: 2rem;\r\n\r\n            .footer-links {\r\n                flex: .4;\r\n                display: flex;\r\n                /* align-items: center; */\r\n                flex-wrap: wrap;\r\n\r\n                p {\r\n                    margin: 0;\r\n                    padding: 0 2rem;\r\n                }\r\n            }\r\n\r\n            .footer-icons {\r\n                flex: .2;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                align-items: center;\r\n\r\n                img {\r\n                    height: 2rem;\r\n                    width: 2rem;\r\n                }\r\n            }\r\n\r\n\r\n            .footer-mention {\r\n                flex: .4;\r\n                text-align: center;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n\r\n\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n}",".point-bleu-avec-trait {\r\n\r\n    /* Style pour le conteneur de point et de trait */\r\n    .point-et-trait {\r\n        height: fit-content;\r\n        display: flex;\r\n        align-items: center;\r\n\r\n        /* Style pour la ligne grise */\r\n        .trait {\r\n            width: 3rem;\r\n            height: 1px;\r\n            background-color: var(--input-border-color);\r\n\r\n            &-column {\r\n                width: 1px;\r\n                height: 3rem;\r\n                margin-top: 1rem;\r\n            }\r\n        }\r\n\r\n        /* Style pour le point bleu */\r\n        .point-bleu {\r\n            min-width: 10px;\r\n            min-height: 10px;\r\n            background-color: var(--blue-primary);\r\n            border-radius: 50%;\r\n            margin-left: 1rem;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n            margin-left: 1rem;\r\n        }\r\n    }\r\n\r\n    .column {\r\n        flex-direction: column;\r\n\r\n        .point-bleu {\r\n            margin-left: 0;\r\n            margin-top: 1rem;\r\n        }\r\n\r\n        &>p {\r\n            // writing-mode: vertical-rl;\r\n            rotate: -90deg;\r\n            margin-top: 2rem;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n.blue-word {\r\n    color: var(--blue-primary);\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3403,25 +4238,36 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "../../node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _assets_styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/styles/styles.scss */ "./assets/styles/styles.scss");
+/* harmony import */ var core_js_modules_web_url_search_params_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.url-search-params.js */ "../../node_modules/core-js/modules/web.url-search-params.js");
+/* harmony import */ var core_js_modules_web_url_search_params_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url_search_params_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_styles_styles_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/styles/styles.scss */ "./assets/styles/styles.scss");
 
 
+
+
+// url params
+const urlParams = new URLSearchParams(window.location.search);
 
 // fonctions
-const removeClass = (elements, classRemoved) => {
-  for (const element of elements) {
-    element.classList.remove(classRemoved);
+const addAndRemoveClass = (selectedElement, allElements, selectedClass) => {
+  for (const element of allElements) {
+    if (element !== selectedElement) {
+      element.classList.remove(selectedClass);
+    } else {
+      element.classList.add(selectedClass);
+    }
   }
 };
 const createHeaderItemBarHTML = function () {
   let html = '';
+  // décompose l'url pour recuperer le nom de la page courante
   for (var _len = arguments.length, elements = new Array(_len), _key = 0; _key < _len; _key++) {
     elements[_key] = arguments[_key];
   }
   for (const element of elements) {
-    const location = window.location.href.split('/');
+    const locationAndParams = window.location.href.split('?')[0];
+    const location = locationAndParams.split('/');
     const currentPage = location[location.length - 1];
-    console.log(currentPage, element.includes(currentPage));
     // verifier si l'item correspond à la page actuelle
     if (currentPage.includes('.html') && element.includes(currentPage)) {
       html += "<span style=\"background-color:var(--blue-primary)\">".concat(element, "</span>");
@@ -3436,20 +4282,16 @@ const createHeaderItemBarHTML = function () {
 // construction de la top-bar
 class TopBar extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = "\n        <header class=\"down-scroll\">\n            <div class=\"container-1\">\n                <div id=\"logo-container\" class=\"logo-container\">\n                </div>\n                <div class=\"menu-container\">\n                    \n                    <p id=\"services\">NOS SERVICES</p>\n                    <p id=\"materiel\">ACHETER DU MATERIEL</p>\n                    <p id=\"entreprise\">L'ENTREPRISE</p>\n                    <p id=\"question\">EN SAVOIR PLUS</p>\n                    \n                </div>\n                <div class=\"nous-rejoindre\">\n                    <span class=\"point\"></span>\n                    <p>CONTACTEZ-NOUS<br>contact@parlonspc.fr</p>\n                </div>\n            </div>\n            <div class=\"container-2\" id=\"container-2\">\n            </div>\n        </header>\n        ";
+    this.innerHTML = "\n        <header class=\"down-scroll\">\n            <div class=\"container-1\">\n                <div id=\"logo-container\" class=\"logo-container\">\n                </div>\n                <div class=\"menu-container\">\n                    \n                    <p id=\"services\">NOS SERVICES</p>\n                    <p id=\"materiel\">ACHETER DU MATERIEL</p>\n                    <p id=\"entreprise\">L'ENTREPRISE</p>\n                    <p id=\"enSavoirPlus\">EN SAVOIR PLUS</p>\n                    \n                </div>\n                <div class=\"nous-rejoindre\">\n                    <span class=\"point\"></span>\n                    <p>CONTACTEZ-NOUS<br>contact@parlonspc.fr</p>\n                </div>\n            </div>\n            <div class=\"container-2\" id=\"container-2\">\n            </div>\n        </header>\n        ";
   }
 }
 
 // balyse pour la top-bar
 customElements.define('top-bar', TopBar);
-{/* <img id="header-logo" src="assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png"
-    alt="logo de l'entreprise ParlonsPC"> */}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// trouver comment faire pour que l'image de la top-bar s'affiche quand je met le code sur github
 
 // une fois la page chargée
 window.addEventListener('DOMContentLoaded', event => {
+  var _urlParams$get;
   // met l'image dans la top-bar
   const headerLogoElement = document.createElement('img');
   headerLogoElement.id = 'header-logo';
@@ -3485,62 +4327,50 @@ window.addEventListener('DOMContentLoaded', event => {
     lastScrollY = scrollY;
   });
 
-  // construction de la barre d'items
-  const servicesElement = document.getElementById('services');
-  const materielElement = document.getElementById('materiel');
-  const entrepriseElement = document.getElementById('entreprise');
-  const questionElement = document.getElementById('question');
+  // menu de la top-bar et bar d'items
+  const menuMap = {
+    'services': ['<a>Audit</a>', '<a href="cybersecurite.html">Cybersécurité</a>', '<a href="infogerance.html">Infogérance</a>', '<a href="cloud_computing.html">Cloud Computing</a>', '<a href="support.html">Support informatique</a>', '<a>Maintenance informatique</a>', '<a>Site internet</a>', '<a>Téléphonie et Internet</a>'],
+    'materiel': ['<a>Mac OS</a>', '<a>Windows</a>', '<a>Configuration sur Mesure</a>', '<a>Reconditionné</a>', '<a>Service après-vente et livraison</a>'],
+    'entreprise': ['<p>Nos Valeurs</p>', '<p>Fonctionnement</p>', '<p>Témoignages de nos clients</p>', '<p>Victor, le dirigeant</p>', '<p>Notre brochure</p>'],
+    'enSavoirPlus': ['<a>Nous poser une question</a>', '<a>Prendre un Rendez-Vous</a>', '<p>Nous suivre sur les réseaux</p>', '<p>Coordonnées</p>']
+  };
   const itemsBarElement = document.getElementById('container-2');
+  const menuContainerAllElements = document.querySelectorAll('.menu-container p');
+  // menu de la top-bar selectionné (envoyé dans l'url)
+  const selectedHeaderMenuId = (_urlParams$get = urlParams.get('menu')) !== null && _urlParams$get !== void 0 ? _urlParams$get : null;
+  console.log(selectedHeaderMenuId);
+  if (selectedHeaderMenuId) {
+    const selectedMenu = document.getElementById(selectedHeaderMenuId);
+    selectedMenu.classList.add('active');
+    itemsBarElement.innerHTML = createHeaderItemBarHTML(...menuMap[selectedHeaderMenuId]);
+  } else {
+    const defaultMenu = document.getElementById('services');
+    defaultMenu.classList.add('active');
+    itemsBarElement.innerHTML = createHeaderItemBarHTML(...menuMap['services']);
+  }
 
-  // active par default dans la bar d'items:
-  servicesElement.classList.add('active');
-  itemsBarElement.innerHTML = createHeaderItemBarHTML('<a id="audit">Audit</a>', '<a id ="cybersecurite" href="cybersecurite.html">Cybersécurité</a>', '<a id="infogerance" href="infogerance.html">Infogérance</a>', '<a id="cloud-computing" href="cloud_computing.html">Cloud Computing</a>', '<a>Maintenance informatique</a>', '<a>Site internet</a>', '<a>Téléphonie et Internet</a>', '<a>Support informatique</a>');
+  // click sur les elements du menu de la top-bar
+  let currentClass;
 
-  // top-bar menu: services
-  servicesElement.addEventListener('click', event => {
-    if (servicesElement.classList.contains('active')) {
-      itemsBarElement.innerHTML = null;
-      removeClass([event.currentTarget], 'active');
-    } else {
-      removeClass([materielElement, entrepriseElement, questionElement], 'active');
-      servicesElement.className = 'active';
-      itemsBarElement.innerHTML = createHeaderItemBarHTML('<a>Audit</a>', '<a href="cybersecurite.html">Cybersécurité</a>', '<a href="infogerance.html">Infogérance</a>', '<a id="cloud-computing" href="cloud_computing.html">Cloud Computing</a>', '<a>Maintenance informatique</a>', '<a>Site internet</a>', '<a>Téléphonie et Internet</a>', '<a>Support informatique</a>');
-    }
-  });
+  // pour chaque elements du menu
+  menuContainerAllElements.forEach(element => {
+    // ajoute un écouteur d'evenement
+    element.addEventListener('click', event => {
+      // menu clické
+      const clickedElement = event.currentTarget;
+      addAndRemoveClass(clickedElement, menuContainerAllElements, 'active');
 
-  // top-bar menu: acheter du materiel
-  materielElement.addEventListener('click', event => {
-    if (materielElement.classList.contains('active')) {
-      itemsBarElement.innerHTML = null;
-      removeClass([event.currentTarget], 'active');
-    } else {
-      removeClass([servicesElement, entrepriseElement, questionElement], 'active');
-      materielElement.classList.add('active');
-      itemsBarElement.innerHTML = createHeaderItemBarHTML('<a>Mac OS</a>', '<a>Windows</a>', '<a>Configuration sur Mesure</a>', '<a>Reconditionné</a>', '<a>Service après-vente et livraison</a>');
-    }
-  });
-  // top-bar menu: l'entreprise
-  entrepriseElement.addEventListener('click', event => {
-    if (entrepriseElement.classList.contains('active')) {
-      itemsBarElement.innerHTML = null;
-      removeClass([event.currentTarget], 'active');
-    } else {
-      removeClass([servicesElement, materielElement, questionElement], 'active');
-      entrepriseElement.classList.add('active');
-      itemsBarElement.innerHTML = createHeaderItemBarHTML('<p>Nos Valeurs</p>', '<p>Fonctionnement</p>', '<p>Témoignages de nos clients</p>', '<p>Victor, le dirigeant</p>', '<p>Notre brochure</p>');
-    }
-  });
-  // top-bar menu: en savoir plus
-  questionElement.addEventListener('click', event => {
-    if (questionElement.classList.contains('active')) {
-      itemsBarElement.innerHTML = null;
-      removeClass([event.currentTarget], 'active');
-    } else {
-      // enleve la class 'active' aux autres elements
-      removeClass([servicesElement, materielElement, entrepriseElement], 'active');
-      questionElement.classList.add('active');
-      itemsBarElement.innerHTML = createHeaderItemBarHTML('<a>Nous poser une question</a>', '<a>Prendre un Rendez-Vous</a>', '<p>Nous suivre sur les réseaux</p>', '<p>Coordonnées</p>');
-    }
+      // construction de la barre d'items
+      itemsBarElement.innerHTML = createHeaderItemBarHTML(...menuMap[clickedElement.id]);
+
+      // ajoute l'id du menu selectionné dans l'url
+      const itemsElement = itemsBarElement.querySelectorAll('a');
+      if (itemsElement) {
+        itemsElement.forEach(element => {
+          element.href += "?menu=".concat(clickedElement.id);
+        });
+      }
+    });
   });
 });
 
