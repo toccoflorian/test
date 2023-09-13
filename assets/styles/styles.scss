@@ -17,6 +17,12 @@
     font-weight: normal;
     cursor: default;
 
+    .blur {
+        transition: 0.5s;
+        background-color: var(--background-color-primary-opacity);
+        filter: blur(10px);
+
+    }
 
     .content {
 
@@ -82,17 +88,98 @@ body {
     margin: 0;
     display: grid;
     background-color: var(--background-color-primary);
-    color: white;
+    color: rgba(255, 255, 255, 0.75);
 
 
 
     // header
-
-
     header {
         z-index: 1;
-        height: 120px;
+        // min-height: 75px;
         color: white;
+        position: absolute;
+        width: 100%;
+
+        &.open {
+
+
+            div {
+                background-color: black;
+                z-index: 1;
+
+                transform: perspective();
+                transition: 1s;
+
+            }
+
+            .container-1 {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+            }
+
+            .container-2 {
+                height: fit-content;
+                width: 100%;
+                padding: 2.5rem 5rem;
+                position: absolute;
+                display: flex;
+
+                .sous-menu {
+                    flex: 1;
+                    padding: 1rem 2rem;
+
+                    nav {
+
+                        display: flex;
+                        flex-direction: column;
+
+                        span {
+                            padding: 1rem 2rem;
+                            width: 100%;
+                            cursor: pointer;
+
+                            * {
+                                color: white;
+                                margin: 0 0;
+                                padding: 0 0;
+
+                            }
+
+                            &:hover {
+                                * {
+
+                                    color: var(--blue-primary);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .description {
+                    padding: 1rem 2rem;
+                    flex: 3;
+
+                    img {
+                        height: 15rem;
+                        width: auto;
+                        color: var(--blue-primary);
+                    }
+
+                    .blue-word {
+                        font-size: 2.5rem;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                        max-width: 80%;
+                        color: rgba(255, 255, 255, 0.801);
+                    }
+                }
+
+
+
+            }
+        }
 
         &.down-scroll {
             // apparition/disparition de la top-bar
@@ -116,10 +203,9 @@ body {
 
             img {
                 cursor: pointer;
-                height: 5rem;
-                height: 5rem;
-                margin-top: 1rem;
-                margin-left: 4rem;
+                height: 2.75rem;
+                margin-top: 0.8rem;
+                margin-left: 3rem;
                 transition: transform 0.3s;
 
                 &:hover {
@@ -143,6 +229,7 @@ body {
                     padding: 0 15px;
                     margin: .5rem 0;
                     cursor: pointer;
+                    font-size: 0.65rem;
 
                     a {
                         margin: 0;
@@ -188,8 +275,9 @@ body {
                 }
 
                 p {
-                    min-width: 10rem;
+                    min-width: 8rem;
                     margin: 0;
+                    font-size: 0.65rem;
                 }
 
                 &:hover {
@@ -205,49 +293,7 @@ body {
             }
         }
 
-        .container-2 {
-            // border-top: 1px solid var(--text-color-primary);
-            // border-bottom: 1px solid var(--text-color-primary);
-            // display: none;
 
-            nav {
-                transition: 0.5s;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                span {
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 3rem;
-                    width: auto;
-                    background-color: #252629;
-                    flex: 1;
-                    align-items: center;
-                    border-left: 2px solid var(--background-color-primary);
-                    border-right: 2px solid var(--background-color-primary);
-                    border-radius: 5px;
-                    overflow: hidden;
-
-                    p,
-                    a {
-                        padding: 50% 0;
-                        text-align: center;
-                        font-size: 0.9rem;
-                        color: white;
-                        width: 100%;
-                    }
-
-                    &:hover {
-                        background-color: var(--blue-primary);
-                    }
-                }
-
-
-            }
-        }
 
         // general header
         .active {
@@ -258,7 +304,9 @@ body {
 
     // content
     .content {
-        padding: 0 2.5rem 4rem 2.5rem;
+        padding: 0 1rem 4rem 1rem;
+
+
 
         section {
             margin-top: 2rem;
