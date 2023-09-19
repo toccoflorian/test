@@ -3613,7 +3613,7 @@ const createHeaderSousMenuHTML = elements => {
     sousMenuTitreContainerElement.classList.add('titre-container');
     iconContainerDivElement.classList.add("icon-container");
     spanIconElement.classList.add('span-icon');
-    spanIconElement.style.background = "url(../assets/icons/".concat(element.icon, ") center/contain no-repeat");
+    spanIconElement.style.background = "url(assets/icons/".concat(element.icon, ") center/contain no-repeat");
     sousMenuTitreTextElement.innerHTML = element.text;
     const navElement = document.createElement('nav');
     element.nav.forEach(lien => {
