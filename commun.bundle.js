@@ -3635,7 +3635,7 @@ const createHeaderDescriptionHTML = (description, text) => {
   descriptionContainerElement.innerHTML = null;
   const descriptionImageElement = document.createElement('span');
   descriptionImageElement.classList.add('span-image');
-  descriptionImageElement.style.background = "url(../assets/images/".concat(description.image, ") center/contain no-repeat");
+  descriptionImageElement.style.background = "url(assets/images/".concat(description.image, ") center/contain no-repeat");
   const descriptionTitreElement = document.createElement('p');
   descriptionTitreElement.classList.add("description-titre");
   descriptionTitreElement.textContent = text;
@@ -3657,22 +3657,6 @@ class TopBar extends HTMLElement {
   }
 }
 
-// page de chargement
-// window.addEventListener('load', event => {
-//     const loadingScreenElement = document.getElementById('loading-screen');
-//     setTimeout(() => {
-//         loadingScreenElement.style.transition = "opacity 0.5s ease-out";
-//         loadingScreenElement.style.transform = "matrix3D()"
-//         loadingScreenElement.style.opacity = '0';
-
-//         // Retirez l'écran de chargement du DOM après une transition
-//         setTimeout(() => {
-//             loadingScreenElement.remove();
-//         }, 500);
-//     }, 50000)
-
-// });
-
 // balyse pour la top-bar
 customElements.define('top-bar', TopBar);
 
@@ -3681,7 +3665,7 @@ window.addEventListener('DOMContentLoaded', event => {
   // met l'image dans la top-bar
   const headerLogoElement = document.createElement('img');
   headerLogoElement.id = 'header-logo';
-  headerLogoElement.src = '../assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png';
+  headerLogoElement.src = 'assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png';
   headerLogoElement.alt = 'logo de l\'entreprise ParlonsPC';
   const logoContainerElement = document.getElementById('logo-container');
   logoContainerElement.appendChild(headerLogoElement);
@@ -3898,7 +3882,7 @@ window.addEventListener('DOMContentLoaded', event => {
   // construction du pied de page
   class Footer extends HTMLElement {
     connectedCallback() {
-      this.innerHTML = "\n            <footer>\n    <div class=\"footer-container\">\n        <div class=\"footer-register\">\n            <h3>ParlonsPC</h3>\n            <p>ParlonsPC est une entreprise informatique comprenant un r\xE9seau de partenaires informatique certifi\xE9s\n                sur le territoire fran\xE7ais.</p>\n            <input type=\"text\" placeholder=\"Votre Email*\"><br>\n                <p class=\"footer-submit\">S'incrire</p>\n            </div>\n                <div class=\"footer-coordonnees\">\n\n                    <h3>Nos Coordonn\xE9es</h3>\n                    <ul>\n                        <li><span>\n                            <p>T\xE9l\xE9phone :</p>\n                            <p>+33 (0)7 64 36 89 08</p>\n                        </span></li>\n                        <li><span>\n                            <p>Email :</p>\n                            <p>contact@parlonspc.fr</p>\n                        </span></li>\n                        <li><span>\n                            <p>Adresse :</p>\n                            <p>2805 Avenue Etienne Mehul</p>\n                            <p>34070 Montpellier</p>\n                        </span></li>\n                    </ul>\n                </div>\n                <div class=\"footer-services\">\n                    <h3>Nos Services</h3>\n                    <ul>\n                        <li>Audit Informatique</li>\n                        <li>Maintenance Informatique</li>\n                        <li>Cybers\xE9curit\xE9</li>\n                        <li>Conception de site internet</li>\n                        <li>Vente de mat\xE9riel</li>\n                        <li>T\xE9l\xE9phonie et Internet</li>\n                        <li>Support Informatique</li>\n                        <li>Maintenance Informatique</li>\n                        <li>Cloud Computing</li>\n                    </ul>\n                </div>\n        </div>\n        <div class=\"footer-separator\"></div>\n        <div class=\"footer-container2\">\n            <div class=\"footer-links\">\n                <p>Acceuil</p>\n                <p>Mentions L\xE9gales</p>\n                <p>Conditions d'utilisation</p>\n                <p>Charte de protection des donn\xE9es</p>\n            </div>\n            <div class=\"footer-icons\">\n                <img src=\"../assets/icons/linkedin_circle.svg\" alt=\"Icon de linkedin avec cercle\">\n                    <img src=\"../assets/icons/Facebook_circle.svg\" alt=\"Icon de facbook avec cercle\">\n                        <img src=\" ../assets/icons/Instagram_circle.svg\" alt=\"Icon de instagram avec cercle\">\n                        </div>\n                        <div class=\"footer-mention\">Copyright \xA9ParlonsPC Tous droits r\xE9serv\xE9s.</div>\n                    </div>\n                </footer>\n                ";
+      this.innerHTML = "\n            <footer>\n    <div class=\"footer-container\">\n        <div class=\"footer-register\">\n            <h3>ParlonsPC</h3>\n            <p>ParlonsPC est une entreprise informatique comprenant un r\xE9seau de partenaires informatique certifi\xE9s\n                sur le territoire fran\xE7ais.</p>\n            <input type=\"text\" placeholder=\"Votre Email*\"><br>\n                <p class=\"footer-submit\">S'incrire</p>\n            </div>\n                <div class=\"footer-coordonnees\">\n\n                    <h3>Nos Coordonn\xE9es</h3>\n                    <ul>\n                        <li><span>\n                            <p>T\xE9l\xE9phone :</p>\n                            <p>+33 (0)7 64 36 89 08</p>\n                        </span></li>\n                        <li><span>\n                            <p>Email :</p>\n                            <p>contact@parlonspc.fr</p>\n                        </span></li>\n                        <li><span>\n                            <p>Adresse :</p>\n                            <p>2805 Avenue Etienne Mehul</p>\n                            <p>34070 Montpellier</p>\n                        </span></li>\n                    </ul>\n                </div>\n                <div class=\"footer-services\">\n                    <h3>Nos Services</h3>\n                    <ul>\n                        <li>Audit Informatique</li>\n                        <li>Maintenance Informatique</li>\n                        <li>Cybers\xE9curit\xE9</li>\n                        <li>Conception de site internet</li>\n                        <li>Vente de mat\xE9riel</li>\n                        <li>T\xE9l\xE9phonie et Internet</li>\n                        <li>Support Informatique</li>\n                        <li>Maintenance Informatique</li>\n                        <li>Cloud Computing</li>\n                    </ul>\n                </div>\n        </div>\n        <div class=\"footer-separator\"></div>\n        <div class=\"footer-container2\">\n            <div class=\"footer-links\">\n                <p>Acceuil</p>\n                <p>Mentions L\xE9gales</p>\n                <p>Conditions d'utilisation</p>\n                <p>Charte de protection des donn\xE9es</p>\n            </div>\n            <div class=\"footer-icons\">\n                <img src=\"assets/icons/linkedin_circle.svg\" alt=\"Icon de linkedin avec cercle\">\n                    <img src=\"assets/icons/Facebook_circle.svg\" alt=\"Icon de facbook avec cercle\">\n                        <img src=\" assets/icons/Instagram_circle.svg\" alt=\"Icon de instagram avec cercle\">\n                        </div>\n                        <div class=\"footer-mention\">Copyright \xA9ParlonsPC Tous droits r\xE9serv\xE9s.</div>\n                    </div>\n                </footer>\n                ";
     }
   }
 
