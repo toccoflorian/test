@@ -2,208 +2,112 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/index.scss":
-/*!*************************************************************************************************************!*\
-  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************/
+/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/avis-clients/avis-clients.scss":
+/*!*********************************************************************************************************************************!*\
+  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/avis-clients/avis-clients.scss ***!
+  \*********************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/Sll3.jpg */ "./assets/images/Sll3.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/victor.png */ "./assets/images/victor.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/icons/animation1.svg */ "./assets/icons/animation1.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png */ "./assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../assets/icons/qote.svg */ "./assets/icons/qote.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../assets/icons/star.svg */ "./assets/icons/star.svg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
-var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
-var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.content .section-1 {
-  display: flex;
+___CSS_LOADER_EXPORT___.push([module.id, `.content .point-bleu-avec-trait {
+  margin-top: 4rem;
+}
+.content .point-bleu-avec-trait .point-et-trait {
   justify-content: center;
 }
-.content .section-1 > div {
-  height: 35rem;
+.content h1 {
+  margin-top: 0;
 }
-.content .section-1 .section1-c1 {
-  flex: 1;
+.content .section-1 .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-.content .section-1 .section1-c1 .icons {
-  height: 50%;
+.content .section-1 .container .avis {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-}
-.content .section-1 .section1-c1 .icons img {
-  cursor: pointer;
-  height: 2.5rem;
-  width: 2.5rem;
-  transition: 0.3s;
-}
-.content .section-1 .section1-c1 .icons img:hover {
-  transform: scale(1.15);
-}
-.content .section-1 .section1-c1 .defiler {
-  margin-top: auto;
-}
-.content .section-1 .section1-c2 {
-  flex: 10;
-  padding-left: 2rem;
-  text-align: center;
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center/cover no-repeat;
+  background-color: #252629;
+  max-width: 2000px;
+  width: 20rem;
+  margin: 2.5rem 3rem;
+  padding: 2rem;
   border-radius: 5px;
-  height: 35rem;
-  width: 100%;
-  transition: transform 0.3s;
-  overflow: initial;
-  display: block;
 }
-.content .section-1 .section1-c2 h1 {
-  text-align: left;
-  margin: 0;
+.content .section-1 .container .avis[data-theme=light] {
+  background-color: rgb(78, 76, 76);
 }
-.content .section-1 .section1-c2:hover {
-  transform: scale(1.01);
-}
-.content .section-2 .section2-container {
-  display: flex;
-}
-.content .section-2 .section2-container .mot-du-dirigeant {
-  flex: 6;
-  padding: 0 2rem;
-}
-.content .section-2 .section2-container .mot-du-dirigeant h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 0;
-  text-align: center;
-}
-.content .section-2 .section2-container .mot-du-dirigeant p {
-  text-align: left;
-}
-.content .section-2 .section2-container .victor {
-  flex: 4;
-  border-left: 1px solid var(--blue-primary);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 4rem;
-}
-.content .section-2 .section2-container .victor .image {
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center no-repeat;
-  height: 25rem;
-  width: 25rem;
-}
-.content .section-2 .section2-container .victor .prendre-rdv {
-  padding: 4rem;
-  text-align: center;
-}
-.content .section-2 .section2-container .victor .prendre-rdv .sous-titre {
-  color: var(--blue-primary);
-}
-.content .section-2 .section2-container .victor .prendre-rdv div {
-  min-width: max-content;
-  background-color: #F4F4F4;
-  padding: 5px 5px;
-  width: fit-content;
-  border-radius: 3px;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-}
-.content .section-2 .section2-container .victor .prendre-rdv div span {
+.content .section-1 .container .avis .infos {
   display: flex;
   align-items: center;
-  border: 2px solid var(--background-color-primary);
-  border-radius: 3px;
 }
-.content .section-2 .section2-container .victor .prendre-rdv div span p {
-  margin: 0;
-  padding: 0.6rem 0.5rem 0.6rem 2rem;
-  color: var(--background-color-primary);
-}
-.content .section-2 .section2-container .victor .prendre-rdv div span img {
-  height: 1.2rem;
-  width: 1.2rem;
-  padding-right: 2rem;
-}
-.content .section-3 {
-  text-align: center;
-  width: 100%;
-}
-.content .section-3 h1 {
-  max-width: 70%;
-  margin: 0 auto 0 auto;
-}
-.content .section-3 p {
-  width: 80%;
-  margin: 5rem auto 5rem auto;
-}
-.content .section-3 .span-animation {
-  margin-top: 3rem;
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center/cover no-repeat;
-  height: 30rem;
+.content .section-1 .container .avis .infos .span-image {
+  flex: 1;
+  height: 6.35rem;
   width: 100%;
   display: block;
-  opacity: 0.75;
-  filter: blur(1px);
+  border-radius: 50%;
+  overflow: visible;
 }
-.content .section-3 .span-image {
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_3___}) center/contain no-repeat;
-  display: block;
-  height: 20rem;
-  width: 50%;
-  position: absolute;
-  margin-left: 45%;
-  margin-top: -32rem;
-  opacity: 0.75;
+.content .section-1 .container .avis .infos p {
+  flex: 2;
+  display: f;
+  font-size: 0.75rem;
+  padding-left: 1rem;
 }
-.content .section-4 {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-top: 8rem;
+.content .section-1 .container .avis .infos p.en-tete {
+  font-size: 1.2rem;
 }
-.content .section-4 .container {
-  height: 340px;
-  width: 340px;
-  padding-bottom: 3.5rem;
-  margin-top: 5rem;
-  margin-right: 5rem;
-  display: flex;
+.content .section-1 .container .avis p {
+  text-align: left;
+  font-size: 0.75rem;
 }
-.content .section-4 .container .span-image {
+.content .section-1 .container .avis p .span-icon {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) no-repeat;
   background-size: contain;
-  min-width: 5rem;
-  margin-right: 1rem;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  margin-left: -1.25rem;
+  margin-bottom: -0.75rem;
 }
-.content .section-4 .container h3 {
-  font-size: 2rem;
-  margin: 0;
-  margin-bottom: 1rem;
-  line-height: 2rem;
+.content .section-1 .container .avis p .span-icon.end {
+  margin-left: auto;
+  margin-top: -1rem;
+  margin-right: -1.25rem;
 }
-.content .section-4 .container p {
-  text-align: left;
-}`, "",{"version":3,"sources":["webpack://./src/index.scss"],"names":[],"mappings":"AAGI;EACI,aAAA;EACA,uBAAA;AAFR;AAIQ;EACI,aAAA;AAFZ;AAKQ;EACI,OAAA;EACA,aAAA;EACA,sBAAA;AAHZ;AAKY;EACI,WAAA;EACA,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,mBAAA;AAHhB;AAKgB;EACI,eAAA;EACA,cAAA;EACA,aAAA;EACA,gBAAA;AAHpB;AAKoB;EACI,sBAAA;AAHxB;AAQY;EACI,gBAAA;AANhB;AAYQ;EACI,QAAA;EACA,kBAAA;EACA,kBAAA;EAEA,0EAAA;EACA,kBAAA;EAQA,aAAA;EACA,WAAA;EACA,0BAAA;EACA,iBAAA;EACA,cAAA;AAlBZ;AASY;EACI,gBAAA;EACA,SAAA;AAPhB;AAgBY;EACI,sBAAA;AAdhB;AA0CQ;EACI,aAAA;AAxCZ;AA0CY;EACI,OAAA;EACA,eAAA;AAxChB;AA0CgB;EACI,eAAA;EACA,gBAAA;EACA,aAAA;EACA,kBAAA;AAxCpB;AA2CgB;EACI,gBAAA;AAzCpB;AA6CY;EACI,OAAA;EACA,0CAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AA3ChB;AA6CgB;EACI,oEAAA;EAEA,aAAA;EACA,YAAA;AA5CpB;AA+CgB;EACI,aAAA;EACA,kBAAA;AA7CpB;AA+CoB;EACI,0BAAA;AA7CxB;AAiDoB;EACI,sBAAA;EACA,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,kBAAA;EACA,iBAAA;EACA,kBAAA;EACA,eAAA;AA/CxB;AAiDwB;EACI,aAAA;EACA,mBAAA;EACA,iDAAA;EACA,kBAAA;AA/C5B;AAiD4B;EACI,SAAA;EAEA,kCAAA;EACA,sCAAA;AAhDhC;AAmD4B;EACI,cAAA;EACA,aAAA;EACA,mBAAA;AAjDhC;AA2DI;EACI,kBAAA;EACA,WAAA;AAzDR;AA2DQ;EACI,cAAA;EACA,qBAAA;AAzDZ;AA4DQ;EACI,UAAA;EACA,2BAAA;AA1DZ;AA6DQ;EACI,gBAAA;EACA,0EAAA;EACA,aAAA;EACA,WAAA;EACA,cAAA;EACA,aAAA;EACA,iBAAA;AA3DZ;AAiEQ;EACI,4EAAA;EACA,cAAA;EACA,aAAA;EACA,UAAA;EACA,kBAAA;EACA,gBAAA;EACA,kBAAA;EACA,aAAA;AA/DZ;AAoEI;EACI,aAAA;EACA,6BAAA;EACA,eAAA;EACA,iBAAA;AAlER;AAoEQ;EACI,aAAA;EACA,YAAA;EACA,sBAAA;EACA,gBAAA;EACA,kBAAA;EACA,aAAA;AAlEZ;AAoEY;EACI,wBAAA;EACA,eAAA;EACA,kBAAA;AAlEhB;AAsEY;EACI,eAAA;EACA,SAAA;EACA,mBAAA;EACA,iBAAA;AApEhB;AAuEY;EACI,gBAAA;AArEhB","sourcesContent":[".content {\r\n\r\n    // section 1\r\n    .section-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        &>div {\r\n            height: 35rem;\r\n        }\r\n\r\n        .section1-c1 {\r\n            flex: 1;\r\n            display: flex;\r\n            flex-direction: column;\r\n\r\n            .icons {\r\n                height: 50%;\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: space-between;\r\n                align-items: center;\r\n\r\n                img {\r\n                    cursor: pointer;\r\n                    height: 2.5rem;\r\n                    width: 2.5rem;\r\n                    transition: 0.3s;\r\n\r\n                    &:hover {\r\n                        transform: scale(1.15);\r\n                    }\r\n                }\r\n            }\r\n\r\n            .defiler {\r\n                margin-top: auto;\r\n            }\r\n\r\n\r\n        }\r\n\r\n        .section1-c2 {\r\n            flex: 10;\r\n            padding-left: 2rem;\r\n            text-align: center;\r\n\r\n            background: url('../assets/images/Sll3.jpg') center/cover no-repeat;\r\n            border-radius: 5px;\r\n\r\n\r\n            h1 {\r\n                text-align: left;\r\n                margin: 0;\r\n            }\r\n\r\n            height: 35rem;\r\n            width: 100%;\r\n            transition: transform 0.3s;\r\n            overflow: initial;\r\n            display: block;\r\n\r\n            &:hover {\r\n                transform: scale(1.01);\r\n            }\r\n        }\r\n\r\n        // .section1-c2 {\r\n        //     flex: 4;\r\n        //     display: flex;\r\n        //     flex-direction: column;\r\n        //     justify-content: flex-start;\r\n\r\n        //     p {\r\n        //         margin-top: 0;\r\n        //         margin-bottom: 0;\r\n        //     }\r\n        // }\r\n\r\n        // .section1-c3 {\r\n        //     flex: 6;\r\n        //     background: url('../assets/images/Sll-1536x1347.jpg') center/cover no-repeat;\r\n        //     opacity: .6;\r\n        // }\r\n\r\n\r\n    }\r\n\r\n\r\n    // section 2\r\n    .section-2 {\r\n        .section2-container {\r\n            display: flex;\r\n\r\n            .mot-du-dirigeant {\r\n                flex: 6;\r\n                padding: 0 2rem;\r\n\r\n                h2 {\r\n                    font-size: 3rem;\r\n                    font-weight: 700;\r\n                    margin-top: 0;\r\n                    text-align: center;\r\n                }\r\n\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n\r\n            .victor {\r\n                flex: 4;\r\n                border-left: 1px solid var(--blue-primary);\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: center;\r\n                align-items: center;\r\n                padding-left: 4rem;\r\n\r\n                .image {\r\n                    background: url('../assets/images/victor.png') center no-repeat;\r\n\r\n                    height: 25rem;\r\n                    width: 25rem;\r\n                }\r\n\r\n                .prendre-rdv {\r\n                    padding: 4rem;\r\n                    text-align: center;\r\n\r\n                    .sous-titre {\r\n                        color: var(--blue-primary);\r\n\r\n                    }\r\n\r\n                    div {\r\n                        min-width: max-content;\r\n                        background-color: #F4F4F4;\r\n                        padding: 5px 5px;\r\n                        width: fit-content;\r\n                        border-radius: 3px;\r\n                        margin-left: auto;\r\n                        margin-right: auto;\r\n                        cursor: pointer;\r\n\r\n                        span {\r\n                            display: flex;\r\n                            align-items: center;\r\n                            border: 2px solid var(--background-color-primary);\r\n                            border-radius: 3px;\r\n\r\n                            p {\r\n                                margin: 0;\r\n\r\n                                padding: .6rem .5rem .6rem 2rem;\r\n                                color: var(--background-color-primary);\r\n                            }\r\n\r\n                            img {\r\n                                height: 1.2rem;\r\n                                width: 1.2rem;\r\n                                padding-right: 2rem;\r\n                            }\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 3\r\n    .section-3 {\r\n        text-align: center;\r\n        width: 100%;\r\n\r\n        h1 {\r\n            max-width: 70%;\r\n            margin: 0 auto 0 auto;\r\n        }\r\n\r\n        p {\r\n            width: 80%;\r\n            margin: 5rem auto 5rem auto;\r\n        }\r\n\r\n        .span-animation {\r\n            margin-top: 3rem;\r\n            background: url(\"../assets/icons/animation1.svg\") center/cover no-repeat;\r\n            height: 30rem;\r\n            width: 100%;\r\n            display: block;\r\n            opacity: 0.75;\r\n            filter: blur(1px);\r\n            // position: absolute;\r\n\r\n\r\n        }\r\n\r\n        .span-image {\r\n            background: url(\"../assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png\") center/contain no-repeat;\r\n            display: block;\r\n            height: 20rem;\r\n            width: 50%;\r\n            position: absolute;\r\n            margin-left: 45%;\r\n            margin-top: -32rem;\r\n            opacity: 0.75;\r\n        }\r\n    }\r\n\r\n    // section 4\r\n    .section-4 {\r\n        display: flex;\r\n        justify-content: space-around;\r\n        flex-wrap: wrap;\r\n        padding-top: 8rem;\r\n\r\n        .container {\r\n            height: 340px;\r\n            width: 340px;\r\n            padding-bottom: 3.5rem;\r\n            margin-top: 5rem;\r\n            margin-right: 5rem;\r\n            display: flex;\r\n\r\n            .span-image {\r\n                background-size: contain;\r\n                min-width: 5rem;\r\n                margin-right: 1rem;\r\n\r\n            }\r\n\r\n            h3 {\r\n                font-size: 2rem;\r\n                margin: 0;\r\n                margin-bottom: 1rem;\r\n                line-height: 2rem;\r\n            }\r\n\r\n            p {\r\n                text-align: left;\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
+.content .section-1 .container .avis .stars-container {
+  display: flex;
+  justify-content: end;
+  margin-top: 3rem;
+}
+.content .section-1 .container .avis .stars-container .span-star {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) no-repeat;
+  background-size: contain;
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.25rem;
+}`, "",{"version":3,"sources":["webpack://./src/avis-clients/avis-clients.scss"],"names":[],"mappings":"AACI;EACI,gBAAA;AAAR;AAGQ;EACI,uBAAA;AADZ;AAKI;EACI,aAAA;AAHR;AASQ;EACI,aAAA;EACA,6BAAA;EACA,eAAA;AAPZ;AASY;EACI,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,yBAAA;EACA,iBAAA;EACA,YAAA;EACA,mBAAA;EACA,aAAA;EACA,kBAAA;AAPhB;AASgB;EACI,iCAAA;AAPpB;AAYgB;EACI,aAAA;EACA,mBAAA;AAVpB;AAYoB;EACI,OAAA;EACA,eAAA;EACA,WAAA;EACA,cAAA;EACA,kBAAA;EAEA,iBAAA;AAXxB;AAcoB;EACI,OAAA;EAEA,UAAA;EACA,kBAAA;EACA,kBAAA;AAbxB;AAewB;EACI,iBAAA;AAb5B;AAoBgB;EACI,gBAAA;EACA,kBAAA;AAlBpB;AAoBoB;EACI,6DAAA;EACA,wBAAA;EACA,cAAA;EACA,YAAA;EACA,WAAA;EACA,qBAAA;EACA,uBAAA;AAlBxB;AAoBwB;EACI,iBAAA;EACA,iBAAA;EACA,sBAAA;AAlB5B;AAwBgB;EACI,aAAA;EACA,oBAAA;EACA,gBAAA;AAtBpB;AAwBoB;EACI,6DAAA;EACA,wBAAA;EACA,cAAA;EACA,cAAA;EACA,aAAA;EACA,qBAAA;AAtBxB","sourcesContent":[".content {\r\n    .point-bleu-avec-trait {\r\n        margin-top: 4rem;\r\n        // padding-right: 5%;\r\n\r\n        .point-et-trait {\r\n            justify-content: center;\r\n        }\r\n    }\r\n\r\n    h1 {\r\n        margin-top: 0;\r\n    }\r\n\r\n    .section-1 {\r\n\r\n\r\n        .container {\r\n            display: flex;\r\n            justify-content: space-evenly;\r\n            flex-wrap: wrap;\r\n\r\n            .avis {\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: space-between;\r\n                background-color: #252629;\r\n                max-width: 2000px;\r\n                width: 20rem;\r\n                margin: 2.5rem 3rem;\r\n                padding: 2rem;\r\n                border-radius: 5px;\r\n\r\n                &[data-theme='light'] {\r\n                    background-color: rgb(78, 76, 76);\r\n\r\n\r\n                }\r\n\r\n                .infos {\r\n                    display: flex;\r\n                    align-items: center;\r\n\r\n                    .span-image {\r\n                        flex: 1;\r\n                        height: 6.35rem;\r\n                        width: 100%;\r\n                        display: block;\r\n                        border-radius: 50%;\r\n                        // margin-right: 2rem;\r\n                        overflow: visible;\r\n                    }\r\n\r\n                    p {\r\n                        flex: 2;\r\n\r\n                        display: f;\r\n                        font-size: 0.75rem;\r\n                        padding-left: 1rem;\r\n\r\n                        &.en-tete {\r\n                            font-size: 1.2rem;\r\n                        }\r\n\r\n\r\n                    }\r\n                }\r\n\r\n                p {\r\n                    text-align: left;\r\n                    font-size: 0.75rem;\r\n\r\n                    .span-icon {\r\n                        background: url('../../assets/icons/qote.svg') no-repeat;\r\n                        background-size: contain;\r\n                        display: block;\r\n                        height: 1rem;\r\n                        width: 1rem;\r\n                        margin-left: -1.25rem;\r\n                        margin-bottom: -0.75rem;\r\n\r\n                        &.end {\r\n                            margin-left: auto;\r\n                            margin-top: -1rem;\r\n                            margin-right: -1.25rem;\r\n                        }\r\n\r\n                    }\r\n                }\r\n\r\n                .stars-container {\r\n                    display: flex;\r\n                    justify-content: end;\r\n                    margin-top: 3rem;\r\n\r\n                    .span-star {\r\n                        background: url('../../assets/icons/star.svg') no-repeat;\r\n                        background-size: contain;\r\n                        display: block;\r\n                        height: 1.5rem;\r\n                        width: 1.5rem;\r\n                        margin-right: 0.25rem;\r\n                    }\r\n                }\r\n\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n\r\n\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -364,29 +268,29 @@ module.exports = function (item) {
 
 /***/ }),
 
-/***/ "./src/index.scss":
-/*!************************!*\
-  !*** ./src/index.scss ***!
-  \************************/
+/***/ "./src/avis-clients/avis-clients.scss":
+/*!********************************************!*\
+  !*** ./src/avis-clients/avis-clients.scss ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./index.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/index.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_avis_clients_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./avis-clients.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/avis-clients/avis-clients.scss");
 
       
       
@@ -408,12 +312,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_avis_clients_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_index_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_avis_clients_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_avis_clients_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_avis_clients_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -685,43 +589,23 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./assets/icons/animation1.svg":
-/*!*************************************!*\
-  !*** ./assets/icons/animation1.svg ***!
-  \*************************************/
+/***/ "./assets/icons/qote.svg":
+/*!*******************************!*\
+  !*** ./assets/icons/qote.svg ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "796595c2cabe2b75e394.svg";
+module.exports = __webpack_require__.p + "b9b98b9f38340c6d035b.svg";
 
 /***/ }),
 
-/***/ "./assets/images/Sll3.jpg":
-/*!********************************!*\
-  !*** ./assets/images/Sll3.jpg ***!
-  \********************************/
+/***/ "./assets/icons/star.svg":
+/*!*******************************!*\
+  !*** ./assets/icons/star.svg ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "10dc5a317910e50003ed.jpg";
-
-/***/ }),
-
-/***/ "./assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png":
-/*!*******************************************************************************!*\
-  !*** ./assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png ***!
-  \*******************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "0110caa060ca25a4c137.png";
-
-/***/ }),
-
-/***/ "./assets/images/victor.png":
-/*!**********************************!*\
-  !*** ./assets/images/victor.png ***!
-  \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "351b2019c2e1f75449dd.png";
+module.exports = __webpack_require__.p + "7888707790ce998b063d.svg";
 
 /***/ })
 
@@ -838,7 +722,7 @@ module.exports = __webpack_require__.p + "351b2019c2e1f75449dd.png";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"main": 0
+/******/ 			"avis": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -865,14 +749,57 @@ module.exports = __webpack_require__.p + "351b2019c2e1f75449dd.png";
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/*!******************************************!*\
+  !*** ./src/avis-clients/avis-clients.js ***!
+  \******************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "./src/index.scss");
+/* harmony import */ var _avis_clients_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./avis-clients.scss */ "./src/avis-clients/avis-clients.scss");
 
+
+// genere le HTML des avis
+const createAvisHTML = (avis, index) => {
+  const html = "\n        <div class=\"avis\" id=\"avis\" data-theme=\"".concat(index % 2 ? 'light' : 'dark', "\">\n            <div class=\"infos\">\n\n                <span class=\"span-image\" id=\"logo-avis\" data-index=").concat(index, ">\n                    <!-- image -->\n                </span>\n\n                <p class=\"en-tete\"><span class=\"blue-word\">").concat(avis['nom'], "</span> | ").concat(avis['detail'], "</p>\n            </div>\n\n            <p>\n                <span class=\"span-icon\"></span>\n                ").concat(avis['text'], "\n                <span class=\"span-icon end\"></span>\n            </p>\n\n            <div class=\"stars-container\">\n                <span class=\"span-star\">\n                    <!-- star -->\n                </span>\n                <span class=\"span-star\">\n                    <!-- star -->\n                </span>\n                <span class=\"span-star\">\n                    <!-- star -->\n                </span>\n                <span class=\"span-star\">\n                </span>\n                <span class=\"span-star\">\n                    <!-- star -->\n                </span>\n            </div>\n        </div>\n    ");
+  return html;
+};
+const avisMap = [{
+  'nom': "Wallskors",
+  'text': "Travailler avec Victor était un plaisir. Nous avons su trouver des accords communs et faisons maintenant affaire l'un avec l'autre. Je recommande, il est motivé et sérieux et cela se reflète dans ParlonsPC.",
+  'logo': "Wallskors-4-arrondis.png",
+  'detail': "Entreprise"
+}, {
+  'nom': "Century21 Mercom Transactions",
+  'text': "Parce qu'il est important de partager les contacts efficaces & professionnels... Si vous avez besoin d'un prestataire informatique...n'hésitez pas...vous pouvez contacter ParlonsPC",
+  'logo': "bjkr868ia2ohmp7b1dioraimkwhj.png",
+  'detail': "Entreprise"
+}, {
+  'nom': "Nordine Amdouni - Réseau ACEH",
+  'text': "Super expérience et travail efficace de professionnel. Vous pouvez déléguer vos projets informatique les yeux fermés. Concepteur innovant et très plaisant !",
+  'logo': "aceh.jpg",
+  'detail': "Commercial"
+}, {
+  'nom': "S.Braza",
+  'text': "Je recommande Parlons PC, et remercie Victor pour son aide et sa disponibilité.",
+  'logo': "law.jpg",
+  'detail': "Avocat"
+}, {
+  'nom': "SMB Laywer",
+  'text': "Nous avons travaillés ParlonsPC et sommes très heureux du résultat de notre collaboration. Nous souhaitons un bon développement à cet société informatique plein de ressources !",
+  'logo': "logo-smblawyer.png",
+  'detail': "Cabinet d'Avocat"
+}];
+const avisContainerElement = document.getElementById('container');
+let allAvisHTML = '';
+avisMap.forEach((element, index) => {
+  allAvisHTML += createAvisHTML(element, index);
+});
+avisContainerElement.innerHTML = allAvisHTML;
+const logoAvisElement = document.querySelectorAll('#logo-avis');
+logoAvisElement.forEach(element => {
+  const logoIndex = element.dataset.index;
+  element.style.background = "url(../../assets/images/".concat(avisMap[logoIndex]['logo'], ") center/contain no-repeat");
+});
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.bundle.js.map
+//# sourceMappingURL=avis.bundle.js.map
