@@ -725,7 +725,7 @@ window.addEventListener('load', event => {
     // Retirez l'écran de chargement du DOM après une transition
     setTimeout(() => {
       loadingScreenElement.remove();
-    }, 500);
+    }, 250);
   }, 0);
 });
 })();
