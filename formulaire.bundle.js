@@ -200,8 +200,262 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* portrait phones and down */
   }
 }
 /* Portrait tablet to landscape and desktop */
+@media (min-width: 767px) and (max-width: 979.9px) {
+  .content {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .content p:first-child {
+    margin-top: 80px;
+    font-size: 20px;
+  }
+  .content .container-1 {
+    display: flex;
+    justify-content: center;
+  }
+  .content .container-1 .span-icon {
+    height: 80px;
+    width: 80px;
+  }
+  .content .container-1 p {
+    padding-left: 25px;
+    font-size: 20px;
+  }
+  .content .container-2 .formulaire form .inputs {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .content .container-2 .formulaire form .inputs input {
+    width: 45%;
+    margin-bottom: 50px;
+    padding: 0.5rem 0.5rem;
+  }
+  .content .container-2 .formulaire form .inputs span {
+    width: calc(45% + 16px);
+    display: flex;
+    justify-content: space-between;
+  }
+  .content .container-2 .formulaire form .inputs span input {
+    padding: 0.5rem 0.5rem;
+  }
+  .content .container-2 .formulaire form .selects {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  .content .container-2 .formulaire form .selects span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(45% + 16px);
+  }
+  .content .container-2 .formulaire form .selects span label {
+    width: max-content;
+  }
+  .content .container-2 .formulaire form .selects span select {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+  }
+  .content .container-2 .formulaire form .selects span select option {
+    padding-bottom: 10px;
+    background-color: var(--background-color-primary);
+  }
+  .content .container-2 .formulaire form textarea {
+    display: block;
+    background-color: var(--background-color-primary);
+    color: white;
+    width: calc(95% - 20px);
+    height: 225px;
+    margin: 0 auto 0 auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .content .container-2 .formulaire form .checkbox {
+    padding-left: 2.5%;
+    margin: 25px 0 25px 0;
+  }
+  .content .container-2 .formulaire form .submit-button {
+    width: 25%;
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+  }
+}
 /* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767.9px) {
+  .content {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .content p:first-child {
+    margin-top: 80px;
+    font-size: 20px;
+  }
+  .content .container-1 {
+    display: flex;
+    justify-content: center;
+  }
+  .content .container-1 .span-icon {
+    height: 80px;
+    width: 80px;
+  }
+  .content .container-1 p {
+    padding-left: 25px;
+    font-size: 20px;
+  }
+  .content .container-2 .formulaire form .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .container-2 .formulaire form .inputs input {
+    width: 80%;
+    margin-bottom: 50px;
+    padding: 0.5rem 0.5rem;
+  }
+  .content .container-2 .formulaire form .inputs span {
+    width: calc(80% + 16px);
+    display: flex;
+    justify-content: space-between;
+  }
+  .content .container-2 .formulaire form .inputs span input {
+    padding: 0.5rem 0.5rem;
+  }
+  .content .container-2 .formulaire form .selects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .content .container-2 .formulaire form .selects span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(80% + 16px);
+    margin-bottom: 50px;
+  }
+  .content .container-2 .formulaire form .selects span label {
+    width: max-content;
+  }
+  .content .container-2 .formulaire form .selects span select {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+  }
+  .content .container-2 .formulaire form .selects span select option {
+    padding-bottom: 10px;
+    background-color: var(--background-color-primary);
+  }
+  .content .container-2 .formulaire form textarea {
+    display: block;
+    background-color: var(--background-color-primary);
+    color: white;
+    width: calc(95% - 20px);
+    height: 225px;
+    margin: 0 auto 0 auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .content .container-2 .formulaire form .checkbox {
+    padding-left: 2.5%;
+    margin: 25px 0 25px 0;
+  }
+  .content .container-2 .formulaire form .submit-button {
+    width: 25%;
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+  }
+}
 /* portrait phones and down */
+@media (max-width: 480.9px) {
+  .content {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .content p:first-child {
+    margin-top: 80px;
+    font-size: 20px;
+  }
+  .content .container-1 {
+    display: flex;
+    justify-content: center;
+  }
+  .content .container-1 .span-icon {
+    height: 80px;
+    width: 80px;
+  }
+  .content .container-1 p {
+    padding-left: 25px;
+    font-size: 20px;
+  }
+  .content .container-2 .formulaire form .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .container-2 .formulaire form .inputs input {
+    width: calc(95% - 20px);
+    margin-bottom: 50px;
+    padding: 0.5rem 0.5rem;
+  }
+  .content .container-2 .formulaire form .inputs span {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content .container-2 .formulaire form .inputs span input {
+    padding: 0.5rem 0.5rem;
+  }
+  .content .container-2 .formulaire form .selects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .content .container-2 .formulaire form .selects span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(95% + 16px);
+    margin-bottom: 50px;
+  }
+  .content .container-2 .formulaire form .selects span label {
+    width: max-content;
+  }
+  .content .container-2 .formulaire form .selects span select {
+    padding: 0.5rem 0.5rem;
+    width: 95%;
+  }
+  .content .container-2 .formulaire form .selects span select option {
+    padding-bottom: 10px;
+    background-color: var(--background-color-primary);
+  }
+  .content .container-2 .formulaire form textarea {
+    display: block;
+    background-color: var(--background-color-primary);
+    color: white;
+    width: calc(95% - 20px);
+    height: 225px;
+    margin: 0 auto 0 auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .content .container-2 .formulaire form .checkbox {
+    padding-left: 2.5%;
+    margin: 25px 0 25px 0;
+  }
+  .content .container-2 .formulaire form .checkbox input {
+    margin-right: 10px;
+  }
+  .content .container-2 .formulaire form .submit-button {
+    width: 25%;
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+  }
+}
 .content .container-1 .span-icon {
   background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center/contain no-repeat;
   display: block;
@@ -211,7 +465,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `/* portrait phones and down */
 }
 .content .container-2 .formulaire form .checkbox {
   display: flex;
-}`, "",{"version":3,"sources":["webpack://./assets/styles/_media-queries.scss","webpack://./src/pages/formulaire_contact/formulaire.scss","webpack://./src/pages/formulaire_contact/responsive/_xl.scss","webpack://./src/pages/formulaire_contact/responsive/_standard.scss"],"names":[],"mappings":"AAAA,6BAAA;AAOA,uCAAA;AAOA,6CAAA;AAOA,YAAA;AAOA,kBAAA;AC1BA,kBAAA;AD4BI;EE9BJ;IACI,gBAAA;IACA,iBAAA;EDQF;ECNE;IACI,gBAAA;IACA,eAAA;EDQN;ECLE;IACI,aAAA;IACA,uBAAA;EDON;ECLM;IACI,YAAA;IACA,WAAA;EDOV;ECJM;IACI,kBAAA;IACA,eAAA;EDMV;ECDM;IACI,iBAAA;IACA,cAAA;EDGV;ECIc;IACI,aAAA;IACA,6BAAA;EDFlB;ECIkB;IACI,UAAA;IACA,mBAAA;IACA,sBAAA;EDFtB;ECMkB;IACI,uBAAA;IACA,aAAA;IACA,8BAAA;EDJtB;ECMsB;IACI,sBAAA;EDJ1B;ECUc;IACI,aAAA;IACA,6BAAA;IACA,mBAAA;EDRlB;ECUkB;IACI,aAAA;IACA,sBAAA;IACA,6BAAA;IACA,mBAAA;IACA,uBAAA;EDRtB;ECUsB;IACI,kBAAA;EDR1B;ECWsB;IACI,sBAAA;IACA,WAAA;EDT1B;ECW0B;IACI,oBAAA;IACA,iDAAA;EDT9B;ECqBc;IACI,cAAA;IACA,iDAAA;IACA,YAAA;IACA,uBAAA;IACA,aAAA;IACA,qBAAA;IACA,kBAAA;IACA,kBAAA;EDnBlB;ECsBc;IACI,kBAAA;IACA,qBAAA;EDpBlB;ECuBc;IACI,UAAA;IACA,qBAAA;IACA,eAAA;EDrBlB;AACF;AAlFA,aAAA;ADeI;EGvBJ;IACI,gBAAA;IACA,iBAAA;EF8FF;EE5FE;IACI,gBAAA;IACA,eAAA;EF8FN;EE3FE;IACI,aAAA;IACA,uBAAA;EF6FN;EE3FM;IACI,YAAA;IACA,WAAA;EF6FV;EE1FM;IACI,kBAAA;IACA,eAAA;EF4FV;EEjFc;IACI,aAAA;IACA,6BAAA;EFmFlB;EEjFkB;IACI,UAAA;IACA,mBAAA;IACA,sBAAA;EFmFtB;EE/EkB;IACI,uBAAA;IACA,aAAA;IACA,8BAAA;EFiFtB;EE/EsB;IACI,sBAAA;EFiF1B;EE3Ec;IACI,aAAA;IACA,6BAAA;IACA,mBAAA;EF6ElB;EE3EkB;IACI,aAAA;IACA,sBAAA;IACA,6BAAA;IACA,mBAAA;IACA,uBAAA;EF6EtB;EE3EsB;IACI,kBAAA;EF6E1B;EE1EsB;IACI,sBAAA;IACA,WAAA;EF4E1B;EE1E0B;IACI,oBAAA;IACA,iDAAA;EF4E9B;EEhEc;IACI,cAAA;IACA,iDAAA;IACA,YAAA;IACA,uBAAA;IACA,aAAA;IACA,qBAAA;IACA,kBAAA;IACA,kBAAA;EFkElB;EE/Dc;IACI,kBAAA;IACA,qBAAA;EFiElB;EE9Dc;IACI,UAAA;IACA,qBAAA;IACA,eAAA;EFgElB;AACF;AA9JA,6CAAA;AAMA,uCAAA;AAMA,6BAAA;AAQQ;EACI,4EAAA;EAEA,cAAA;AA8IZ;AAnIgB;EACI,gCAAA;AAqIpB;AA9HgB;EACI,aAAA;AAgIpB","sourcesContent":["/* portrait phones and down */\r\n@mixin xs {\r\n    @media (max-width: 480.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n    @media (min-width: 481px) and (max-width: 767.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n    @media (min-width: 767px) and (max-width: 979.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* desktop */\r\n@mixin standard {\r\n    @media (min-width: 980px) and (max-width: 1199.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Large desktop */\r\n@mixin xl {\r\n    @media (min-width: 1200px) {\r\n        @content;\r\n    }\r\n}","@use \"../../../assets/styles/media-queries\" as MQueries;\r\n\r\n/* Large desktop */\r\n@include MQueries.xl {\r\n    @import \"./responsive/xl\";\r\n}\r\n\r\n\r\n/*  desktop */\r\n@include MQueries.standard {\r\n    @import \"./responsive/standard\";\r\n}\r\n\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@include MQueries.md {\r\n    @import \"./responsive/md\";\r\n}\r\n\r\n\r\n/* Landscape phone to portrait tablet */\r\n@include MQueries.sm {\r\n    @import \"./responsive/sm\";\r\n}\r\n\r\n\r\n/* portrait phones and down */\r\n@include MQueries.xs {\r\n    @import \"./responsive/xs\";\r\n}\r\n\r\n\r\n.content {\r\n    .container-1 {\r\n        .span-icon {\r\n            background: url(\"../../../assets/icons/24heures.svg\") center/contain no-repeat;\r\n\r\n            display: block;\r\n        }\r\n\r\n        p {}\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n                label {\r\n                    color: var(--input-border-color);\r\n                }\r\n\r\n                input {}\r\n\r\n                textarea {}\r\n\r\n                .checkbox {\r\n                    display: flex;\r\n\r\n                }\r\n\r\n                button {}\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            max-width: 1000px;\r\n            margin: 0 auto;\r\n\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n\r\n                    input {\r\n                        width: 45%;\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n\r\n                    }\r\n\r\n                    span {\r\n                        width: calc(45% + 16px);\r\n                        display: flex;\r\n                        justify-content: space-between;\r\n\r\n                        input {\r\n                            padding: 0.5rem 0.5rem;\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n                    margin-bottom: 50px;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(45% + 16px);\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 100%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .checkbox {\r\n                    padding-left: 2.5%;\r\n                    margin: 25px 0 25px 0;\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n\r\n                    input {\r\n                        width: 45%;\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n\r\n                    }\r\n\r\n                    span {\r\n                        width: calc(45% + 16px);\r\n                        display: flex;\r\n                        justify-content: space-between;\r\n\r\n                        input {\r\n                            padding: 0.5rem 0.5rem;\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n                    margin-bottom: 50px;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(45% + 16px);\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 100%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .checkbox {\r\n                    padding-left: 2.5%;\r\n                    margin: 25px 0 25px 0;\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./assets/styles/_media-queries.scss","webpack://./src/pages/formulaire_contact/formulaire.scss","webpack://./src/pages/formulaire_contact/responsive/_xl.scss","webpack://./src/pages/formulaire_contact/responsive/_standard.scss","webpack://./src/pages/formulaire_contact/responsive/_md.scss","webpack://./src/pages/formulaire_contact/responsive/_sm.scss","webpack://./src/pages/formulaire_contact/responsive/_xs.scss"],"names":[],"mappings":"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","sourcesContent":["/* portrait phones and down */\r\n@mixin xs {\r\n    @media (max-width: 480.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n    @media (min-width: 481px) and (max-width: 767.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n    @media (min-width: 767px) and (max-width: 979.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* desktop */\r\n@mixin standard {\r\n    @media (min-width: 980px) and (max-width: 1199.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Large desktop */\r\n@mixin xl {\r\n    @media (min-width: 1200px) {\r\n        @content;\r\n    }\r\n}","@use \"../../../assets/styles/media-queries\" as MQueries;\r\n\r\n/* Large desktop */\r\n@include MQueries.xl {\r\n    @import \"./responsive/xl\";\r\n}\r\n\r\n\r\n/*  desktop */\r\n@include MQueries.standard {\r\n    @import \"./responsive/standard\";\r\n}\r\n\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@include MQueries.md {\r\n    @import \"./responsive/md\";\r\n}\r\n\r\n\r\n/* Landscape phone to portrait tablet */\r\n@include MQueries.sm {\r\n    @import \"./responsive/sm\";\r\n}\r\n\r\n\r\n/* portrait phones and down */\r\n@include MQueries.xs {\r\n    @import \"./responsive/xs\";\r\n}\r\n\r\n\r\n.content {\r\n    .container-1 {\r\n        .span-icon {\r\n            background: url(\"../../../assets/icons/24heures.svg\") center/contain no-repeat;\r\n\r\n            display: block;\r\n        }\r\n\r\n        p {}\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n                label {\r\n                    color: var(--input-border-color);\r\n                }\r\n\r\n                input {}\r\n\r\n                textarea {}\r\n\r\n                .checkbox {\r\n                    display: flex;\r\n\r\n                }\r\n\r\n                button {}\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            max-width: 1000px;\r\n            margin: 0 auto;\r\n\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n\r\n                    input {\r\n                        width: 45%;\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n\r\n                    }\r\n\r\n                    span {\r\n                        width: calc(45% + 16px);\r\n                        display: flex;\r\n                        justify-content: space-between;\r\n\r\n                        input {\r\n                            padding: 0.5rem 0.5rem;\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n                    margin-bottom: 50px;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(45% + 16px);\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 100%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .checkbox {\r\n                    padding-left: 2.5%;\r\n                    margin: 25px 0 25px 0;\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n\r\n                    input {\r\n                        width: 45%;\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n\r\n                    }\r\n\r\n                    span {\r\n                        width: calc(45% + 16px);\r\n                        display: flex;\r\n                        justify-content: space-between;\r\n\r\n                        input {\r\n                            padding: 0.5rem 0.5rem;\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n                    margin-bottom: 50px;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(45% + 16px);\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 100%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .checkbox {\r\n                    padding-left: 2.5%;\r\n                    margin: 25px 0 25px 0;\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n\r\n                    input {\r\n                        width: 45%;\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n\r\n                    }\r\n\r\n                    span {\r\n                        width: calc(45% + 16px);\r\n                        display: flex;\r\n                        justify-content: space-between;\r\n\r\n                        input {\r\n                            padding: 0.5rem 0.5rem;\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n                    margin-bottom: 50px;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(45% + 16px);\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 100%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .checkbox {\r\n                    padding-left: 2.5%;\r\n                    margin: 25px 0 25px 0;\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n\r\n                    input {\r\n                        width: 80%;\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n\r\n                    }\r\n\r\n                    span {\r\n                        width: calc(80% + 16px);\r\n                        display: flex;\r\n                        justify-content: space-between;\r\n\r\n                        input {\r\n                            padding: 0.5rem 0.5rem;\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    align-items: center;\r\n                    justify-content: space-evenly;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(80% + 16px);\r\n                        margin-bottom: 50px;\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 100%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .checkbox {\r\n                    padding-left: 2.5%;\r\n                    margin: 25px 0 25px 0;\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n\r\n                    input {\r\n                        width: calc(95% - 20px);\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n\r\n                    }\r\n\r\n                    span {\r\n                        width: calc(95%);\r\n                        display: flex;\r\n                        justify-content: space-between;\r\n\r\n                        input {\r\n                            padding: 0.5rem 0.5rem;\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    align-items: center;\r\n                    justify-content: space-evenly;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(95% + 16px);\r\n                        margin-bottom: 50px;\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 95%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .checkbox {\r\n                    padding-left: 2.5%;\r\n                    margin: 25px 0 25px 0;\r\n\r\n                    input {\r\n                        margin-right: 10px;\r\n                    }\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
