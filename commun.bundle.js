@@ -2405,10 +2405,10 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 
 /***/ }),
 
-/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/styles/styles.scss":
-/*!************************************************************************************************************************!*\
-  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/styles/styles.scss ***!
-  \************************************************************************************************************************/
+/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/styles/responsive-styles.scss":
+/*!***********************************************************************************************************************************!*\
+  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/styles/responsive-styles.scss ***!
+  \***********************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2426,14 +2426,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2 */ "./assets/fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../images/cropped-image_2023-08-10_142556159-removebg-preview.png */ "./assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../images/trefle.png */ "./assets/images/trefle.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../images/trefle.png */ "./assets/images/trefle.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../images/cropped-image_2023-08-10_142556159-removebg-preview.png */ "./assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `:root {
+___CSS_LOADER_EXPORT___.push([module.id, `/* portrait phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* desktop */
+/* Large desktop */
+:root {
   --background-color-primary: #15171C;
   --background-color-primary-opacity: #15171ccb;
   --text-color-primary: rgba(255, 255, 255, 0.75);
@@ -2444,6 +2449,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
 .point-bleu-avec-trait {
   /* Style pour le conteneur de point et de trait */
 }
+
 .point-bleu-avec-trait .point-et-trait {
   height: fit-content;
   display: flex;
@@ -2451,12 +2457,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
   /* Style pour la ligne grise */
   /* Style pour le point bleu */
 }
+
 .point-bleu-avec-trait .point-et-trait .trait {
   width: 3rem;
   height: 1px;
   background-color: var(--input-border-color);
   margin-left: 1rem;
 }
+
 .point-bleu-avec-trait .point-et-trait .trait-column {
   width: 1px;
   height: 3rem;
@@ -2464,6 +2472,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
   margin-bottom: 1rem;
   margin-left: 0;
 }
+
 .point-bleu-avec-trait .point-et-trait .point-bleu {
   min-width: 10px;
   min-height: 10px;
@@ -2471,17 +2480,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
   border-radius: 50%;
   margin-left: 1rem;
 }
+
 .point-bleu-avec-trait .point-et-trait p {
   font-size: 1.5rem;
   margin-left: 1rem;
 }
+
 .point-bleu-avec-trait .column {
   flex-direction: column;
 }
+
 .point-bleu-avec-trait .column .point-bleu {
   margin-left: 0;
   margin-top: 1rem;
 }
+
 .point-bleu-avec-trait .column > p {
   rotate: -90deg;
   margin-top: 2rem;
@@ -2491,6 +2504,31 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
 
 .blue-word {
   color: var(--blue-primary);
+}
+
+input,
+select {
+  display: block;
+  background-color: var(--background-color-general);
+  border: none;
+  border-bottom: var(--input-border-color) solid 1px;
+  font-size: 15px;
+  color: var(--text-color-primary);
+  text-align: center;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+p.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-primary);
+  border-radius: 15px;
+  min-height: 48px;
 }
 
 /* thai */
@@ -2508,250 +2546,69 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
   font-weight: normal;
   cursor: default;
 }
-:root .blur {
-  transition: 0.5s;
-  background-color: var(--background-color-primary-opacity);
-  filter: blur(10px);
-}
-
-body {
+:root body {
   margin: 0;
   display: grid;
   background-color: var(--background-color-primary);
 }
-body .loading-screen {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
+:root body .blur {
+  transition: 0.5s;
+  background-color: var(--background-color-primary-opacity);
+  filter: blur(10px);
 }
-body .loading-screen .section-0 {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  padding: 4rem 0 10rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body .loading-screen .section-0 .span-image {
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) no-repeat;
-  background-size: contain;
-  display: block;
-  height: 12.5rem;
-  width: 25rem;
-  margin: 4rem auto 0 auto;
+:root body.header-menu-open {
   overflow: hidden;
 }
-body .loading-screen .section-0 h1 {
-  background-image: linear-gradient(to left, #94A4B0, #5F82A0, #3F6D97, #486078);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 1.5rem;
-  margin: 0;
-}
-body .loading-screen .section-0 p {
-  width: 35%;
-  text-align: center;
-  font-size: 0.8rem;
-  color: white;
-}
-body .loading-screen .section-0 .span-icon {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: space-evenly;
-  width: 35%;
-}
-body .loading-screen .section-0 .span-icon * {
-  height: 2.5rem;
-}
-body header {
+:root body header {
   z-index: 1;
   color: white;
-  position: absolute;
-  width: 100%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);
-}
-body header.open div {
-  background-color: black;
-  z-index: 1;
-  transition: all 0.5s ease-out;
-  transform: perspective();
-}
-body header.open .header-container-1 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-body header.open .header-container-2 {
-  height: fit-content;
-  position: absolute;
-  width: 100%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);
-  display: flex;
-}
-body header.open .header-container-2 .description-container {
-  flex: 1;
-}
-body header.open .header-container-2 .description-container .span-image {
-  height: 7.5rem;
-  width: 10rem;
-  display: block;
-  margin: 3rem auto 3rem 3rem;
-}
-body header.open .header-container-2 .description-container p {
-  font-size: 0.65rem;
-  opacity: 0.75;
-  padding: 0 0 0 1rem;
-}
-body header.open .header-container-2 .description-container p.description-titre {
-  font-size: 1rem;
-  opacity: 1;
-}
-body header.open .header-container-2 .sous-menu-container {
-  flex: 3;
-  padding: 3rem 2rem 8rem 2rem;
-  margin-left: auto;
-  display: flex;
-  justify-content: end;
-  flex-wrap: wrap;
-  transition: flex-wrap 0.5s ease-out;
-  transform: perspective();
-}
-body header.open .header-container-2 .sous-menu-container .sous-menu {
-  flex: 1;
-  letter-spacing: 0.1rem;
-  padding: 2rem 1rem;
-}
-body header.open .header-container-2 .sous-menu-container .sous-menu .titre-container {
-  display: flex;
-  justify-content: start;
-}
-body header.open .header-container-2 .sous-menu-container .sous-menu .titre-container * {
-  color: white;
-  margin: 0 0;
-  padding: 0 0;
-  text-align: left;
-}
-body header.open .header-container-2 .sous-menu-container .sous-menu .titre-container div.icon-container .span-icon {
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  display: block;
-  background-color: #01FF01;
-}
-body header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p {
-  font-size: 0.65rem;
-  width: max-content;
-  padding-left: 23px;
-  padding-bottom: 0.5rem;
-  display: flex;
-}
-body header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .green-word {
-  color: #01FF01;
-  text-shadow: 0px 1px 2px #01FF01;
-  opacity: 0.85;
-  margin: 0 5px 0 5px;
-}
-body header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .nouveau {
-  position: absolute;
-  margin-top: -1.5rem;
-  margin-left: 2rem;
-  text-shadow: 5px -4px 2px blue;
-  opacity: 0.75;
-}
-body header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .span-image {
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center/contain no-repeat;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-}
-body header.open .header-container-2 .sous-menu-container nav {
-  display: flex;
-  flex-direction: column;
-}
-body header.open .header-container-2 .sous-menu-container nav a {
-  cursor: pointer;
-  height: 2rem;
-  width: max-content;
-  min-width: 8rem;
-  display: flex;
-  align-items: center;
-  opacity: 0.75;
-  font-size: 0.6rem;
-  transition: all 0.5s;
-}
-body header.open .header-container-2 .sous-menu-container nav a:hover {
-  color: var(--blue-primary);
-  text-shadow: 5px 5px 2px blue;
-  opacity: 1;
-}
-body header.down-scroll {
   position: fixed;
-  top: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);
   width: 100%;
-  transition: top 0.3s;
-  background-color: var(--background-color-primary-opacity);
-  backdrop-filter: blur(5px);
+  max-height: 100vh;
 }
-body header .header-container-1 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  font-family: "Prompt";
-  letter-spacing: 3px;
-  justify-content: space-between;
-}
-body header .header-container-1 img {
-  cursor: pointer;
-  height: 2.75rem;
-  margin-top: 0.8rem;
-  margin-left: 3rem;
-  transition: transform 0.3s;
-}
-body header .header-container-1 img:hover {
-  transform: scale(1.05);
-}
-body header .header-container-1 .menu-container {
-  width: 70%;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-}
-body header .header-container-1 .menu-container p {
-  width: fit-content;
-  padding: 0 15px;
-  margin: 0.5rem 0;
-  cursor: pointer;
-  font-size: 0.65rem;
-}
-body header .header-container-1 .menu-container p a {
-  margin: 0;
-}
-body header .header-container-1 .menu-container p a:hover {
-  transition: 0.5s;
+:root body header .active {
   color: var(--blue-primary);
 }
-body header .header-container-1 .nous-rejoindre {
+:root body header a {
+  text-decoration: none;
+  color: white;
+}
+:root body header .header-container-1 {
+  display: flex;
+  max-height: 75px;
+}
+:root body header .header-container-1 .logo-container img {
+  cursor: pointer;
+}
+:root body header .header-container-1 .menu-container .span-icon {
+  cursor: pointer;
+}
+:root body header .header-container-1 .menu-container .span-icon .bar {
+  height: 10px;
+  width: 50px;
+  background-color: white;
+  border-radius: 5px;
+}
+:root body header .header-container-1 .menu-container .span-icon .bar.milieu {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+:root body header .header-container-1 .menu-container .span-icon.active * {
+  background-color: var(--blue-primary);
+}
+:root body header .header-container-1 .menu-container .span-icon.active .milieu {
+  margin-left: 0.5rem;
+}
+:root body header .header-container-1 .nous-rejoindre {
   border-top: var(--blue-primary) solid 2px;
   border-left: var(--blue-primary) solid 2px;
   border-bottom: #FF3131 solid 2px;
   border-right: #FF3131 solid 2px;
   border-radius: 5px;
-  letter-spacing: normal;
-  height: fit-content;
-  padding: 0 2rem 0 2rem;
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 3rem;
 }
-body header .header-container-1 .nous-rejoindre, body header .header-container-1 .nous-rejoindre * {
-  cursor: pointer;
-}
-body header .header-container-1 .nous-rejoindre span.point {
+:root body header .header-container-1 .nous-rejoindre span.point {
   background-color: var(--blue-primary);
   border-radius: 50%;
   height: 12px;
@@ -2760,174 +2617,1366 @@ body header .header-container-1 .nous-rejoindre span.point {
   margin-top: auto;
   margin-bottom: auto;
 }
-body header .header-container-1 .nous-rejoindre p {
-  min-width: 8rem;
-  margin: 0;
-  font-size: 0.65rem;
-}
-body header .header-container-1 .nous-rejoindre:hover {
+:root body header .header-container-1 .nous-rejoindre:hover {
   transition: 0.2s;
   border: var(--blue-primary) solid 2px;
   color: var(--blue-primary);
 }
-body header .header-container-1 .nous-rejoindre:hover span.point {
+:root body header .header-container-1 .nous-rejoindre:hover span.point {
   transition: 1.2s;
   background-color: white;
 }
-body header .active {
-  color: var(--blue-primary);
+:root body header .header-container-1 .nous-rejoindre, :root body header .header-container-1 .nous-rejoindre * {
+  cursor: pointer;
 }
-body .content {
-  padding: 0 2.5rem 4rem 2.5rem;
-  margin-top: 170px;
+:root body header.down-scroll {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  transition: top 0.5s ease-out;
+  background-color: var(--background-color-primary-opacity);
+  backdrop-filter: blur(5px);
 }
-body .content h1 {
-  font-size: 3rem;
-  margin-top: 8rem;
-  text-align: center;
+:root body header.mobil-menu-open {
+  overflow: scroll;
 }
-body .content h2 {
-  font-size: 1.75rem;
+:root body header.open .header-container-mobil {
+  background-color: black;
+  border-top: 1px white solid;
+  padding: 7.5% 0;
 }
-body .content h3 {
-  font-size: 1.2rem;
+:root body header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container p {
+  display: flex;
+  align-items: center;
 }
-body .content h1,
-body .content h2,
-body .content h3 {
-  letter-spacing: 0.2rem;
+:root body header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .nouveau {
+  position: absolute;
+  color: white;
+  text-shadow: 5px -4px 2px blue;
+  opacity: 0.75;
+}
+:root body header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .green-word {
+  color: #01FF01;
+  text-shadow: 0px 1px 2px #01FF01;
+  opacity: 0.85;
+}
+:root body header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .span-image {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center/contain no-repeat;
+  display: block;
+}
+:root body .content h1,
+:root body .content h2,
+:root body .content h3 {
   color: white;
 }
-body .content p,
-body .content a {
+:root body .content p,
+:root body .content a {
   text-align: center;
 }
-body .contenta,
-body .content p,
-body .content li {
-  letter-spacing: 2px;
-  font-size: 0.75rem;
+:root body .content a,
+:root body .content p,
+:root body .content li {
   color: var(--text-color-primary);
 }
-body .content ul {
+:root body .content ul {
   text-decoration: none;
   padding: 0 0 0 0;
 }
-body .content ul li {
+:root body .content ul li {
   list-style-type: none;
 }
-body .content ul.with-blue-puce li {
+:root body .content ul.with-blue-puce li {
   list-style-type: disc;
 }
-body .content ul.with-blue-puce li::marker {
+:root body .content ul.with-blue-puce li::marker {
   color: var(--blue-primary);
 }
-body .content section {
-  margin-top: 2rem;
-  margin-bottom: 15rem;
+:root body .content .marqueur {
+  height: 90px;
 }
-body .content section .span-image {
-  border-radius: 5px;
+:root body footer {
+  padding: 1vh 1vh;
 }
-body .content section .tab p {
-  padding-left: 2rem;
+:root body footer h3 {
+  color: white;
 }
-body footer {
-  padding: 1rem 2rem;
-}
-body footer a,
-body footer p,
-body footer li {
+:root body footer a,
+:root body footer p,
+:root body footer li {
   color: var(--text-color-primary);
 }
-body footer ul {
+:root body footer ul {
   list-style-type: none;
   padding-left: 0;
 }
-body footer .footer-container {
-  padding: 2rem 0;
+:root body footer .footer-container .footer-register h3 {
+  text-align: center;
+  font-size: 65px;
+}
+:root body footer .footer-container .footer-register p:not([id=footer-submit]) {
+  text-align: center;
+}
+:root body footer .footer-container .footer-coordonnees {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
 }
-body footer .footer-container div {
-  margin-right: 6rem;
-}
-body footer .footer-container h3 {
-  font-size: 1.8rem;
-  max-width: 50px;
+:root body footer .footer-container .footer-coordonnees span p:first-child {
   color: white;
 }
-body footer .footer-container .footer-register {
-  flex: 0.4;
+:root body footer .footer-container .footer-coordonnees span p {
+  margin: 0 0 0 0;
 }
-body footer .footer-container .footer-register input {
-  width: 99%;
-  background-color: var(--background-color-general);
-  border: none;
-  border-bottom: var(--input-border-color) solid 1px;
-  font-size: 20px;
-  margin: 3rem 0 0 0;
-  color: var(--text-color-primary);
+:root body footer .footer-container .footer-services {
+  text-align: center;
 }
-body footer .footer-container .footer-register input:focus {
-  outline: none;
-}
-body footer .footer-container .footer-register .footer-submit {
-  background-color: var(--blue-primary);
-  padding: 0.75rem 20rem;
-  border-radius: 15px;
-  margin: 3rem 0 0 0;
-}
-body footer .footer-container .footer-coordonnees {
-  flex: 0.3;
-}
-body footer .footer-container .footer-coordonnees li {
-  margin-bottom: 2rem;
-}
-body footer .footer-container .footer-coordonnees li span p {
-  margin: 0;
-}
-body footer .footer-container .footer-services {
-  flex: 0.3;
-}
-body footer .footer-container .footer-services li {
-  margin-bottom: 0;
-  padding-bottom: 1rem;
-}
-body footer .footer-separator {
+:root body footer .footer-separator {
   height: 2px;
   background-color: var(--text-color-primary);
 }
-body footer .footer-container2 {
-  display: flex;
-  padding-top: 2rem;
-}
-body footer .footer-container2 .footer-links {
-  flex: 0.4;
-  display: flex;
-  /* align-items: center; */
-  flex-wrap: wrap;
-}
-body footer .footer-container2 .footer-links p {
-  margin: 0;
-  padding: 0 2rem;
-}
-body footer .footer-container2 .footer-icons {
-  flex: 0.2;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-body footer .footer-container2 .footer-icons img {
-  height: 2rem;
-  width: 2rem;
-}
-body footer .footer-container2 .footer-mention {
-  flex: 0.4;
+:root body footer .footer-container2 .footer-links {
   text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
-}`, "",{"version":3,"sources":["webpack://./assets/styles/_variables.scss","webpack://./assets/styles/styles.scss","webpack://./assets/styles/_classes.scss"],"names":[],"mappings":"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","sourcesContent":[":root {\r\n    --background-color-primary: #15171C;\r\n    --background-color-primary-opacity: #15171ccb;\r\n    --text-color-primary: rgba(255, 255, 255, 0.75);\r\n    --input-border-color: #6A6B6D;\r\n    --blue-primary: #4A81F7;\r\n}","@use 'variables';\r\n@use 'classes';\r\n\r\n/* thai */\r\n/* latin */\r\n@font-face {\r\n    font-display: swap;\r\n    font-family: 'Prompt';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    src: url('../fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2') format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\r\n}\r\n\r\n:root {\r\n    font-family: 'Prompt';\r\n    font-weight: normal;\r\n    cursor: default;\r\n\r\n    .blur {\r\n        transition: 0.5s;\r\n        background-color: var(--background-color-primary-opacity);\r\n        filter: blur(10px);\r\n\r\n    }\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    display: grid;\r\n    background-color: var(--background-color-primary);\r\n\r\n    // page de chargement\r\n    .loading-screen {\r\n        position: fixed;\r\n        height: 100%;\r\n        width: 100%;\r\n        z-index: 10;\r\n\r\n        .section-0 {\r\n            width: 100%;\r\n            height: 100%;\r\n            background-color: black;\r\n            padding: 4rem 0 10rem 0;\r\n            display: flex;\r\n            flex-direction: column;\r\n            align-items: center;\r\n\r\n\r\n            .span-image {\r\n                background: url('../images/cropped-image_2023-08-10_142556159-removebg-preview.png') no-repeat;\r\n                background-size: contain;\r\n                display: block;\r\n                height: 12.5rem;\r\n                width: 25rem;\r\n                margin: 4rem auto 0 auto;\r\n                overflow: hidden;\r\n            }\r\n\r\n            h1 {\r\n                background-image: linear-gradient(to left, #94A4B0, #5F82A0, #3F6D97, #486078);\r\n                -webkit-background-clip: text;\r\n                color: transparent;\r\n                font-size: 1.5rem;\r\n                margin: 0\r\n            }\r\n\r\n            p {\r\n                width: 35%;\r\n\r\n                text-align: center;\r\n                font-size: 0.8rem;\r\n                color: white;\r\n            }\r\n\r\n            .span-icon {\r\n\r\n                margin-top: 3rem;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                width: 35%;\r\n\r\n                * {\r\n                    height: 2.5rem;\r\n                }\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n    // header\r\n    header {\r\n        z-index: 1;\r\n        // min-height: 75px;\r\n        color: white;\r\n        position: absolute;\r\n        width: 100%;\r\n        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);\r\n\r\n\r\n        &.open {\r\n\r\n\r\n\r\n            div {\r\n                background-color: black;\r\n                z-index: 1;\r\n\r\n                transition: all 0.5s ease-out;\r\n                transform: perspective();\r\n\r\n            }\r\n\r\n            .header-container-1 {\r\n                border-bottom: 1px solid rgba(255, 255, 255, 0.5);\r\n\r\n            }\r\n\r\n            .header-container-2 {\r\n                height: fit-content;\r\n                position: absolute;\r\n                width: 100%;\r\n                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);\r\n                display: flex;\r\n\r\n                .description-container {\r\n\r\n                    flex: 1;\r\n\r\n\r\n                    .span-image {\r\n                        height: 7.5rem;\r\n                        width: 10rem;\r\n                        display: block;\r\n                        margin: 3rem auto 3rem 3rem;\r\n                    }\r\n\r\n\r\n                    p {\r\n                        font-size: 0.65rem;\r\n                        opacity: 0.75;\r\n                        padding: 0 0 0 1rem;\r\n\r\n                        &.description-titre {\r\n                            font-size: 1rem;\r\n                            opacity: 1;\r\n                        }\r\n                    }\r\n                }\r\n\r\n                .sous-menu-container {\r\n                    flex: 3;\r\n                    padding: 3rem 2rem 8rem 2rem;\r\n\r\n                    margin-left: auto;\r\n\r\n                    display: flex;\r\n                    justify-content: end;\r\n                    flex-wrap: wrap;\r\n\r\n                    transition: flex-wrap 0.5s ease-out;\r\n                    transform: perspective();\r\n\r\n\r\n\r\n                    .sous-menu {\r\n                        flex: 1;\r\n                        letter-spacing: 0.1rem;\r\n                        padding: 2rem 1rem;\r\n\r\n\r\n\r\n                        .titre-container {\r\n                            display: flex;\r\n                            justify-content: start;\r\n\r\n                            * {\r\n                                color: white;\r\n                                margin: 0 0;\r\n                                padding: 0 0;\r\n                                text-align: left;\r\n\r\n                            }\r\n\r\n                            div.icon-container {\r\n\r\n                                .span-icon {\r\n                                    position: absolute;\r\n                                    width: 1rem;\r\n                                    height: 1rem;\r\n                                    display: block;\r\n                                    background-color: #01FF01;\r\n                                }\r\n                            }\r\n\r\n\r\n                            p {\r\n                                font-size: 0.65rem;\r\n                                // transition: 0.75s;\r\n                                width: max-content;\r\n                                padding-left: 23px;\r\n                                padding-bottom: 0.5rem;\r\n                                display: flex;\r\n\r\n                                .green-word {\r\n                                    color: #01FF01;\r\n                                    text-shadow: 0px 1px 2px #01FF01;\r\n                                    opacity: 0.85;\r\n                                    margin: 0 5px 0 5px\r\n                                }\r\n\r\n                                .nouveau {\r\n                                    position: absolute;\r\n                                    margin-top: -1.5rem;\r\n                                    margin-left: 2rem;\r\n                                    text-shadow: 5px -4px 2px blue;\r\n                                    opacity: 0.75;\r\n                                }\r\n\r\n                                .span-image {\r\n                                    background: url('../images/trefle.png') center/contain no-repeat;\r\n                                    display: block;\r\n                                    width: 1rem;\r\n                                    height: 1rem;\r\n                                }\r\n                            }\r\n                        }\r\n\r\n                    }\r\n\r\n                    nav {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n\r\n                        a {\r\n                            cursor: pointer;\r\n                            height: 2rem;\r\n                            width: max-content;\r\n                            min-width: 8rem;\r\n                            display: flex;\r\n                            align-items: center;\r\n                            opacity: 0.75;\r\n                            font-size: 0.6rem;\r\n                            transition: all 0.5s;\r\n\r\n                            &:hover {\r\n                                color: var(--blue-primary);\r\n                                text-shadow: 5px 5px 2px blue;\r\n                                opacity: 1;\r\n                            }\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n        &.down-scroll {\r\n            // apparition/disparition de la top-bar\r\n            position: fixed;\r\n            top: 0px;\r\n            width: 100%;\r\n            transition: top 0.3s;\r\n            background-color: var(--background-color-primary-opacity);\r\n            backdrop-filter: blur(5px);\r\n        }\r\n\r\n\r\n        .header-container-1 {\r\n            height: 100%;\r\n            width: 100%;\r\n            display: flex;\r\n            font-family: 'Prompt';\r\n            letter-spacing: 3px;\r\n            justify-content: space-between;\r\n\r\n\r\n            img {\r\n                cursor: pointer;\r\n                height: 2.75rem;\r\n                margin-top: 0.8rem;\r\n                margin-left: 3rem;\r\n                transition: transform 0.3s;\r\n\r\n                &:hover {\r\n                    transform: scale(1.05);\r\n                }\r\n            }\r\n\r\n            .menu-container {\r\n                width: 70%;\r\n                display: flex;\r\n                align-items: center;\r\n                width: 100%;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                flex-wrap: wrap;\r\n                align-items: center;\r\n\r\n\r\n                p {\r\n                    width: fit-content;\r\n                    padding: 0 15px;\r\n                    margin: .5rem 0;\r\n                    cursor: pointer;\r\n                    font-size: 0.65rem;\r\n\r\n                    a {\r\n                        margin: 0;\r\n                    }\r\n\r\n\r\n                    & a:hover {\r\n                        transition: 0.5s;\r\n                        color: var(--blue-primary);\r\n                    }\r\n                }\r\n            }\r\n\r\n            .nous-rejoindre {\r\n                border-top: var(--blue-primary) solid 2px;\r\n                border-left: var(--blue-primary) solid 2px;\r\n                border-bottom: #FF3131 solid 2px;\r\n                border-right: #FF3131 solid 2px;\r\n                border-radius: 5px;\r\n                letter-spacing: normal;\r\n                height: fit-content;\r\n                padding: 0 2rem 0 2rem;\r\n                display: flex;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n                margin-right: 3rem;\r\n\r\n\r\n                &,\r\n                & * {\r\n                    cursor: pointer;\r\n                }\r\n\r\n\r\n                span.point {\r\n                    background-color: var(--blue-primary);\r\n                    border-radius: 50%;\r\n                    height: 12px;\r\n                    width: 12px;\r\n                    margin-right: 10px;\r\n                    margin-top: auto;\r\n                    margin-bottom: auto;\r\n                }\r\n\r\n                p {\r\n                    min-width: 8rem;\r\n                    margin: 0;\r\n                    font-size: 0.65rem;\r\n                }\r\n\r\n                &:hover {\r\n                    transition: 0.2s;\r\n                    border: var(--blue-primary) solid 2px;\r\n                    color: var(--blue-primary);\r\n\r\n                    span.point {\r\n                        transition: 1.2s;\r\n                        background-color: white;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n\r\n\r\n        // general header\r\n        .active {\r\n            color: var(--blue-primary);\r\n        }\r\n\r\n    }\r\n\r\n    // content\r\n    .content {\r\n        padding: 0 2.5rem 4rem 2.5rem;\r\n        margin-top: 170px;\r\n\r\n        // titres\r\n        h1 {\r\n            font-size: 3rem;\r\n            margin-top: 8rem;\r\n            text-align: center;\r\n        }\r\n\r\n        h2 {\r\n            font-size: 1.75rem;\r\n        }\r\n\r\n        h3 {\r\n            font-size: 1.2rem;\r\n        }\r\n\r\n        h1,\r\n        h2,\r\n        h3 {\r\n            letter-spacing: 0.2rem;\r\n            color: white;\r\n        }\r\n\r\n        // textes\r\n        p,\r\n        a {\r\n            text-align: center;\r\n\r\n        }\r\n\r\n        &a,\r\n        p,\r\n        li {\r\n            letter-spacing: 2px;\r\n            font-size: 0.75rem;\r\n            color: var(--text-color-primary);\r\n        }\r\n\r\n        // listes\r\n        ul {\r\n            text-decoration: none;\r\n            padding: 0 0 0 0;\r\n\r\n            li {\r\n\r\n                list-style-type: none;\r\n            }\r\n\r\n            &.with-blue-puce {\r\n                li {\r\n                    list-style-type: disc;\r\n                }\r\n\r\n                li::marker {\r\n                    color: var(--blue-primary);\r\n                }\r\n            }\r\n        }\r\n\r\n        // sections\r\n        section {\r\n            margin-top: 2rem;\r\n            margin-bottom: 15rem;\r\n\r\n            .span-image {\r\n                border-radius: 5px;\r\n            }\r\n\r\n            .tab p {\r\n                padding-left: 2rem;\r\n            }\r\n        }\r\n    }\r\n\r\n    // footer\r\n    footer {\r\n        padding: 1rem 2rem;\r\n\r\n        a,\r\n        p,\r\n        li {\r\n            color: var(--text-color-primary);\r\n\r\n        }\r\n\r\n        ul {\r\n            list-style-type: none;\r\n            padding-left: 0;\r\n        }\r\n\r\n        .footer-container {\r\n            padding: 2rem 0;\r\n            display: flex;\r\n            flex-wrap: wrap;\r\n\r\n\r\n            div {\r\n                margin-right: 6rem;\r\n            }\r\n\r\n            h3 {\r\n                font-size: 1.8rem;\r\n                max-width: 50px;\r\n                color: white;\r\n            }\r\n\r\n            .footer-register {\r\n                flex: 0.4;\r\n\r\n                input {\r\n                    width: 99%;\r\n                    background-color: var(--background-color-general);\r\n                    border: none;\r\n                    border-bottom: var(--input-border-color) solid 1px;\r\n                    font-size: 20px;\r\n                    margin: 3rem 0 0 0;\r\n                    color: var(--text-color-primary);\r\n\r\n                    &:focus {\r\n                        outline: none;\r\n                    }\r\n                }\r\n\r\n                .footer-submit {\r\n                    background-color: var(--blue-primary);\r\n                    padding: .75rem 20rem;\r\n                    border-radius: 15px;\r\n                    margin: 3rem 0 0 0;\r\n                }\r\n            }\r\n\r\n            .footer-coordonnees {\r\n                flex: 0.3;\r\n\r\n                li {\r\n                    margin-bottom: 2rem;\r\n\r\n                    span {\r\n\r\n                        p {\r\n                            margin: 0;\r\n                        }\r\n                    }\r\n                }\r\n\r\n            }\r\n\r\n            .footer-services {\r\n                flex: .3;\r\n\r\n                li {\r\n                    margin-bottom: 0;\r\n                    padding-bottom: 1rem;\r\n                }\r\n            }\r\n\r\n\r\n\r\n        }\r\n\r\n        .footer-separator {\r\n            height: 2px;\r\n            background-color: var(--text-color-primary);\r\n        }\r\n\r\n        .footer-container2 {\r\n            display: flex;\r\n            padding-top: 2rem;\r\n\r\n            .footer-links {\r\n                flex: .4;\r\n                display: flex;\r\n                /* align-items: center; */\r\n                flex-wrap: wrap;\r\n\r\n                p {\r\n                    margin: 0;\r\n                    padding: 0 2rem;\r\n                }\r\n            }\r\n\r\n            .footer-icons {\r\n                flex: .2;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                align-items: center;\r\n\r\n                img {\r\n                    height: 2rem;\r\n                    width: 2rem;\r\n                }\r\n            }\r\n\r\n\r\n            .footer-mention {\r\n                flex: .4;\r\n                text-align: center;\r\n                margin-top: auto;\r\n                margin-bottom: auto;\r\n\r\n\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n}",".point-bleu-avec-trait {\r\n\r\n    /* Style pour le conteneur de point et de trait */\r\n    .point-et-trait {\r\n        height: fit-content;\r\n        display: flex;\r\n        align-items: center;\r\n\r\n        /* Style pour la ligne grise */\r\n        .trait {\r\n            width: 3rem;\r\n            height: 1px;\r\n            background-color: var(--input-border-color);\r\n            margin-left: 1rem;\r\n\r\n            &-column {\r\n                width: 1px;\r\n                height: 3rem;\r\n                margin-top: 1rem;\r\n                margin-bottom: 1rem;\r\n                margin-left: 0;\r\n            }\r\n        }\r\n\r\n        /* Style pour le point bleu */\r\n        .point-bleu {\r\n            min-width: 10px;\r\n            min-height: 10px;\r\n            background-color: var(--blue-primary);\r\n            border-radius: 50%;\r\n            margin-left: 1rem;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n            margin-left: 1rem;\r\n        }\r\n    }\r\n\r\n    .column {\r\n        flex-direction: column;\r\n\r\n        .point-bleu {\r\n            margin-left: 0;\r\n            margin-top: 1rem;\r\n        }\r\n\r\n        &>p {\r\n            // writing-mode: vertical-rl;\r\n            rotate: -90deg;\r\n            margin-top: 2rem;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n.blue-word {\r\n    color: var(--blue-primary);\r\n}"],"sourceRoot":""}]);
+}
+:root body footer .footer-container2 .footer-icons {
+  display: flex;
+}
+:root body footer .footer-container2 .footer-icons img {
+  height: 48px;
+}
+:root body footer .footer-container2 .footer-mention {
+  color: white;
+  text-align: center;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  header .header-container-1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    letter-spacing: 3px;
+    justify-content: space-between;
+    padding-left: 1%;
+  }
+  header .header-container-1 img {
+    cursor: pointer;
+    max-width: 200px;
+    transition: transform 0.3s;
+  }
+  header .header-container-1 img:hover {
+    transform: scale(1.05);
+  }
+  header .header-container-1 .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header .header-container-1 .menu-container p {
+    width: fit-content;
+    padding: 0 15px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    font-size: 0.65rem;
+  }
+  header .header-container-1 .menu-container p a {
+    margin: 0;
+  }
+  header .header-container-1 .menu-container p a:hover {
+    transition: 0.5s;
+    color: var(--blue-primary);
+  }
+  header .header-container-1 .menu-container .span-icon {
+    display: none;
+  }
+  header .header-container-1 .nous-rejoindre {
+    padding: 0 2rem 0 2rem;
+    margin: auto 3rem auto 1.5rem;
+    letter-spacing: normal;
+  }
+  header .header-container-1 .nous-rejoindre p {
+    min-width: 8rem;
+    margin: 0;
+    font-size: 0.65rem;
+  }
+  header .header-container-mobil {
+    display: none;
+  }
+  header.open div {
+    background-color: black;
+    z-index: 1;
+    transition: all 0.5s ease-out;
+    transform: perspective();
+  }
+  header.open .header-container-1 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  header.open .header-container-2 {
+    height: fit-content;
+    position: absolute;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);
+    display: flex;
+  }
+  header.open .header-container-2 .description-container {
+    flex: 1;
+  }
+  header.open .header-container-2 .description-container .span-image {
+    height: 7.5rem;
+    width: 10rem;
+    display: block;
+    margin: 3rem auto 3rem 3rem;
+  }
+  header.open .header-container-2 .description-container p {
+    font-size: 0.65rem;
+    opacity: 0.75;
+    padding: 0 0 0 1rem;
+  }
+  header.open .header-container-2 .description-container p.description-titre {
+    font-size: 1rem;
+    opacity: 1;
+  }
+  header.open .header-container-2 .sous-menu-container {
+    flex: 3;
+    padding: 3rem 2rem 8rem 2rem;
+    margin-left: auto;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    transition: flex-wrap 0.5s ease-out;
+    transform: perspective();
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu {
+    flex: 1;
+    letter-spacing: 0.1rem;
+    padding: 2rem 1rem;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container {
+    display: flex;
+    justify-content: start;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container * {
+    color: white;
+    margin: 0 0;
+    padding: 0 0;
+    text-align: left;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container div.icon-container .span-icon {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background-color: #01FF01;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p {
+    font-size: 0.65rem;
+    width: max-content;
+    padding-left: 23px;
+    padding-bottom: 0.5rem;
+    display: flex;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .green-word {
+    color: #01FF01;
+    text-shadow: 0px 1px 2px #01FF01;
+    opacity: 0.85;
+    margin: 0 5px 0 5px;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .nouveau {
+    position: absolute;
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+    text-shadow: 5px -4px 2px blue;
+    opacity: 0.75;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .span-image {
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center/contain no-repeat;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+  }
+  header.open .header-container-2 .sous-menu-container nav {
+    display: flex;
+    flex-direction: column;
+  }
+  header.open .header-container-2 .sous-menu-container nav a {
+    cursor: pointer;
+    height: 2rem;
+    width: max-content;
+    min-width: 8rem;
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+    font-size: 0.6rem;
+    transition: all 0.5s;
+  }
+  header.open .header-container-2 .sous-menu-container nav a:hover {
+    color: var(--blue-primary);
+    text-shadow: 5px 5px 2px blue;
+    opacity: 1;
+  }
+  .content {
+    margin-top: 90px;
+  }
+  .content h1 {
+    font-size: 3rem;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .content h2 {
+    font-size: 1.75rem;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  .content h1,
+  .content h2,
+  .content h3 {
+    letter-spacing: 0.2rem;
+  }
+  .contenta,
+  .content p,
+  .content li {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+  .content section {
+    margin-top: 2rem;
+    margin-bottom: 15rem;
+  }
+  .content section .span-image {
+    border-radius: 5px;
+  }
+  .content section .tab p {
+    padding-left: 2rem;
+  }
+  footer {
+    margin-top: 60px;
+  }
+  footer a,
+  footer p,
+  footer li {
+    font-size: 20px;
+  }
+  footer .footer-container .footer-register input {
+    margin: 120px auto 20px auto;
+    width: 50%;
+  }
+  footer .footer-container .footer-register p[id=footer-submit] {
+    width: 25%;
+    margin: 0 auto 0 auto;
+  }
+  footer .footer-container .infos-services {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .footer-container .infos-services .footer-coordonnees {
+    flex: 1;
+    margin-top: 80px;
+  }
+  footer .footer-container .infos-services .footer-coordonnees h3 {
+    font-size: 40px;
+  }
+  footer .footer-container .infos-services .footer-coordonnees span {
+    margin: 20px 0 20px 0;
+  }
+  footer .footer-container .infos-services .footer-services {
+    flex: 1;
+    margin-top: 80px;
+  }
+  footer .footer-container .infos-services .footer-services h3 {
+    font-size: 40px;
+  }
+  footer .footer-container .infos-services .footer-services ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-container .infos-services .footer-services ul li {
+    margin: 10px 0 10px 0;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-separator {
+    margin: 40px 0;
+  }
+  footer .footer-container2 .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .footer-container2 .footer-links p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+  }
+  footer .footer-container2 .footer-icons {
+    justify-content: space-evenly;
+    margin: 60px auto 60px auto;
+    width: 50%;
+  }
+}
+/*  desktop */
+@media (min-width: 980px) and (max-width: 1199.9px) {
+  .loading-screen {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+  }
+  .loading-screen .section-0 {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding: 4rem 0 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .loading-screen .section-0 .span-image {
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_2___}) no-repeat;
+    background-size: contain;
+    display: block;
+    height: 12.5rem;
+    width: 25rem;
+    margin: 4rem auto 0 auto;
+    overflow: hidden;
+  }
+  .loading-screen .section-0 h1 {
+    background-image: linear-gradient(to left, #94A4B0, #5F82A0, #3F6D97, #486078);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .loading-screen .section-0 p {
+    width: 35%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
+  }
+  .loading-screen .section-0 .span-icon {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+  }
+  .loading-screen .section-0 .span-icon * {
+    height: 2.5rem;
+  }
+  header .header-container-1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    letter-spacing: 3px;
+    justify-content: space-between;
+  }
+  header .header-container-1 img {
+    cursor: pointer;
+    height: 2.75rem;
+    margin-top: 0.8rem;
+    margin-left: 3rem;
+    transition: transform 0.3s;
+  }
+  header .header-container-1 img:hover {
+    transform: scale(1.05);
+  }
+  header .header-container-1 .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header .header-container-1 .menu-container p {
+    width: fit-content;
+    padding: 0 15px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    font-size: 0.65rem;
+  }
+  header .header-container-1 .menu-container p a {
+    margin: 0;
+  }
+  header .header-container-1 .menu-container p a:hover {
+    transition: 0.5s;
+    color: var(--blue-primary);
+  }
+  header .header-container-1 .menu-container .span-icon {
+    display: none;
+  }
+  header .header-container-1 .nous-rejoindre {
+    padding: 0 2rem 0 2rem;
+    margin: auto 3rem auto 1.5rem;
+    letter-spacing: normal;
+  }
+  header .header-container-1 .nous-rejoindre p {
+    min-width: 8rem;
+    margin: 0;
+    font-size: 0.65rem;
+  }
+  header .header-container-mobil {
+    display: none;
+  }
+  header.open div {
+    background-color: black;
+    z-index: 1;
+    transition: all 0.5s ease-out;
+    transform: perspective();
+  }
+  header.open .header-container-1 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  header.open .header-container-2 {
+    height: fit-content;
+    position: absolute;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);
+    display: flex;
+  }
+  header.open .header-container-2 .description-container {
+    flex: 1;
+  }
+  header.open .header-container-2 .description-container .span-image {
+    height: 7.5rem;
+    width: 10rem;
+    display: block;
+    margin: 3rem auto 3rem 3rem;
+  }
+  header.open .header-container-2 .description-container p {
+    font-size: 0.65rem;
+    opacity: 0.75;
+    padding: 0 0 0 1rem;
+  }
+  header.open .header-container-2 .description-container p.description-titre {
+    font-size: 1rem;
+    opacity: 1;
+  }
+  header.open .header-container-2 .sous-menu-container {
+    flex: 3;
+    padding: 3rem 2rem 8rem 2rem;
+    margin-left: auto;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    transition: flex-wrap 0.5s ease-out;
+    transform: perspective();
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu {
+    flex: 1;
+    letter-spacing: 0.1rem;
+    padding: 2rem 1rem;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container {
+    display: flex;
+    justify-content: start;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container * {
+    color: white;
+    margin: 0 0;
+    padding: 0 0;
+    text-align: left;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container div.icon-container .span-icon {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background-color: #01FF01;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p {
+    font-size: 0.65rem;
+    width: max-content;
+    padding-left: 23px;
+    padding-bottom: 0.5rem;
+    display: flex;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .green-word {
+    color: #01FF01;
+    text-shadow: 0px 1px 2px #01FF01;
+    opacity: 0.85;
+    margin: 0 5px 0 5px;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .nouveau {
+    position: absolute;
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+    text-shadow: 5px -4px 2px blue;
+    opacity: 0.75;
+  }
+  header.open .header-container-2 .sous-menu-container .sous-menu .titre-container p .span-image {
+    background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center/contain no-repeat;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+  }
+  header.open .header-container-2 .sous-menu-container nav {
+    display: flex;
+    flex-direction: column;
+  }
+  header.open .header-container-2 .sous-menu-container nav a {
+    cursor: pointer;
+    height: 2rem;
+    width: max-content;
+    min-width: 8rem;
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+    font-size: 0.6rem;
+    transition: all 0.5s;
+  }
+  header.open .header-container-2 .sous-menu-container nav a:hover {
+    color: var(--blue-primary);
+    text-shadow: 5px 5px 2px blue;
+    opacity: 1;
+  }
+  .content {
+    margin-top: 90px;
+  }
+  .content h1 {
+    font-size: 3rem;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .content h2 {
+    font-size: 1.75rem;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  .content h1,
+  .content h2,
+  .content h3 {
+    letter-spacing: 0.2rem;
+  }
+  .contenta,
+  .content p,
+  .content li {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+  .content section {
+    margin-top: 2rem;
+    margin-bottom: 15rem;
+  }
+  .content section .span-image {
+    border-radius: 5px;
+  }
+  .content section .tab p {
+    padding-left: 2rem;
+  }
+  footer a,
+  footer p,
+  footer li {
+    font-size: 20px;
+  }
+  footer .footer-container .footer-register input {
+    margin: 120px auto 20px auto;
+    width: 50%;
+  }
+  footer .footer-container .footer-register p[id=footer-submit] {
+    width: 25%;
+    margin: 0 auto 0 auto;
+  }
+  footer .footer-container .infos-services {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  footer .footer-container .infos-services .footer-coordonnees {
+    flex: 1;
+    margin-top: 80px;
+  }
+  footer .footer-container .infos-services .footer-coordonnees h3 {
+    font-size: 40px;
+  }
+  footer .footer-container .infos-services .footer-coordonnees span {
+    margin: 20px 0 20px 0;
+  }
+  footer .footer-container .infos-services .footer-services {
+    flex: 1;
+    margin-top: 80px;
+  }
+  footer .footer-container .infos-services .footer-services h3 {
+    font-size: 40px;
+  }
+  footer .footer-container .infos-services .footer-services ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-container .infos-services .footer-services ul li {
+    margin: 10px 0 10px 0;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-separator {
+    margin: 40px 0;
+  }
+  footer .footer-container2 .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  footer .footer-container2 .footer-links p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+  }
+  footer .footer-container2 .footer-icons {
+    justify-content: space-evenly;
+    margin: 60px 0 60px 0;
+  }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 767px) and (max-width: 979.9px) {
+  header .header-container-1 {
+    margin-top: 1rem;
+  }
+  header .header-container-1 div {
+    flex: 1;
+  }
+  header .header-container-1 .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  header .header-container-1 .logo-container img {
+    max-height: 70px;
+    width: 110%;
+  }
+  header .header-container-1 .menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-container-1 .menu-container p {
+    display: none;
+  }
+  header .header-container-1 .nous-rejoindre {
+    height: fit-content;
+    width: fit-content;
+    margin: auto 1rem auto 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  header .header-container-1 .nous-rejoindre p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  header .header-container-2 {
+    display: none;
+  }
+  header.open .header-container-mobil.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header.open .header-container-mobil.menu .menu-mobil {
+    width: 75%;
+    margin: 0;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    margin: 1rem 0;
+    border-radius: 15px;
+  }
+  header.open .header-container-mobil.menu .menu-mobil p {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  header.open .header-container-mobil.sous-menu .span-icon {
+    display: block;
+  }
+  header.open .header-container-mobil.sous-menu .span-icon.retour {
+    position: absolute;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    margin-right: 7.5%;
+    margin-left: auto;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil {
+    margin: 1.5rem 0 0.5rem 0;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container {
+    display: flex;
+    align-items: center;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .icon-container {
+    padding: 0 5px;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .icon-container .span-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container p {
+    color: var(--blue-primary);
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .nouveau {
+    margin-top: -3rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .green-word {
+    margin: 0 8px 0 8px;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .span-image {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 3rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil nav a {
+    width: max-content;
+    min-width: 50%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 2.5px 0 2.5px 0;
+  }
+  .content {
+    margin-top: 90px;
+    padding: 0 20px;
+  }
+  .content h1 {
+    font-size: 3rem;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .content h2 {
+    font-size: 1.75rem;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  .content h1,
+  .content h2,
+  .content h3 {
+    letter-spacing: 0.2rem;
+  }
+  .contenta,
+  .content p,
+  .content li {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+  .content section {
+    margin-top: 2rem;
+    margin-bottom: 15rem;
+  }
+  .content section .span-image {
+    border-radius: 5px;
+  }
+  .content section .tab p {
+    padding-left: 2rem;
+  }
+  footer {
+    margin-top: 60px;
+  }
+  footer a,
+  footer p,
+  footer li {
+    font-size: 20px;
+  }
+  footer .footer-container .footer-register input {
+    margin: 100px auto 20px auto;
+    width: 80%;
+  }
+  footer .footer-container .footer-register p#footer-submit {
+    margin: 0 auto 0 auto;
+    width: 60%;
+  }
+  footer .footer-container .footer-coordonnees {
+    margin-top: 60px;
+  }
+  footer .footer-container .footer-coordonnees h3 {
+    font-size: 40px;
+  }
+  footer .footer-container .footer-coordonnees span {
+    margin: 20px 0 20px 0;
+  }
+  footer .footer-container .footer-services {
+    margin-top: 80px;
+  }
+  footer .footer-container .footer-services h3 {
+    font-size: 40px;
+  }
+  footer .footer-container .footer-services ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-container .footer-services ul li {
+    margin: 10px 0 10px 0;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-separator {
+    margin: 40px 0;
+  }
+  footer .footer-container2 .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-container2 .footer-links p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+  }
+  footer .footer-container2 .footer-icons {
+    justify-content: space-evenly;
+    margin: 60px 0 60px 0;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767.9px) {
+  header .header-container-1 {
+    margin-top: 1rem;
+  }
+  header .header-container-1 div {
+    flex: 1;
+  }
+  header .header-container-1 .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  header .header-container-1 .logo-container img {
+    max-height: 70px;
+    width: 110%;
+  }
+  header .header-container-1 .menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-container-1 .menu-container p {
+    display: none;
+  }
+  header .header-container-1 .nous-rejoindre {
+    height: fit-content;
+    width: fit-content;
+    margin: auto 1rem auto 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  header .header-container-1 .nous-rejoindre p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  header .header-container-2 {
+    display: none;
+  }
+  header.open .header-container-mobil.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header.open .header-container-mobil.menu .menu-mobil {
+    width: 75%;
+    margin: 0;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    margin: 1rem 0;
+    border-radius: 15px;
+  }
+  header.open .header-container-mobil.menu .menu-mobil p {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  header.open .header-container-mobil.sous-menu .span-icon {
+    display: block;
+  }
+  header.open .header-container-mobil.sous-menu .span-icon.retour {
+    position: absolute;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    margin-right: 7.5%;
+    margin-left: auto;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil {
+    margin: 1.5rem 0 0.5rem 0;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container {
+    display: flex;
+    align-items: center;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .icon-container {
+    padding: 0 5px;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .icon-container .span-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container p {
+    color: var(--blue-primary);
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .nouveau {
+    margin-top: -3rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .green-word {
+    margin: 0 8px 0 8px;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .span-image {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 3rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil nav a {
+    width: max-content;
+    min-width: 50%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 2.5px 0 2.5px 0;
+  }
+  .content {
+    margin-top: 90px;
+    padding: 0 20px;
+  }
+  .content h1 {
+    font-size: 3rem;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .content h2 {
+    font-size: 1.75rem;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  .content h1,
+  .content h2,
+  .content h3 {
+    letter-spacing: 0.2rem;
+  }
+  .contenta,
+  .content p,
+  .content li {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+  .content section {
+    margin-top: 2rem;
+    margin-bottom: 15rem;
+  }
+  .content section .span-image {
+    border-radius: 5px;
+  }
+  .content section .tab p {
+    padding-left: 2rem;
+  }
+  footer {
+    margin-top: 60px;
+  }
+  footer .footer-container .footer-register input {
+    margin: 100px auto 20px auto;
+    width: 95%;
+  }
+  footer .footer-container .footer-register p#footer-submit {
+    margin: 0 auto 0 auto;
+    width: 80%;
+  }
+  footer .footer-container .footer-coordonnees {
+    margin-top: 60px;
+  }
+  footer .footer-container .footer-coordonnees h3 {
+    font-size: 30px;
+  }
+  footer .footer-container .footer-coordonnees span {
+    margin: 10px 0 10px 0;
+  }
+  footer .footer-container .footer-services {
+    margin-top: 60px;
+  }
+  footer .footer-container .footer-services h3 {
+    font-size: 30px;
+  }
+  footer .footer-container .footer-services ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-container .footer-services ul li {
+    margin: 10px 0 10px 0;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-separator {
+    margin: 40px 0;
+  }
+  footer .footer-container2 .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-container2 .footer-links p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+  }
+  footer .footer-container2 .footer-icons {
+    justify-content: space-evenly;
+    margin: 60px 0 60px 0;
+  }
+}
+/* portrait phones and down */
+@media (max-width: 480.9px) {
+  header .header-container-1 div {
+    flex: 1;
+  }
+  header .header-container-1 .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  header .header-container-1 .logo-container img {
+    max-height: 70px;
+    width: 110%;
+  }
+  header .header-container-1 .menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-container-1 .menu-container p {
+    display: none;
+  }
+  header .header-container-1 .nous-rejoindre {
+    height: fit-content;
+    margin: auto 0.25rem auto 0;
+  }
+  header .header-container-1 .nous-rejoindre p {
+    font-size: 0.65rem;
+    margin: 0;
+  }
+  header .header-container-2 {
+    display: none;
+  }
+  header.open .header-container-mobil.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header.open .header-container-mobil.menu .menu-mobil {
+    width: 75%;
+    margin: 0;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    margin: 1rem 0;
+    border-radius: 15px;
+  }
+  header.open .header-container-mobil.menu .menu-mobil p {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  header.open .header-container-mobil.sous-menu .span-icon {
+    display: block;
+  }
+  header.open .header-container-mobil.sous-menu .span-icon.retour {
+    position: absolute;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+    margin-left: auto;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil {
+    margin: 1.5rem 0 0.5rem 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container {
+    display: flex;
+    align-items: center;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .icon-container {
+    padding: 0 5px;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .icon-container .span-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container p {
+    color: var(--blue-primary);
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .nouveau {
+    margin-top: -3rem;
+    font-size: 0.65rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .green-word {
+    margin: 0 8px 0 8px;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil .titre-container .span-image {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 3rem;
+  }
+  header.open .header-container-mobil.sous-menu .sous-menu-mobil nav a {
+    width: max-content;
+    min-width: 50%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 2.5px 0 2.5px 0;
+  }
+  .content {
+    margin-top: 90px;
+  }
+  .content h1 {
+    font-size: 3rem;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .content h2 {
+    font-size: 1.75rem;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  .content h1,
+  .content h2,
+  .content h3 {
+    letter-spacing: 0.2rem;
+  }
+  .contenta,
+  .content p,
+  .content li {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+  }
+  .content section {
+    margin-top: 2rem;
+    margin-bottom: 15rem;
+  }
+  .content section .span-image {
+    border-radius: 5px;
+  }
+  .content section .tab p {
+    padding-left: 2rem;
+  }
+  footer {
+    margin-top: 60px;
+  }
+  footer .footer-container .footer-register input {
+    margin: 100px 0 20px 0;
+    width: 99%;
+  }
+  footer .footer-container .footer-register p#footer-submit {
+    width: 99%;
+  }
+  footer .footer-container .footer-coordonnees {
+    margin-top: 60px;
+  }
+  footer .footer-container .footer-coordonnees h3 {
+    font-size: 30px;
+  }
+  footer .footer-container .footer-coordonnees span {
+    margin: 10px 0 10px 0;
+  }
+  footer .footer-container .footer-services {
+    margin-top: 60px;
+  }
+  footer .footer-container .footer-services h3 {
+    font-size: 30px;
+  }
+  footer .footer-container .footer-services ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-container .footer-services ul li {
+    margin: 10px 0 10px 0;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-separator {
+    margin: 40px 0;
+  }
+  footer .footer-container2 .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-container2 .footer-links p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    min-height: 48px;
+    min-width: 50%;
+  }
+  footer .footer-container2 .footer-icons {
+    justify-content: space-evenly;
+    margin: 60px 0 60px 0;
+  }
+}`, "",{"version":3,"sources":["webpack://./assets/styles/_media-queries.scss","webpack://./assets/styles/_variables.scss","webpack://./assets/styles/responsive-styles.scss","webpack://./assets/styles/_classes.scss","webpack://./assets/styles/responsive/all-display.scss","webpack://./assets/styles/responsive/_xl-styles.scss","webpack://./assets/styles/responsive/_standard-styles.scss","webpack://./assets/styles/responsive/_md-styles.scss","webpack://./assets/styles/responsive/_sm-styles.scss","webpack://./assets/styles/responsive/_xs-styles.scss"],"names":[],"mappings":"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","sourcesContent":["/* portrait phones and down */\r\n@mixin xs {\r\n    @media (max-width: 480.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n    @media (min-width: 481px) and (max-width: 767.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n    @media (min-width: 767px) and (max-width: 979.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* desktop */\r\n@mixin standard {\r\n    @media (min-width: 980px) and (max-width: 1199.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Large desktop */\r\n@mixin xl {\r\n    @media (min-width: 1200px) {\r\n        @content;\r\n    }\r\n}",":root {\r\n    --background-color-primary: #15171C;\r\n    --background-color-primary-opacity: #15171ccb;\r\n    --text-color-primary: rgba(255, 255, 255, 0.75);\r\n    --input-border-color: #6A6B6D;\r\n    --blue-primary: #4A81F7;\r\n}","@use 'media-queries' as MQueries;\r\n@import \"./responsive/all-display.scss\";\r\n\r\n\r\n/* Large desktop */\r\n@include MQueries.xl {\r\n    @import \"./responsive/xl-styles\";\r\n}\r\n\r\n\r\n/*  desktop */\r\n@include MQueries.standard {\r\n    @import \"./responsive/standard-styles\";\r\n}\r\n\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@include MQueries.md {\r\n    @import \"./responsive/md-styles\";\r\n}\r\n\r\n\r\n/* Landscape phone to portrait tablet */\r\n@include MQueries.sm {\r\n    @import \"./responsive/sm-styles\";\r\n}\r\n\r\n\r\n/* portrait phones and down */\r\n@include MQueries.xs {\r\n    @import \"./responsive/xs-styles\";\r\n}",".point-bleu-avec-trait {\r\n\r\n    /* Style pour le conteneur de point et de trait */\r\n    .point-et-trait {\r\n        height: fit-content;\r\n        display: flex;\r\n        align-items: center;\r\n\r\n\r\n\r\n        /* Style pour la ligne grise */\r\n        .trait {\r\n            width: 3rem;\r\n            height: 1px;\r\n            background-color: var(--input-border-color);\r\n            margin-left: 1rem;\r\n\r\n            &-column {\r\n                width: 1px;\r\n                height: 3rem;\r\n                margin-top: 1rem;\r\n                margin-bottom: 1rem;\r\n                margin-left: 0;\r\n            }\r\n        }\r\n\r\n        /* Style pour le point bleu */\r\n        .point-bleu {\r\n            min-width: 10px;\r\n            min-height: 10px;\r\n            background-color: var(--blue-primary);\r\n            border-radius: 50%;\r\n            margin-left: 1rem;\r\n        }\r\n\r\n        p {\r\n            font-size: 1.5rem;\r\n            margin-left: 1rem;\r\n        }\r\n    }\r\n\r\n    .column {\r\n        flex-direction: column;\r\n\r\n        .point-bleu {\r\n            margin-left: 0;\r\n            margin-top: 1rem;\r\n        }\r\n\r\n        &>p {\r\n            // writing-mode: vertical-rl;\r\n            rotate: -90deg;\r\n            margin-top: 2rem;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n.blue-word {\r\n    color: var(--blue-primary);\r\n}\r\n\r\ninput,\r\nselect {\r\n    display: block;\r\n\r\n    background-color: var(--background-color-general);\r\n    border: none;\r\n    border-bottom: var(--input-border-color) solid 1px;\r\n    font-size: 15px;\r\n    color: var(--text-color-primary);\r\n    text-align: center;\r\n\r\n    &:focus {\r\n        outline: none;\r\n    }\r\n}\r\n\r\n\r\n\r\np.submit-button {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: var(--blue-primary);\r\n    border-radius: 15px;\r\n    min-height: 48px;\r\n}","@use '../variables';\r\n@use '../classes';\r\n\r\n\r\n/* thai */\r\n/* latin */\r\n@font-face {\r\n    font-display: swap;\r\n    font-family: 'Prompt';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    src: url('../fonts/-W_8XJnvUD7dzB2Ck_kIaWMu.woff2') format('woff2');\r\n    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\r\n}\r\n\r\n\r\n\r\n\r\n:root {\r\n    font-family: 'Prompt';\r\n    font-weight: normal;\r\n    cursor: default;\r\n\r\n    body {\r\n        margin: 0;\r\n        display: grid;\r\n        background-color: var(--background-color-primary);\r\n\r\n        .blur {\r\n            transition: 0.5s;\r\n            background-color: var(--background-color-primary-opacity);\r\n            filter: blur(10px);\r\n        }\r\n\r\n        &.header-menu-open {\r\n            overflow: hidden;\r\n        }\r\n\r\n        // header\r\n        header {\r\n            z-index: 1;\r\n            color: white;\r\n            position: fixed;\r\n            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);\r\n            width: 100%;\r\n            max-height: 100vh;\r\n\r\n            // general header\r\n            .active {\r\n                color: var(--blue-primary);\r\n            }\r\n\r\n            a {\r\n                text-decoration: none;\r\n                color: white;\r\n            }\r\n\r\n            .header-container-1 {\r\n                display: flex;\r\n                max-height: 75px;\r\n\r\n                div {}\r\n\r\n                .logo-container {\r\n\r\n                    img {\r\n                        cursor: pointer;\r\n\r\n                    }\r\n                }\r\n\r\n                .menu-container {\r\n                    .span-icon {\r\n                        cursor: pointer;\r\n\r\n                        .bar {\r\n                            height: 10px;\r\n                            width: 50px;\r\n                            background-color: white;\r\n                            border-radius: 5px;\r\n\r\n                            &.milieu {\r\n                                margin-top: 8px;\r\n                                margin-bottom: 8px;\r\n                            }\r\n                        }\r\n\r\n                        &.active {\r\n\r\n                            * {\r\n\r\n                                background-color: var(--blue-primary);\r\n                            }\r\n\r\n                            .milieu {\r\n                                margin-left: 0.5rem;\r\n                            }\r\n\r\n                        }\r\n\r\n                    }\r\n\r\n                    p {}\r\n                }\r\n\r\n                .nous-rejoindre {\r\n                    border-top: var(--blue-primary) solid 2px;\r\n                    border-left: var(--blue-primary) solid 2px;\r\n                    border-bottom: #FF3131 solid 2px;\r\n                    border-right: #FF3131 solid 2px;\r\n                    border-radius: 5px;\r\n                    display: flex;\r\n\r\n\r\n\r\n                    span.point {\r\n                        background-color: var(--blue-primary);\r\n                        border-radius: 50%;\r\n                        height: 12px;\r\n                        width: 12px;\r\n                        margin-right: 10px;\r\n                        margin-top: auto;\r\n                        margin-bottom: auto;\r\n                    }\r\n\r\n                    p {}\r\n\r\n                    &:hover {\r\n                        transition: 0.2s;\r\n                        border: var(--blue-primary) solid 2px;\r\n                        color: var(--blue-primary);\r\n\r\n                        span.point {\r\n                            transition: 1.2s;\r\n                            background-color: white;\r\n                        }\r\n                    }\r\n\r\n                    &,\r\n                    & * {\r\n                        cursor: pointer;\r\n                    }\r\n                }\r\n            }\r\n\r\n            &.down-scroll {\r\n                // apparition/disparition de la top-bar\r\n                position: fixed;\r\n                top: 0px;\r\n                width: 100%;\r\n                transition: top 0.5s ease-out;\r\n                background-color: var(--background-color-primary-opacity);\r\n                backdrop-filter: blur(5px);\r\n            }\r\n\r\n            &.mobil-menu-open {\r\n                overflow: scroll;\r\n            }\r\n\r\n            // mobil & tablet\r\n            &.open {\r\n\r\n                .header-container-mobil {\r\n                    background-color: black;\r\n                    border-top: 1px white solid;\r\n                    padding: 7.5% 0;\r\n\r\n\r\n                    &.menu {\r\n\r\n\r\n                        .menu-mobil {\r\n\r\n\r\n                            p {}\r\n                        }\r\n                    }\r\n\r\n                    &.sous-menu {\r\n\r\n                        .span-icon {}\r\n\r\n                        .span-icon.retour {}\r\n\r\n                        .sous-menu-mobil {\r\n\r\n\r\n                            .titre-container {\r\n\r\n\r\n                                .icon-container {\r\n\r\n\r\n                                    .span-icon {}\r\n                                }\r\n\r\n                                p {\r\n                                    display: flex;\r\n                                    align-items: center;\r\n\r\n                                }\r\n\r\n                                .nouveau {\r\n                                    position: absolute;\r\n                                    color: white;\r\n                                    text-shadow: 5px -4px 2px blue;\r\n                                    opacity: 0.75;\r\n                                }\r\n\r\n                                .green-word {\r\n                                    color: #01FF01;\r\n                                    text-shadow: 0px 1px 2px #01FF01;\r\n                                    opacity: 0.85;\r\n                                }\r\n\r\n                                .span-image {\r\n                                    background: url('../images/trefle.png') center/contain no-repeat;\r\n                                    display: block;\r\n\r\n                                }\r\n                            }\r\n\r\n                            nav {\r\n\r\n\r\n                                a {}\r\n                            }\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n        // content\r\n        .content {\r\n\r\n\r\n            // titres\r\n            h1,\r\n            h2,\r\n            h3 {\r\n                color: white;\r\n            }\r\n\r\n            // textes\r\n            p,\r\n            a {\r\n                text-align: center;\r\n            }\r\n\r\n            a,\r\n            p,\r\n            li {\r\n                color: var(--text-color-primary);\r\n            }\r\n\r\n            // listes\r\n            ul {\r\n                text-decoration: none;\r\n                padding: 0 0 0 0;\r\n\r\n                li {\r\n\r\n                    list-style-type: none;\r\n                }\r\n\r\n                &.with-blue-puce {\r\n                    li {\r\n                        list-style-type: disc;\r\n                    }\r\n\r\n                    li::marker {\r\n                        color: var(--blue-primary);\r\n                    }\r\n                }\r\n            }\r\n\r\n            // sections\r\n            section {}\r\n\r\n            // marqueurs\r\n            .marqueur {\r\n                height: 90px;\r\n            }\r\n        }\r\n\r\n        // footer\r\n        footer {\r\n            padding: 1vh 1vh;\r\n\r\n            h3 {\r\n                color: white;\r\n            }\r\n\r\n            a,\r\n            p,\r\n            li {\r\n                color: var(--text-color-primary);\r\n\r\n            }\r\n\r\n            ul {\r\n                list-style-type: none;\r\n                padding-left: 0;\r\n            }\r\n\r\n            .footer-container {\r\n                .footer-register {\r\n                    h3 {\r\n                        text-align: center;\r\n                        font-size: 65px;\r\n                    }\r\n\r\n                    p:not([id=\"footer-submit\"]) {\r\n                        text-align: center;\r\n                    }\r\n\r\n                    input {}\r\n\r\n                    p.submit-button {}\r\n                }\r\n\r\n                .footer-coordonnees {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    text-align: center;\r\n\r\n                    h3 {}\r\n\r\n\r\n\r\n\r\n                    span {\r\n\r\n                        & p:first-child {\r\n                            color: white;\r\n                        }\r\n\r\n                        p {\r\n                            margin: 0 0 0 0;\r\n                        }\r\n                    }\r\n\r\n\r\n                }\r\n\r\n                .footer-services {\r\n                    text-align: center;\r\n\r\n                    h3 {}\r\n\r\n                    ul {\r\n                        li {}\r\n                    }\r\n                }\r\n            }\r\n\r\n            .footer-separator {\r\n                height: 2px;\r\n                background-color: var(--text-color-primary);\r\n            }\r\n\r\n            .footer-container2 {\r\n                .footer-links {\r\n                    text-align: center;\r\n\r\n                    p {}\r\n                }\r\n\r\n                .footer-icons {\r\n                    display: flex;\r\n\r\n                    img {\r\n                        height: 48px;\r\n                    }\r\n                }\r\n\r\n                .footer-mention {\r\n                    color: white;\r\n                    text-align: center;\r\n                }\r\n            }\r\n\r\n        }\r\n\r\n    }\r\n\r\n}","header {\r\n    .header-container-1 {\r\n        height: 100%;\r\n        width: 100%;\r\n        display: flex;\r\n        letter-spacing: 3px;\r\n        justify-content: space-between;\r\n        padding-left: 1%;\r\n\r\n\r\n        img {\r\n            cursor: pointer;\r\n\r\n            max-width: 200px;\r\n            transition: transform 0.3s;\r\n\r\n            &:hover {\r\n                transform: scale(1.05);\r\n            }\r\n        }\r\n\r\n        .menu-container {\r\n\r\n            width: 100%;\r\n            display: flex;\r\n            justify-content: space-evenly;\r\n            align-items: center;\r\n            flex-wrap: wrap;\r\n\r\n\r\n            p {\r\n                width: fit-content;\r\n                padding: 0 15px;\r\n                margin: .5rem 0;\r\n                cursor: pointer;\r\n                font-size: 0.65rem;\r\n\r\n                a {\r\n                    margin: 0;\r\n                }\r\n\r\n\r\n                & a:hover {\r\n                    transition: 0.5s;\r\n                    color: var(--blue-primary);\r\n                }\r\n            }\r\n\r\n            .span-icon {\r\n                display: none;\r\n            }\r\n        }\r\n\r\n        .nous-rejoindre {\r\n\r\n            padding: 0 2rem 0 2rem;\r\n            margin: auto 3rem auto 1.5rem;\r\n            letter-spacing: normal;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n            p {\r\n                min-width: 8rem;\r\n                margin: 0;\r\n                font-size: 0.65rem;\r\n            }\r\n\r\n\r\n        }\r\n    }\r\n\r\n    .header-container-mobil {\r\n        display: none;\r\n    }\r\n\r\n    &.open {\r\n\r\n\r\n\r\n        div {\r\n            background-color: black;\r\n            z-index: 1;\r\n\r\n            transition: all 0.5s ease-out;\r\n            transform: perspective();\r\n\r\n        }\r\n\r\n        .header-container-1 {\r\n            border-bottom: 1px solid rgba(255, 255, 255, 0.5);\r\n\r\n        }\r\n\r\n        .header-container-2 {\r\n            height: fit-content;\r\n            position: absolute;\r\n            width: 100%;\r\n            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);\r\n            display: flex;\r\n\r\n            .description-container {\r\n\r\n                flex: 1;\r\n\r\n\r\n                .span-image {\r\n                    height: 7.5rem;\r\n                    width: 10rem;\r\n                    display: block;\r\n                    margin: 3rem auto 3rem 3rem;\r\n                }\r\n\r\n\r\n                p {\r\n                    font-size: 0.65rem;\r\n                    opacity: 0.75;\r\n                    padding: 0 0 0 1rem;\r\n\r\n                    &.description-titre {\r\n                        font-size: 1rem;\r\n                        opacity: 1;\r\n                    }\r\n                }\r\n            }\r\n\r\n            .sous-menu-container {\r\n                flex: 3;\r\n                padding: 3rem 2rem 8rem 2rem;\r\n\r\n                margin-left: auto;\r\n\r\n                display: flex;\r\n                justify-content: end;\r\n                flex-wrap: wrap;\r\n\r\n                transition: flex-wrap 0.5s ease-out;\r\n                transform: perspective();\r\n\r\n\r\n\r\n                .sous-menu {\r\n                    flex: 1;\r\n                    letter-spacing: 0.1rem;\r\n                    padding: 2rem 1rem;\r\n\r\n\r\n\r\n                    .titre-container {\r\n                        display: flex;\r\n                        justify-content: start;\r\n\r\n                        * {\r\n                            color: white;\r\n                            margin: 0 0;\r\n                            padding: 0 0;\r\n                            text-align: left;\r\n\r\n                        }\r\n\r\n                        div.icon-container {\r\n\r\n                            .span-icon {\r\n                                position: absolute;\r\n                                width: 1rem;\r\n                                height: 1rem;\r\n                                display: block;\r\n                                background-color: #01FF01;\r\n                            }\r\n                        }\r\n\r\n\r\n                        p {\r\n                            font-size: 0.65rem;\r\n                            // transition: 0.75s;\r\n                            width: max-content;\r\n                            padding-left: 23px;\r\n                            padding-bottom: 0.5rem;\r\n                            display: flex;\r\n\r\n                            .green-word {\r\n                                color: #01FF01;\r\n                                text-shadow: 0px 1px 2px #01FF01;\r\n                                opacity: 0.85;\r\n                                margin: 0 5px 0 5px\r\n                            }\r\n\r\n                            .nouveau {\r\n                                position: absolute;\r\n                                margin-top: -1.5rem;\r\n                                margin-left: 2rem;\r\n                                text-shadow: 5px -4px 2px blue;\r\n                                opacity: 0.75;\r\n                            }\r\n\r\n                            .span-image {\r\n                                background: url('../images/trefle.png') center/contain no-repeat;\r\n                                display: block;\r\n                                width: 1rem;\r\n                                height: 1rem;\r\n                            }\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                nav {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n\r\n                    a {\r\n                        cursor: pointer;\r\n                        height: 2rem;\r\n                        width: max-content;\r\n                        min-width: 8rem;\r\n                        display: flex;\r\n                        align-items: center;\r\n                        opacity: 0.75;\r\n                        font-size: 0.6rem;\r\n                        transition: all 0.5s;\r\n\r\n                        &:hover {\r\n                            color: var(--blue-primary);\r\n                            text-shadow: 5px 5px 2px blue;\r\n                            opacity: 1;\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n// content\r\n.content {\r\n    margin-top: 90px;\r\n\r\n    // titres\r\n    h1 {\r\n        font-size: 3rem;\r\n        margin-top: 8rem;\r\n        text-align: center;\r\n    }\r\n\r\n    h2 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.2rem;\r\n    }\r\n\r\n    h1,\r\n    h2,\r\n    h3 {\r\n        letter-spacing: 0.2rem;\r\n\r\n    }\r\n\r\n    // textes\r\n\r\n    &a,\r\n    p,\r\n    li {\r\n        letter-spacing: 2px;\r\n        font-size: 0.75rem;\r\n    }\r\n\r\n\r\n\r\n    // sections\r\n    section {\r\n        margin-top: 2rem;\r\n        margin-bottom: 15rem;\r\n\r\n        .span-image {\r\n            border-radius: 5px;\r\n        }\r\n\r\n        .tab p {\r\n            padding-left: 2rem;\r\n        }\r\n    }\r\n}\r\n\r\nfooter {\r\n    margin-top: 60px;\r\n\r\n    h3 {}\r\n\r\n    a,\r\n    p,\r\n    li {\r\n        font-size: 20px;\r\n    }\r\n\r\n    ul {}\r\n\r\n    .footer-container {\r\n        .footer-register {\r\n            h3 {}\r\n\r\n            p:not([id=\"footer-submit\"]) {}\r\n\r\n            input {\r\n                margin: 120px auto 20px auto;\r\n                width: 50%;\r\n            }\r\n\r\n            p[id=\"footer-submit\"] {\r\n                width: 25%;\r\n                margin: 0 auto 0 auto;\r\n            }\r\n        }\r\n\r\n        .infos-services {\r\n            display: flex;\r\n            flex-wrap: nowrap;\r\n            width: 75%;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n\r\n            .footer-coordonnees {\r\n                flex: 1;\r\n                margin-top: 80px;\r\n\r\n                h3 {\r\n                    font-size: 40px;\r\n                }\r\n\r\n\r\n                span {\r\n                    margin: 20px 0 20px 0;\r\n\r\n                    p {}\r\n                }\r\n\r\n            }\r\n\r\n            .footer-services {\r\n                flex: 1;\r\n                margin-top: 80px;\r\n\r\n                h3 {\r\n                    font-size: 40px;\r\n                }\r\n\r\n                ul {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n\r\n                    li {\r\n                        margin: 10px 0 10px 0;\r\n                        width: max-content;\r\n                        min-height: 48px;\r\n                        min-width: 50%;\r\n                        display: flex;\r\n                        justify-content: center;\r\n                        align-items: center;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n\r\n    }\r\n\r\n    .footer-separator {\r\n        margin: 40px 0;\r\n    }\r\n\r\n    .footer-container2 {\r\n        .footer-links {\r\n            display: flex;\r\n            flex-wrap: wrap;\r\n            justify-content: center;\r\n            align-items: center;\r\n            width: 50%;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n\r\n            p {\r\n                display: flex;\r\n                justify-content: center;\r\n                align-items: center;\r\n                width: max-content;\r\n                min-height: 48px;\r\n                min-width: 50%;\r\n            }\r\n        }\r\n\r\n        .footer-icons {\r\n            justify-content: space-evenly;\r\n            margin: 60px auto 60px auto;\r\n            width: 50%;\r\n\r\n            img {}\r\n        }\r\n\r\n        .footer-mention {}\r\n    }\r\n\r\n}","// page de chargement\r\n.loading-screen {\r\n    position: fixed;\r\n    height: 100%;\r\n    width: 100%;\r\n    z-index: 10;\r\n\r\n    .section-0 {\r\n        width: 100%;\r\n        height: 100%;\r\n        background-color: black;\r\n        padding: 4rem 0 10rem 0;\r\n        display: flex;\r\n        flex-direction: column;\r\n        align-items: center;\r\n\r\n\r\n        .span-image {\r\n            background: url('../images/cropped-image_2023-08-10_142556159-removebg-preview.png') no-repeat;\r\n            background-size: contain;\r\n            display: block;\r\n            height: 12.5rem;\r\n            width: 25rem;\r\n            margin: 4rem auto 0 auto;\r\n            overflow: hidden;\r\n        }\r\n\r\n        h1 {\r\n            background-image: linear-gradient(to left, #94A4B0, #5F82A0, #3F6D97, #486078);\r\n            -webkit-background-clip: text;\r\n            color: transparent;\r\n            font-size: 1.5rem;\r\n            margin: 0\r\n        }\r\n\r\n        p {\r\n            width: 35%;\r\n\r\n            text-align: center;\r\n            font-size: 0.8rem;\r\n            color: white;\r\n        }\r\n\r\n        .span-icon {\r\n\r\n            margin-top: 3rem;\r\n            display: flex;\r\n            justify-content: space-evenly;\r\n            width: 35%;\r\n\r\n            * {\r\n                height: 2.5rem;\r\n            }\r\n        }\r\n    }\r\n\r\n}\r\n\r\n// header\r\nheader {\r\n\r\n    .header-container-1 {\r\n        height: 100%;\r\n        width: 100%;\r\n        display: flex;\r\n        letter-spacing: 3px;\r\n        justify-content: space-between;\r\n\r\n\r\n        img {\r\n            cursor: pointer;\r\n            height: 2.75rem;\r\n            margin-top: 0.8rem;\r\n            margin-left: 3rem;\r\n            transition: transform 0.3s;\r\n\r\n            &:hover {\r\n                transform: scale(1.05);\r\n            }\r\n        }\r\n\r\n        .menu-container {\r\n\r\n            width: 100%;\r\n            display: flex;\r\n            justify-content: space-evenly;\r\n            align-items: center;\r\n            flex-wrap: wrap;\r\n\r\n\r\n            p {\r\n                width: fit-content;\r\n                padding: 0 15px;\r\n                margin: .5rem 0;\r\n                cursor: pointer;\r\n                font-size: 0.65rem;\r\n\r\n                a {\r\n                    margin: 0;\r\n                }\r\n\r\n\r\n                & a:hover {\r\n                    transition: 0.5s;\r\n                    color: var(--blue-primary);\r\n                }\r\n            }\r\n\r\n            .span-icon {\r\n                display: none;\r\n            }\r\n        }\r\n\r\n        .nous-rejoindre {\r\n\r\n            padding: 0 2rem 0 2rem;\r\n            margin: auto 3rem auto 1.5rem;\r\n            letter-spacing: normal;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n            p {\r\n                min-width: 8rem;\r\n                margin: 0;\r\n                font-size: 0.65rem;\r\n            }\r\n\r\n\r\n        }\r\n    }\r\n\r\n    .header-container-mobil {\r\n        display: none;\r\n    }\r\n\r\n    &.open {\r\n\r\n\r\n\r\n        div {\r\n            background-color: black;\r\n            z-index: 1;\r\n\r\n            transition: all 0.5s ease-out;\r\n            transform: perspective();\r\n\r\n        }\r\n\r\n        .header-container-1 {\r\n            border-bottom: 1px solid rgba(255, 255, 255, 0.5);\r\n\r\n        }\r\n\r\n        .header-container-2 {\r\n            height: fit-content;\r\n            position: absolute;\r\n            width: 100%;\r\n            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.76);\r\n            display: flex;\r\n\r\n            .description-container {\r\n\r\n                flex: 1;\r\n\r\n\r\n                .span-image {\r\n                    height: 7.5rem;\r\n                    width: 10rem;\r\n                    display: block;\r\n                    margin: 3rem auto 3rem 3rem;\r\n                }\r\n\r\n\r\n                p {\r\n                    font-size: 0.65rem;\r\n                    opacity: 0.75;\r\n                    padding: 0 0 0 1rem;\r\n\r\n                    &.description-titre {\r\n                        font-size: 1rem;\r\n                        opacity: 1;\r\n                    }\r\n                }\r\n            }\r\n\r\n            .sous-menu-container {\r\n                flex: 3;\r\n                padding: 3rem 2rem 8rem 2rem;\r\n\r\n                margin-left: auto;\r\n\r\n                display: flex;\r\n                justify-content: end;\r\n                flex-wrap: wrap;\r\n\r\n                transition: flex-wrap 0.5s ease-out;\r\n                transform: perspective();\r\n\r\n\r\n\r\n                .sous-menu {\r\n                    flex: 1;\r\n                    letter-spacing: 0.1rem;\r\n                    padding: 2rem 1rem;\r\n\r\n\r\n\r\n                    .titre-container {\r\n                        display: flex;\r\n                        justify-content: start;\r\n\r\n                        * {\r\n                            color: white;\r\n                            margin: 0 0;\r\n                            padding: 0 0;\r\n                            text-align: left;\r\n\r\n                        }\r\n\r\n                        div.icon-container {\r\n\r\n                            .span-icon {\r\n                                position: absolute;\r\n                                width: 1rem;\r\n                                height: 1rem;\r\n                                display: block;\r\n                                background-color: #01FF01;\r\n                            }\r\n                        }\r\n\r\n\r\n                        p {\r\n                            font-size: 0.65rem;\r\n                            // transition: 0.75s;\r\n                            width: max-content;\r\n                            padding-left: 23px;\r\n                            padding-bottom: 0.5rem;\r\n                            display: flex;\r\n\r\n                            .green-word {\r\n                                color: #01FF01;\r\n                                text-shadow: 0px 1px 2px #01FF01;\r\n                                opacity: 0.85;\r\n                                margin: 0 5px 0 5px\r\n                            }\r\n\r\n                            .nouveau {\r\n                                position: absolute;\r\n                                margin-top: -1.5rem;\r\n                                margin-left: 2rem;\r\n                                text-shadow: 5px -4px 2px blue;\r\n                                opacity: 0.75;\r\n                            }\r\n\r\n                            .span-image {\r\n                                background: url('../images/trefle.png') center/contain no-repeat;\r\n                                display: block;\r\n                                width: 1rem;\r\n                                height: 1rem;\r\n                            }\r\n                        }\r\n                    }\r\n\r\n                }\r\n\r\n                nav {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n\r\n                    a {\r\n                        cursor: pointer;\r\n                        height: 2rem;\r\n                        width: max-content;\r\n                        min-width: 8rem;\r\n                        display: flex;\r\n                        align-items: center;\r\n                        opacity: 0.75;\r\n                        font-size: 0.6rem;\r\n                        transition: all 0.5s;\r\n\r\n                        &:hover {\r\n                            color: var(--blue-primary);\r\n                            text-shadow: 5px 5px 2px blue;\r\n                            opacity: 1;\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n}\r\n\r\n// content\r\n.content {\r\n    margin-top: 90px;\r\n\r\n    // titres\r\n    h1 {\r\n        font-size: 3rem;\r\n        margin-top: 8rem;\r\n        text-align: center;\r\n    }\r\n\r\n    h2 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.2rem;\r\n    }\r\n\r\n    h1,\r\n    h2,\r\n    h3 {\r\n        letter-spacing: 0.2rem;\r\n\r\n    }\r\n\r\n    // textes\r\n\r\n    &a,\r\n    p,\r\n    li {\r\n        letter-spacing: 2px;\r\n        font-size: 0.75rem;\r\n    }\r\n\r\n\r\n\r\n    // sections\r\n    section {\r\n        margin-top: 2rem;\r\n        margin-bottom: 15rem;\r\n\r\n        .span-image {\r\n            border-radius: 5px;\r\n        }\r\n\r\n        .tab p {\r\n            padding-left: 2rem;\r\n        }\r\n    }\r\n}\r\n\r\n// footer\r\n\r\nfooter {\r\n\r\n    h3 {}\r\n\r\n    a,\r\n    p,\r\n    li {\r\n        font-size: 20px;\r\n    }\r\n\r\n    ul {}\r\n\r\n    .footer-container {\r\n        .footer-register {\r\n            h3 {}\r\n\r\n            p:not([id=\"footer-submit\"]) {}\r\n\r\n            input {\r\n                margin: 120px auto 20px auto;\r\n                width: 50%;\r\n            }\r\n\r\n            p[id=\"footer-submit\"] {\r\n                width: 25%;\r\n                margin: 0 auto 0 auto;\r\n            }\r\n        }\r\n\r\n        .infos-services {\r\n            display: flex;\r\n            flex-wrap: nowrap;\r\n\r\n            .footer-coordonnees {\r\n                flex: 1;\r\n                margin-top: 80px;\r\n\r\n                h3 {\r\n                    font-size: 40px;\r\n                }\r\n\r\n\r\n                span {\r\n                    margin: 20px 0 20px 0;\r\n\r\n                    p {}\r\n                }\r\n\r\n            }\r\n\r\n            .footer-services {\r\n                flex: 1;\r\n                margin-top: 80px;\r\n\r\n                h3 {\r\n                    font-size: 40px;\r\n                }\r\n\r\n                ul {\r\n                    display: flex;\r\n                    flex-direction: column;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n\r\n                    li {\r\n                        margin: 10px 0 10px 0;\r\n                        width: max-content;\r\n                        min-height: 48px;\r\n                        min-width: 50%;\r\n                        display: flex;\r\n                        justify-content: center;\r\n                        align-items: center;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n\r\n\r\n    }\r\n\r\n    .footer-separator {\r\n        margin: 40px 0;\r\n    }\r\n\r\n    .footer-container2 {\r\n        .footer-links {\r\n            display: flex;\r\n            flex-wrap: wrap;\r\n            align-items: center;\r\n\r\n            p {\r\n                display: flex;\r\n                justify-content: center;\r\n                align-items: center;\r\n                width: max-content;\r\n                min-height: 48px;\r\n                min-width: 50%;\r\n            }\r\n        }\r\n\r\n        .footer-icons {\r\n            justify-content: space-evenly;\r\n            margin: 60px 0 60px 0;\r\n\r\n            img {}\r\n        }\r\n\r\n        .footer-mention {}\r\n    }\r\n\r\n}","header {\r\n\r\n    .header-container-1 {\r\n\r\n        margin-top: 1rem;\r\n\r\n        div {\r\n            flex: 1;\r\n        }\r\n\r\n        .logo-container {\r\n            display: flex;\r\n            align-items: center;\r\n\r\n            img {\r\n                max-height: 70px;\r\n                width: 110%;\r\n            }\r\n        }\r\n\r\n        .menu-container {\r\n            display: flex;\r\n            justify-content: center;\r\n            align-items: center;\r\n\r\n            .span-icon {\r\n\r\n\r\n                .bar {\r\n\r\n\r\n                    &.milieu {}\r\n                }\r\n            }\r\n\r\n            p {\r\n                display: none;\r\n            }\r\n        }\r\n\r\n        .nous-rejoindre {\r\n            height: fit-content;\r\n            width: fit-content;\r\n            margin: auto 1rem auto 0;\r\n            padding: 0.5rem 1rem;\r\n            display: flex;\r\n            justify-content: center;\r\n\r\n\r\n            span.point {}\r\n\r\n            p {\r\n                font-size: .8rem;\r\n                margin: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n    .header-container-2 {\r\n        display: none;\r\n    }\r\n\r\n    &.open {\r\n        .header-container-mobil {\r\n\r\n            &.menu {\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: space-evenly;\r\n                align-items: center;\r\n\r\n                .menu-mobil {\r\n                    width: 75%;\r\n                    margin: 0;\r\n                    font-size: 1.2rem;\r\n                    border: 1px solid white;\r\n                    margin: 1rem 0;\r\n                    border-radius: 15px;\r\n\r\n                    p {\r\n                        text-align: center;\r\n                        margin: 0.5rem 0;\r\n                    }\r\n                }\r\n            }\r\n\r\n            &.sous-menu {\r\n\r\n                .span-icon {\r\n                    display: block;\r\n                }\r\n\r\n                .span-icon.retour {\r\n                    position: absolute;\r\n                    right: 1rem;\r\n                    width: 60px;\r\n                    height: 60px;\r\n                    margin-right: 7.5%;\r\n                    margin-left: auto;\r\n                }\r\n\r\n                .sous-menu-mobil {\r\n                    margin: 1.5rem 0 0.5rem 0;\r\n                    padding-left: 7.5%;\r\n                    padding-right: 7.5%;\r\n\r\n                    .titre-container {\r\n                        display: flex;\r\n                        align-items: center;\r\n                        // border: 1px dotted var(--blue-primary);\r\n\r\n                        .icon-container {\r\n                            padding: 0 5px;\r\n\r\n                            .span-icon {\r\n                                height: 1.5rem;\r\n                                width: 1.5rem;\r\n                            }\r\n                        }\r\n\r\n                        p {\r\n                            color: var(--blue-primary);\r\n                            margin: 0;\r\n                            font-size: 1.25rem;\r\n                        }\r\n\r\n                        .nouveau {\r\n                            margin-top: -3rem;\r\n                        }\r\n\r\n                        .green-word {\r\n                            margin: 0 8px 0 8px;\r\n                        }\r\n\r\n                        .span-image {\r\n                            width: 1.5rem;\r\n                            height: 1.5rem;\r\n                        }\r\n\r\n                    }\r\n\r\n                    nav {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        padding: 0 0 0 3rem;\r\n\r\n                        a {\r\n                            width: max-content;\r\n                            min-width: 50%;\r\n                            height: 48px;\r\n                            display: flex;\r\n                            align-items: center;\r\n                            margin: 2.5px 0 2.5px 0;\r\n                        }\r\n\r\n\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n// content\r\n.content {\r\n    margin-top: 90px;\r\n    padding: 0 20px;\r\n\r\n    // titres\r\n    h1 {\r\n        font-size: 3rem;\r\n        margin-top: 8rem;\r\n        text-align: center;\r\n    }\r\n\r\n    h2 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.2rem;\r\n    }\r\n\r\n    h1,\r\n    h2,\r\n    h3 {\r\n        letter-spacing: 0.2rem;\r\n\r\n    }\r\n\r\n    // textes\r\n\r\n    &a,\r\n    p,\r\n    li {\r\n        letter-spacing: 2px;\r\n        font-size: 0.75rem;\r\n    }\r\n\r\n\r\n\r\n    // sections\r\n    section {\r\n        margin-top: 2rem;\r\n        margin-bottom: 15rem;\r\n\r\n        .span-image {\r\n            border-radius: 5px;\r\n        }\r\n\r\n        .tab p {\r\n            padding-left: 2rem;\r\n        }\r\n    }\r\n}\r\n\r\n\r\nfooter {\r\n    margin-top: 60px;\r\n\r\n    h3 {}\r\n\r\n    a,\r\n    p,\r\n    li {\r\n        font-size: 20px;\r\n    }\r\n\r\n    ul {}\r\n\r\n    .footer-container {\r\n        .footer-register {\r\n            h3 {}\r\n\r\n            p:not([id=\"footer-submit\"]) {}\r\n\r\n            input {\r\n                margin: 100px auto 20px auto;\r\n                width: 80%;\r\n            }\r\n\r\n            p#footer-submit {\r\n                margin: 0 auto 0 auto;\r\n                width: 60%;\r\n            }\r\n        }\r\n\r\n        .footer-coordonnees {\r\n            margin-top: 60px;\r\n\r\n            h3 {\r\n                font-size: 40px;\r\n            }\r\n\r\n\r\n            span {\r\n                margin: 20px 0 20px 0;\r\n\r\n                p {}\r\n            }\r\n\r\n        }\r\n\r\n        .footer-services {\r\n            margin-top: 80px;\r\n\r\n            h3 {\r\n                font-size: 40px;\r\n            }\r\n\r\n            ul {\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: center;\r\n                align-items: center;\r\n\r\n                li {\r\n                    margin: 10px 0 10px 0;\r\n                    width: max-content;\r\n                    min-height: 48px;\r\n                    min-width: 50%;\r\n                    display: flex;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    .footer-separator {\r\n        margin: 40px 0;\r\n    }\r\n\r\n    .footer-container2 {\r\n        .footer-links {\r\n            display: flex;\r\n            flex-direction: column;\r\n            align-items: center;\r\n\r\n            p {\r\n                display: flex;\r\n                justify-content: center;\r\n                align-items: center;\r\n                width: max-content;\r\n                min-height: 48px;\r\n                min-width: 50%;\r\n            }\r\n        }\r\n\r\n        .footer-icons {\r\n            justify-content: space-evenly;\r\n            margin: 60px 0 60px 0;\r\n\r\n            img {}\r\n        }\r\n\r\n        .footer-mention {}\r\n    }\r\n\r\n}","header {\r\n\r\n    .header-container-1 {\r\n        margin-top: 1rem;\r\n\r\n        div {\r\n            flex: 1;\r\n        }\r\n\r\n        .logo-container {\r\n            display: flex;\r\n            align-items: center;\r\n\r\n            img {\r\n                max-height: 70px;\r\n                width: 110%;\r\n            }\r\n        }\r\n\r\n        .menu-container {\r\n            display: flex;\r\n            justify-content: center;\r\n            align-items: center;\r\n\r\n            .span-icon {\r\n\r\n\r\n                .bar {\r\n\r\n\r\n                    &.milieu {}\r\n                }\r\n            }\r\n\r\n            p {\r\n                display: none;\r\n            }\r\n        }\r\n\r\n        .nous-rejoindre {\r\n            height: fit-content;\r\n            width: fit-content;\r\n            margin: auto 1rem auto 0;\r\n            padding: 0.5rem 1rem;\r\n            display: flex;\r\n            justify-content: center;\r\n\r\n\r\n            span.point {}\r\n\r\n            p {\r\n                font-size: .8rem;\r\n                margin: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n    .header-container-2 {\r\n        display: none;\r\n    }\r\n\r\n    &.open {\r\n        .header-container-mobil {\r\n\r\n            &.menu {\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: space-evenly;\r\n                align-items: center;\r\n\r\n                .menu-mobil {\r\n                    width: 75%;\r\n                    margin: 0;\r\n                    font-size: 1.2rem;\r\n                    border: 1px solid white;\r\n                    margin: 1rem 0;\r\n                    border-radius: 15px;\r\n\r\n                    p {\r\n                        text-align: center;\r\n                        margin: 0.5rem 0;\r\n                    }\r\n                }\r\n            }\r\n\r\n            &.sous-menu {\r\n\r\n                .span-icon {\r\n                    display: block;\r\n                }\r\n\r\n                .span-icon.retour {\r\n                    position: absolute;\r\n                    right: 1rem;\r\n                    width: 60px;\r\n                    height: 60px;\r\n                    margin-right: 7.5%;\r\n                    margin-left: auto;\r\n                }\r\n\r\n                .sous-menu-mobil {\r\n                    margin: 1.5rem 0 0.5rem 0;\r\n                    padding-left: 7.5%;\r\n                    padding-right: 7.5%;\r\n\r\n                    .titre-container {\r\n                        display: flex;\r\n                        align-items: center;\r\n                        // border: 1px dotted var(--blue-primary);\r\n\r\n                        .icon-container {\r\n                            padding: 0 5px;\r\n\r\n                            .span-icon {\r\n                                height: 1.5rem;\r\n                                width: 1.5rem;\r\n                            }\r\n                        }\r\n\r\n                        p {\r\n                            color: var(--blue-primary);\r\n                            margin: 0;\r\n                            font-size: 1.25rem;\r\n                        }\r\n\r\n                        .nouveau {\r\n                            margin-top: -3rem;\r\n                        }\r\n\r\n                        .green-word {\r\n                            margin: 0 8px 0 8px;\r\n                        }\r\n\r\n                        .span-image {\r\n                            width: 1.5rem;\r\n                            height: 1.5rem;\r\n                        }\r\n\r\n                    }\r\n\r\n                    nav {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        padding: 0 0 0 3rem;\r\n\r\n                        a {\r\n                            width: max-content;\r\n                            min-width: 50%;\r\n                            height: 48px;\r\n                            display: flex;\r\n                            align-items: center;\r\n                            margin: 2.5px 0 2.5px 0;\r\n                        }\r\n\r\n\r\n                    }\r\n                }\r\n            }\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        }\r\n    }\r\n}\r\n\r\n// content\r\n.content {\r\n    margin-top: 90px;\r\n    padding: 0 20px;\r\n\r\n    // titres\r\n    h1 {\r\n        font-size: 3rem;\r\n        margin-top: 8rem;\r\n        text-align: center;\r\n    }\r\n\r\n    h2 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.2rem;\r\n    }\r\n\r\n    h1,\r\n    h2,\r\n    h3 {\r\n        letter-spacing: 0.2rem;\r\n\r\n    }\r\n\r\n    // textes\r\n\r\n    &a,\r\n    p,\r\n    li {\r\n        letter-spacing: 2px;\r\n        font-size: 0.75rem;\r\n    }\r\n\r\n\r\n\r\n    // sections\r\n    section {\r\n        margin-top: 2rem;\r\n        margin-bottom: 15rem;\r\n\r\n        .span-image {\r\n            border-radius: 5px;\r\n        }\r\n\r\n        .tab p {\r\n            padding-left: 2rem;\r\n        }\r\n    }\r\n}\r\n\r\nfooter {\r\n    margin-top: 60px;\r\n\r\n    h3 {}\r\n\r\n    a,\r\n    p,\r\n    li {}\r\n\r\n    ul {}\r\n\r\n    .footer-container {\r\n        .footer-register {\r\n            h3 {}\r\n\r\n            p:not([id=\"footer-submit\"]) {}\r\n\r\n            input {\r\n                margin: 100px auto 20px auto;\r\n                width: 95%;\r\n            }\r\n\r\n            p#footer-submit {\r\n                margin: 0 auto 0 auto;\r\n                width: 80%;\r\n            }\r\n        }\r\n\r\n        .footer-coordonnees {\r\n            margin-top: 60px;\r\n\r\n            h3 {\r\n                font-size: 30px;\r\n            }\r\n\r\n\r\n            span {\r\n                margin: 10px 0 10px 0;\r\n\r\n                p {}\r\n            }\r\n\r\n        }\r\n\r\n        .footer-services {\r\n            margin-top: 60px;\r\n\r\n            h3 {\r\n                font-size: 30px;\r\n            }\r\n\r\n            ul {\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: center;\r\n                align-items: center;\r\n\r\n                li {\r\n                    margin: 10px 0 10px 0;\r\n                    width: max-content;\r\n                    min-height: 48px;\r\n                    min-width: 50%;\r\n                    display: flex;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    .footer-separator {\r\n        margin: 40px 0;\r\n    }\r\n\r\n    .footer-container2 {\r\n        .footer-links {\r\n            display: flex;\r\n            flex-direction: column;\r\n            align-items: center;\r\n\r\n            p {\r\n                display: flex;\r\n                justify-content: center;\r\n                align-items: center;\r\n                width: max-content;\r\n                min-height: 48px;\r\n                min-width: 50%;\r\n            }\r\n        }\r\n\r\n        .footer-icons {\r\n            justify-content: space-evenly;\r\n            margin: 60px 0 60px 0;\r\n\r\n            img {}\r\n        }\r\n\r\n        .footer-mention {}\r\n    }\r\n\r\n}","header {\r\n\r\n    .header-container-1 {\r\n\r\n        div {\r\n            flex: 1;\r\n        }\r\n\r\n        .logo-container {\r\n            display: flex;\r\n            align-items: center;\r\n\r\n            img {\r\n                max-height: 70px;\r\n                width: 110%;\r\n            }\r\n        }\r\n\r\n        .menu-container {\r\n            display: flex;\r\n            justify-content: center;\r\n            align-items: center;\r\n\r\n            .span-icon {\r\n\r\n\r\n                .bar {\r\n                    &.milieu {}\r\n                }\r\n            }\r\n\r\n            p {\r\n                display: none;\r\n            }\r\n        }\r\n\r\n        .nous-rejoindre {\r\n            height: fit-content;\r\n            margin: auto 0.25rem auto 0;\r\n\r\n\r\n            span.point {}\r\n\r\n            p {\r\n                font-size: .65rem;\r\n                margin: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n    .header-container-2 {\r\n        display: none;\r\n    }\r\n\r\n\r\n    &.open {\r\n        .header-container-mobil {\r\n\r\n            &.menu {\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: space-evenly;\r\n                align-items: center;\r\n\r\n                .menu-mobil {\r\n                    width: 75%;\r\n                    margin: 0;\r\n                    font-size: 1.2rem;\r\n                    border: 1px solid white;\r\n                    margin: 1rem 0;\r\n                    border-radius: 15px;\r\n\r\n                    p {\r\n                        text-align: center;\r\n                        margin: 0.5rem 0;\r\n                    }\r\n                }\r\n            }\r\n\r\n            &.sous-menu {\r\n\r\n                .span-icon {\r\n                    display: block;\r\n                }\r\n\r\n                .span-icon.retour {\r\n                    position: absolute;\r\n                    right: 1rem;\r\n                    width: 60px;\r\n                    height: 60px;\r\n                    margin-right: 1rem;\r\n                    margin-left: auto;\r\n                }\r\n\r\n                .sous-menu-mobil {\r\n                    margin: 1.5rem 0 0.5rem 0;\r\n                    padding-left: 1rem;\r\n                    padding-right: 1rem;\r\n\r\n                    .titre-container {\r\n                        display: flex;\r\n                        align-items: center;\r\n                        // border: 1px dotted var(--blue-primary);\r\n\r\n                        .icon-container {\r\n                            padding: 0 5px;\r\n\r\n                            .span-icon {\r\n                                height: 1.5rem;\r\n                                width: 1.5rem;\r\n                            }\r\n                        }\r\n\r\n                        p {\r\n                            color: var(--blue-primary);\r\n                            margin: 0;\r\n                            font-size: 1.25rem;\r\n                        }\r\n\r\n                        .nouveau {\r\n                            margin-top: -3rem;\r\n                            font-size: 0.65rem;\r\n                        }\r\n\r\n                        .green-word {\r\n                            margin: 0 8px 0 8px;\r\n                        }\r\n\r\n                        .span-image {\r\n                            width: 1.5rem;\r\n                            height: 1.5rem;\r\n                        }\r\n\r\n                    }\r\n\r\n                    nav {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        padding: 0 0 0 3rem;\r\n\r\n                        a {\r\n                            width: max-content;\r\n                            min-width: 50%;\r\n                            height: 48px;\r\n                            display: flex;\r\n                            align-items: center;\r\n                            margin: 2.5px 0 2.5px 0;\r\n                        }\r\n\r\n\r\n                    }\r\n                }\r\n            }\r\n\r\n        }\r\n    }\r\n}\r\n\r\n// content\r\n.content {\r\n    margin-top: 90px;\r\n\r\n    // titres\r\n    h1 {\r\n        font-size: 3rem;\r\n        margin-top: 8rem;\r\n        text-align: center;\r\n    }\r\n\r\n    h2 {\r\n        font-size: 1.75rem;\r\n    }\r\n\r\n    h3 {\r\n        font-size: 1.2rem;\r\n    }\r\n\r\n    h1,\r\n    h2,\r\n    h3 {\r\n        letter-spacing: 0.2rem;\r\n\r\n    }\r\n\r\n    // textes\r\n\r\n    &a,\r\n    p,\r\n    li {\r\n        letter-spacing: 2px;\r\n        font-size: 0.75rem;\r\n    }\r\n\r\n\r\n\r\n    // sections\r\n    section {\r\n        margin-top: 2rem;\r\n        margin-bottom: 15rem;\r\n\r\n        .span-image {\r\n            border-radius: 5px;\r\n        }\r\n\r\n        .tab p {\r\n            padding-left: 2rem;\r\n        }\r\n    }\r\n}\r\n\r\nfooter {\r\n    margin-top: 60px;\r\n\r\n    h3 {}\r\n\r\n    a,\r\n    p,\r\n    li {}\r\n\r\n    ul {}\r\n\r\n    .footer-container {\r\n        .footer-register {\r\n            h3 {}\r\n\r\n            p:not([id=\"footer-submit\"]) {}\r\n\r\n            input {\r\n                margin: 100px 0 20px 0;\r\n                width: 99%;\r\n            }\r\n\r\n            p#footer-submit {\r\n                width: 99%;\r\n            }\r\n        }\r\n\r\n        .footer-coordonnees {\r\n            margin-top: 60px;\r\n\r\n            h3 {\r\n                font-size: 30px;\r\n            }\r\n\r\n\r\n            span {\r\n                margin: 10px 0 10px 0;\r\n\r\n                p {}\r\n            }\r\n\r\n        }\r\n\r\n        .footer-services {\r\n            margin-top: 60px;\r\n\r\n            h3 {\r\n                font-size: 30px;\r\n            }\r\n\r\n            ul {\r\n                display: flex;\r\n                flex-direction: column;\r\n                justify-content: center;\r\n                align-items: center;\r\n\r\n                li {\r\n                    margin: 10px 0 10px 0;\r\n                    width: max-content;\r\n                    min-height: 48px;\r\n                    min-width: 50%;\r\n                    display: flex;\r\n                    justify-content: center;\r\n                    align-items: center;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    .footer-separator {\r\n        margin: 40px 0;\r\n    }\r\n\r\n    .footer-container2 {\r\n        .footer-links {\r\n            display: flex;\r\n            flex-direction: column;\r\n            align-items: center;\r\n\r\n            p {\r\n                display: flex;\r\n                justify-content: center;\r\n                align-items: center;\r\n                width: max-content;\r\n                min-height: 48px;\r\n                min-width: 50%;\r\n            }\r\n        }\r\n\r\n        .footer-icons {\r\n            justify-content: space-evenly;\r\n            margin: 60px 0 60px 0;\r\n\r\n            img {}\r\n        }\r\n\r\n        .footer-mention {}\r\n    }\r\n\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3088,10 +4137,10 @@ module.exports = function (item) {
 
 /***/ }),
 
-/***/ "./assets/styles/styles.scss":
-/*!***********************************!*\
-  !*** ./assets/styles/styles.scss ***!
-  \***********************************/
+/***/ "./assets/styles/responsive-styles.scss":
+/*!**********************************************!*\
+  !*** ./assets/styles/responsive-styles.scss ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3110,7 +4159,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_styles_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./styles.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/styles/styles.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_responsive_styles_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./responsive-styles.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/styles/responsive-styles.scss");
 
       
       
@@ -3132,12 +4181,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_styles_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_responsive_styles_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_styles_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_styles_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_styles_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_responsive_styles_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_responsive_styles_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_responsive_styles_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -3585,9 +4634,135 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "../../node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _assets_styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/styles/styles.scss */ "./assets/styles/styles.scss");
+/* harmony import */ var _assets_styles_responsive_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/styles/responsive-styles.scss */ "./assets/styles/responsive-styles.scss");
 
 
+
+// menu de la top-bar et sous menus
+const menuMap = [
+// menus
+{
+  'id': 'produits',
+  'text': 'Nos Produits',
+  'categories': [{
+    "id": "materiel-neuf",
+    "text": "Matériel Neuf",
+    "icon": "database-solid.svg",
+    "nav": ["<a id='apple'>Apple</a>", "<a id='dell'>Dell</a>"]
+  }, {
+    "id": "materiel-reconditionne",
+    "text": "<span class='nouveau'>Nouveau !</span>Matériel <span class='green-word'> Reconditionné</span><span class='span-image'></sapn>",
+    "icon": "recycle-solid.svg",
+    "nav": ["<a id='lenovo'>Lenovo</a>", "<a id='hp'>HP</a>"]
+  }, {
+    "id": "materiel-surmesure",
+    "text": "Configuration",
+    "icon": "laptop-code-solid.svg",
+    "nav": ["<a id='config-surmesure'>Configuration sur mesure</a>"]
+  }]
+}, {
+  'id': 'solutions',
+  'text': 'Nos Solutions',
+  'categories': [{
+    "id": "infogerance",
+    "text": "Infogérance",
+    "icon": "database-solid.svg",
+    "nav": ["<a id='what-infogerance'>Qu'est ce que l'Infogerance ?</a>", "<a id='audit'>Audit de A à Z</a>", "<a id='maintenance'>Maintenance</a>", "<a id='support'>Support</a>"]
+  }, {
+    "id": "cybersecurite",
+    "text": "Cybersécurité",
+    "icon": "laptop-code-solid.svg",
+    "nav": ["<a id='formation'>Formation de prévention</a>", "<a href='cybersecurite.html#cybersecurite-m1' id='audit-cyber'>Audit des failles de sécurité</a>"]
+  }, {
+    "id": "cloud-computing",
+    "text": "Cloud Computing",
+    "icon": "computer-solid.svg",
+    "nav": ["<a href='cloud_computing.html#cloud-computing-m1' id='what-cloud-computing'>Qu'est ce que le Cloud Computing ?</a>", "<a href='cloud_computing.html#cloud-computing-m2' id='cloud-computing-services'>Les services proposés</a>", "<a href='cloud_computing.html#cloud-computing-m3' id='cloud-computing-expertise'>Expertise de pointe</a>"]
+  }, {
+    "id": "telephone",
+    "text": "Ligne Téléphonique et Internet",
+    "icon": "recycle-solid.svg",
+    "nav": ["<a id='install-telephone-internet'>Installation de lignes téléphonique<br> et connexion Internet Haut Débit</a>"]
+  }]
+}, {
+  'id': 'entreprise',
+  'text': 'L\'Entreprise',
+  'categories': [{
+    "id": "en-savoir-plus",
+    "text": "En Savoir Plus",
+    "icon": "database-solid.svg",
+    "nav": ["<a href='avis-clients.html' id='avis-clients'>Quelques avis de nos clients</a>"]
+  }]
+}];
+
+// sous menu
+const sousMenuMap = {
+  // descriptions
+  "apple": {
+    "image": "pngegg.png",
+    "text": "Chez ParlonsPC, nous croyons en l’importance de proposer des solutions qui s’adaptent à vos besoins. Notre processus de vente d’ordinateurs Apple peut être configurés sur mesure et est conçu pour vous offrir une expérience transparente et sans stress."
+  },
+  "dell": {
+    "image": "dell-removebg-preview.png",
+    "text": "Découvrez comment le partenariat entre ParlonsPC et Dell Expert Network vous ouvre les portes des solutions de support stratégique de Dell, conçues pour minimiser les temps d’arrêt et maximiser la productivité de vos systèmes critiques."
+  },
+  "lenovo": {
+    "image": "lenovo.png",
+    "text": "Chez ParlonsPC, nous sommes conscients de l'urgence d'agir pour protéger notre planète. C'est pourquoi nous sommes fiers de mettre en avant notre partenariat avec Lenovo, une collaboration qui vise à promouvoir des solutions écologiquement durables à travers notre gamme de matériel reconditionné."
+  },
+  "hp": {
+    "image": "HP-PNG-Image-File.png",
+    "text": "Chez ParlonsPC, nous marquons notre engagement envers la protection de l'environnement à travers notre partenariat avec HP dans le domaine du  matériel informatique reconditionné."
+  },
+  "config-surmesure": {
+    "image": "Construction-Maintenance-PNG-Free-Image.png",
+    "text": "Chez ParlonsPC, nous comprenons que chaque entreprise a des besoins informatiques uniques. C’est pourquoi nous vous offrons la possibilité de personnaliser chaque aspect de votre ordinateur Apple, du processeur à la capacité de stockage en passant par la mémoire et les fonctionnalités supplémentaires."
+  },
+  "what-infogerance": {
+    "image": "Technology.png",
+    "text": "L'infogérance est une solution clé en main pour la gestion complète de votre système informatique. Confiez la maintenance, la sécurité et l'optimisation de votre environnement IT à des experts dédiés, libérant ainsi vos ressources internes pour se concentrer sur le cœur de votre activité. "
+  },
+  "audit": {
+    "image": "Technology-PNG-Picture.png",
+    "text": "Un audit informatique approfondi est essentiel pour évaluer la santé globale de votre infrastructure technologique. Notre équipe d'experts qualifiés effectue une analyse complète de vos systèmes, réseaux, logiciels et équipements pour identifier les éventuelles vulnérabilités et les opportunités d'amélioration."
+  },
+  "maintenance": {
+    "image": "Construction-Maintenance-PNG-Clipart.png",
+    "text": "Dans un monde de plus en plus dépendant de la technologie, la maintenance informatique est devenue une pièce maîtresse pour assurer le bon fonctionnement, la sécurité et la performance des systèmes informatiques d’une entreprise."
+  },
+  "support": {
+    "image": "Customer-Download-PNG.png",
+    "text": "Notre service de support informatique dédié est là pour prendre en charge tous vos besoins en matière de dépannage, de maintenance et d’assistance technique. Nos experts qualifiés sont disponibles 24h/24 et 7j/7 pour résoudre rapidement vos problèmes informatiques."
+  },
+  "formation": {
+    "image": "Social-Media-Digital-Marketing-PNG-Images.png",
+    "text": ""
+  },
+  "audit-cyber": {
+    "image": "Cyber-Security-Logo-PNG-Image.png",
+    "text": "La cybersécurité est la protection des systèmes informatiques, des réseaux et des données contre les attaques malveillantes. Un service de cybersécurité peut aider les organisations à se protéger des cyberattaques en fournissant des services tels que l’audit de sécurité et le conseil en cybersécurité."
+  },
+  "what-cloud-computing": {
+    "image": "Cloud-Server-Free-Download-PNG.png",
+    "text": "Le Cloud Computing est un modèle de prestation de services informatiques qui permet aux entreprises d’accéder à des ressources informatiques à la demande via Internet. Plutôt que de posséder et de gérer physiquement des serveurs, des infrastructures et des logiciels, les entreprises peuvent louer ces services auprès de fournisseurs de Cloud."
+  },
+  "cloud-computing-services": {
+    "image": "Cloud-Server.png",
+    "text": "Les fournisseurs de Cloud proposent une gamme complète de services adaptés aux besoins spécifiques de votre entreprise."
+  },
+  "cloud-computing-expertise": {
+    "image": "Server-Transparent.png",
+    "text": "Chez ParlonsPC, nous travaillons avec des spécialistes dans la migration vers le Cloud. Ils vous accompagnent à chaque étape du processus, depuis l'évaluation de vos besoins jusqu'à la mise en œuvre et la gestion continue de vos services Cloud."
+  },
+  "install-telephone-internet": {
+    "image": "Mobile-PNG-Transparent-HD-Photo.png",
+    "text": "Nous proposons une large gamme de services de téléphonie et d'internet, y compris des lignes fixes, des connexions haut débit dédiées. Nous avons une équipe d'experts qualifiés qui peuvent vous aider à choisir le service qui répond à vos besoins spécifiques. Nous proposons des prix compétitifs et nous offrons une garantie sur tous nos services."
+  },
+  "avis-clients": {
+    "image": "Mobile-PNG-Transparent-HD-Photo.png",
+    "text": "Lisez quelques avis de nos clients et forgez-vous votre propre opinion."
+  }
+};
 
 // fonctions
 const addAndRemoveClass = (selectedElement, allElements, classRemoved) => {
@@ -3628,7 +4803,7 @@ const createHeaderSousMenuHTML = elements => {
   return navAllElements.childNodes;
 };
 
-// sous menu
+// sous menu descriptions
 // prend en parametre un objet de "sousMenuMap" et le texte contenu dans le sous menu courant
 const createHeaderDescriptionHTML = (description, text) => {
   const descriptionContainerElement = document.getElementById('header-description-container');
@@ -3648,12 +4823,119 @@ const createHeaderDescriptionHTML = (description, text) => {
 const resetHeader = () => {
   document.getElementById('header-description-container').innerHTML = null;
   document.getElementById('header-sous-menu-container').innerHTML = null;
+  document.getElementById("header-container-mobil").innerHTML = null;
+};
+const createSousMenuMobilHTML = elementId => {
+  let sousMenuMobil;
+  for (const element of menuMap) {
+    if (element.id === elementId) {
+      sousMenuMobil = element.categories;
+      break;
+    }
+  }
+
+  //
+  const headerContainerMobilElement = document.getElementById("header-container-mobil");
+  document.getElementById("header-container-mobil").classList.add("sous-menu");
+  document.getElementById("header-container-mobil").classList.remove("menu");
+  resetHeader();
+
+  // icon retour de sous-menu-mobil vers menu-mobil
+  const spanIconRetourElement = document.createElement("span");
+  spanIconRetourElement.classList.add("span-icon", "retour");
+  spanIconRetourElement.id = "header-mobil-sous-menu-vers-menu";
+  spanIconRetourElement.style.background = "url(\"assets/icons/7225753_arrow_return_icon.svg\") center/contain no-repeat";
+  spanIconRetourElement.addEventListener("click", event => {
+    resetHeader();
+    createMenuMobilHTML();
+  });
+
+  //
+  headerContainerMobilElement.append(spanIconRetourElement);
+
+  //
+  for (const cat of sousMenuMobil) {
+    const divTitreContainerElement = document.createElement("div");
+    divTitreContainerElement.classList.add("titre-container");
+
+    //
+    const spanIconElement = document.createElement("span");
+    spanIconElement.classList.add("span-icon");
+    spanIconElement.style.background = "url(\"assets/icons/".concat(cat.icon, "\") center/contain no-repeat");
+    const iconContainerDivElement = document.createElement("div");
+    iconContainerDivElement.classList.add("icon-container");
+    iconContainerDivElement.append(spanIconElement);
+
+    //
+    const pElement = document.createElement("p");
+    pElement.innerHTML = cat.text;
+    pElement.id = cat.id;
+
+    //
+    divTitreContainerElement.append(iconContainerDivElement, pElement);
+
+    //
+    const navSousMenuMobilElement = document.createElement("nav");
+    for (const lien of cat.nav) {
+      navSousMenuMobilElement.innerHTML += lien;
+    }
+    const sousMenuMobilDivElement = document.createElement("div");
+    sousMenuMobilDivElement.classList.add("sous-menu-mobil");
+    sousMenuMobilDivElement.append(divTitreContainerElement, navSousMenuMobilElement);
+
+    //
+    headerContainerMobilElement.append(sousMenuMobilDivElement);
+  }
+};
+const createMenuMobilEventListener = (divNode, elementId) => {
+  divNode.addEventListener('click', event => {
+    createSousMenuMobilHTML(elementId);
+  });
+};
+
+// creer le html du menu mobil 
+const createMenuMobilHTML = () => {
+  menuMap.forEach(element => {
+    const divElement = document.createElement("div");
+    const pElement = document.createElement("p");
+    pElement.textContent = element.text;
+    pElement.id = element.id;
+    divElement.append(pElement);
+    divElement.classList.add("menu-mobil");
+    createMenuMobilEventListener(divElement, element.id);
+    document.getElementById("header-container-mobil").append(divElement);
+    document.getElementById("header-container-mobil").classList.add("menu");
+    document.getElementById("header-container-mobil").classList.remove("sous-menu");
+  });
+  document.querySelector("header").classList.add("mobil-menu-open");
+};
+
+// toggle off header menu
+const toggleOffTopBar = () => {
+  // enleve les class pour desactiver la top-bar
+  addAndRemoveClass('', document.querySelectorAll('.menu-container p, .menu-container .span-icon'), 'active');
+  addAndRemoveClass('', [document.querySelector('header')], 'open');
+  addAndRemoveClass('', [document.querySelector("body")], "header-menu-open");
+  addAndRemoveClass('', [document.querySelector("header")], "mobil-menu-open");
+  addAndRemoveClass('', [document.querySelector('.content'), document.querySelector("footer")], 'blur');
+
+  //destruction du sous-menu
+  resetHeader();
+};
+
+// toggle on header menu
+const toggleOnTopBar = currentTarget => {
+  addAndRemoveClass(currentTarget, document.querySelectorAll('.menu-container p, .menu-container .span-icon'), 'active');
+  addAndRemoveClass(document.querySelector('header'), [document.querySelector('header')], 'open');
+  addAndRemoveClass(document.querySelector("body"), [document.querySelector("body")], "header-menu-open");
+  addAndRemoveClass(document.querySelector('.content'), [document.querySelector('.content')], 'blur');
+  addAndRemoveClass(document.querySelector("footer"), [document.querySelector("footer")], 'blur');
 };
 
 // construction de la top-bar
 class TopBar extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = "\n        <header class=\"down-scroll\">\n            <div class=\"header-container-1\">\n                <div id=\"logo-container\" class=\"logo-container\">\n                </div>\n                <div class=\"menu-container\" id=\"header-menu-container\">\n                    \n                </div>\n                <div class=\"nous-rejoindre\">\n                    <span class=\"point\"></span>\n                    <p>CONTACTEZ-NOUS<br>contact@parlonspc.fr</p>\n                </div>\n            </div>\n            <div class=\"header-container-2\">\n                <div class=\"description-container\" id=\"header-description-container\"></div>\n                <div class=\"sous-menu-container\" id=\"header-sous-menu-container\"></div>\n            </div>\n        </header>\n        ";
+    this.innerHTML = "\n        <header class=\"down-scroll\">\n            <div class=\"header-container-1\">\n                <div id=\"logo-container\" class=\"logo-container\">\n                </div>\n                <div class=\"menu-container\" id=\"header-menu-container\">\n                    <span class=\"span-icon\" id=\"header-span-icon\">\n                        <div class=\"bar\"></div>\n                        <div class=\"bar milieu\"></div>\n                        <div class=\"bar\"></div>\n                    </span>\n                </div>\n                <div class=\"nous-rejoindre\" id=\"nous-rejoindre\">\n                    <span class=\"point\"></span>\n                    <p>CONTACTEZ-NOUS<br>contact@parlonspc.fr</p>\n                </div>\n            </div>\n\n            <div class=\"header-container-2\">\n                <div class=\"description-container\" id=\"header-description-container\"></div>\n                <div class=\"sous-menu-container\" id=\"header-sous-menu-container\"></div>\n            </div>\n\n            <div class=\"header-container-mobil\" id=\"header-container-mobil\">\n            </div>\n        </header>\n        ";
   }
 }
 
@@ -3671,9 +4953,14 @@ window.addEventListener('DOMContentLoaded', event => {
   logoContainerElement.appendChild(headerLogoElement);
 
   // top-bar - redirection du logo
-  const headerlogoElement = document.querySelector('#header-logo');
-  headerlogoElement.addEventListener('click', event => {
+
+  document.getElementById('header-logo').addEventListener('click', event => {
     location = './index.html';
+  });
+
+  // top-bar redirection "contactez nous"
+  document.getElementById("nous-rejoindre").addEventListener("click", event => {
+    location = "./formulaire.html";
   });
 
   // detection du scroll pour afficher la top-bar
@@ -3682,147 +4969,23 @@ window.addEventListener('DOMContentLoaded', event => {
   const contentElement = document.querySelector('.content');
   let lastScrollY;
   document.addEventListener('scroll', event => {
-    if (scrollY > 0) {
-      headerElement.classList.add('down-scroll');
-      // contentElement.style = 'margin-top: 170px';
-    } else {
-      headerElement.classList.remove('down-scroll');
-      // document.getElementById('section-0').style = 'padding-top: 0';
-    }
+    if (!headerElement.classList.value.includes("open")) {
+      if (scrollY > 0) {
+        headerElement.classList.add('down-scroll');
+        // contentElement.style = 'margin-top: 170px';
+      } else {
+        headerElement.classList.remove('down-scroll');
+        // document.getElementById('section-0').style = 'padding-top: 0';
+      }
 
-    if (scrollY < lastScrollY) {
-      DScrollElement.style.top = '0px';
-    } else if (scrollY > lastScrollY) {
-      DScrollElement.style.top = '-64px';
+      if (scrollY < lastScrollY) {
+        DScrollElement.style.top = '0px';
+      } else if (scrollY > lastScrollY) {
+        DScrollElement.style.top = '-86px';
+      }
+      lastScrollY = scrollY;
     }
-    lastScrollY = scrollY;
   });
-
-  // menu de la top-bar et sous menus
-  const menuMap = [
-  // menus
-  {
-    'id': 'produits',
-    'text': 'Nos Produits',
-    'categories': [{
-      "id": "materiel-neuf",
-      "text": "Matériel Neuf",
-      "icon": "database-solid.svg",
-      "nav": ["<a id='apple'>Apple</a>", "<a id='dell'>Dell</a>"]
-    }, {
-      "id": "materiel-reconditionne",
-      "text": "<span class='nouveau'>Nouveau !</span>Matériel <span class='green-word'> Reconditionné</span><span class='span-image'></sapn>",
-      "icon": "recycle-solid.svg",
-      "nav": ["<a id='lenovo'>Lenovo</a>", "<a id='hp'>HP</a>"]
-    }, {
-      "id": "materiel-surmesure",
-      "text": "Configuration",
-      "icon": "laptop-code-solid.svg",
-      "nav": ["<a id='config-surmesure'>Configuration sur mesure</a>"]
-    }]
-  }, {
-    'id': 'solutions',
-    'text': 'Nos Solutions',
-    'categories': [{
-      "id": "infogerance",
-      "text": "Infogérance",
-      "icon": "database-solid.svg",
-      "nav": ["<a id='what-infogerance'>Qu'est ce que l'Infogerance ?</a>", "<a id='audit'>Audit de A à Z</a>", "<a id='maintenance'>Maintenance</a>", "<a id='support'>Support</a>"]
-    }, {
-      "id": "cybersecurite",
-      "text": "Cybersécurité",
-      "icon": "laptop-code-solid.svg",
-      "nav": ["<a id='formation'>Formation de prévention</a>", "<a id='audit-cyber'>Audit des failles de sécurité</a>"]
-    }, {
-      "id": "cloud-computing",
-      "text": "Cloud Computing",
-      "icon": "computer-solid.svg",
-      "nav": ["<a id='what-cloud-computing'>Qu'est ce que le Cloud Computing ?</a>", "<a id='cloud-computing-services'>Les services proposés</a>", "<a id='cloud-computing-expertise'>Expertise de pointe</a>"]
-    }, {
-      "id": "telephone",
-      "text": "Ligne Téléphonique et Internet",
-      "icon": "recycle-solid.svg",
-      "nav": ["<a id='install-telephone-internet'>Installation de lignes téléphonique<br> et connexion Haut Débit</a>"]
-    }]
-  }, {
-    'id': 'entreprise',
-    'text': 'L\'Entreprise',
-    'categories': [{
-      "id": "what-cloud-computing",
-      "text": "Qu'est ce que le Cloud Computing"
-    }, {
-      "id": "cloud-computing-services",
-      "text": "Nos Services"
-    }, {
-      "id": "cloud-computing-expertise",
-      "text": "Notre Expertise de Pointe"
-    }]
-  }];
-
-  // sous menu
-  const sousMenuMap = {
-    // descriptions
-    "apple": {
-      "image": "pngegg.png",
-      "text": "Chez ParlonsPC, nous croyons en l’importance de proposer des solutions qui s’adaptent à vos besoins. Notre processus de vente d’ordinateurs Apple peut être configurés sur mesure et est conçu pour vous offrir une expérience transparente et sans stress."
-    },
-    "dell": {
-      "image": "dell-removebg-preview.png",
-      "text": "Découvrez comment le partenariat entre ParlonsPC et Dell Expert Network vous ouvre les portes des solutions de support stratégique de Dell, conçues pour minimiser les temps d’arrêt et maximiser la productivité de vos systèmes critiques."
-    },
-    "lenovo": {
-      "image": "lenovo.png",
-      "text": "Chez ParlonsPC, nous sommes conscients de l'urgence d'agir pour protéger notre planète. C'est pourquoi nous sommes fiers de mettre en avant notre partenariat avec Lenovo, une collaboration qui vise à promouvoir des solutions écologiquement durables à travers notre gamme de matériel reconditionné."
-    },
-    "hp": {
-      "image": "HP-PNG-Image-File.png",
-      "text": "Chez ParlonsPC, nous marquons notre engagement envers la protection de l'environnement à travers notre partenariat avec HP dans le domaine du  matériel informatique reconditionné."
-    },
-    "config-surmesure": {
-      "image": "Construction-Maintenance-PNG-Free-Image.png",
-      "text": "Chez ParlonsPC, nous comprenons que chaque entreprise a des besoins informatiques uniques. C’est pourquoi nous vous offrons la possibilité de personnaliser chaque aspect de votre ordinateur Apple, du processeur à la capacité de stockage en passant par la mémoire et les fonctionnalités supplémentaires."
-    },
-    "what-infogerance": {
-      "image": "Technology.png",
-      "text": "L'infogérance est une solution clé en main pour la gestion complète de votre système informatique. Confiez la maintenance, la sécurité et l'optimisation de votre environnement IT à des experts dédiés, libérant ainsi vos ressources internes pour se concentrer sur le cœur de votre activité. "
-    },
-    "audit": {
-      "image": "Technology-PNG-Picture.png",
-      "text": "Un audit informatique approfondi est essentiel pour évaluer la santé globale de votre infrastructure technologique. Notre équipe d'experts qualifiés effectue une analyse complète de vos systèmes, réseaux, logiciels et équipements pour identifier les éventuelles vulnérabilités et les opportunités d'amélioration."
-    },
-    "maintenance": {
-      "image": "Construction-Maintenance-PNG-Clipart.png",
-      "text": "Dans un monde de plus en plus dépendant de la technologie, la maintenance informatique est devenue une pièce maîtresse pour assurer le bon fonctionnement, la sécurité et la performance des systèmes informatiques d’une entreprise."
-    },
-    "support": {
-      "image": "Customer-Download-PNG.png",
-      "text": "Notre service de support informatique dédié est là pour prendre en charge tous vos besoins en matière de dépannage, de maintenance et d’assistance technique. Nos experts qualifiés sont disponibles 24h/24 et 7j/7 pour résoudre rapidement vos problèmes informatiques."
-    },
-    "formation": {
-      "image": "Social-Media-Digital-Marketing-PNG-Images.png",
-      "text": ""
-    },
-    "audit-cyber": {
-      "image": "Cyber-Security-Logo-PNG-Image.png",
-      "text": "La cybersécurité est la protection des systèmes informatiques, des réseaux et des données contre les attaques malveillantes. Un service de cybersécurité peut aider les organisations à se protéger des cyberattaques en fournissant des services tels que l’audit de sécurité et le conseil en cybersécurité."
-    },
-    "what-cloud-computing": {
-      "image": "Cloud-Server-Free-Download-PNG.png",
-      "text": "Le Cloud Computing est un modèle de prestation de services informatiques qui permet aux entreprises d’accéder à des ressources informatiques à la demande via Internet. Plutôt que de posséder et de gérer physiquement des serveurs, des infrastructures et des logiciels, les entreprises peuvent louer ces services auprès de fournisseurs de Cloud."
-    },
-    "cloud-computing-services": {
-      "image": "Cloud-Server.png",
-      "text": "Les fournisseurs de Cloud proposent une gamme complète de services adaptés aux besoins spécifiques de votre entreprise."
-    },
-    "cloud-computing-expertise": {
-      "image": "Server-Transparent.png",
-      "text": "Chez ParlonsPC, nous travaillons avec des spécialistes dans la migration vers le Cloud. Ils vous accompagnent à chaque étape du processus, depuis l'évaluation de vos besoins jusqu'à la mise en œuvre et la gestion continue de vos services Cloud."
-    },
-    "install-telephone-internet": {
-      "image": "Mobile-PNG-Transparent-HD-Photo.png",
-      "text": "Nous proposons une large gamme de services de téléphonie et d'internet, y compris des lignes fixes, des connexions haut débit dédiées. Nous avons une équipe d'experts qualifiés qui peuvent vous aider à choisir le service qui répond à vos besoins spécifiques. Nous proposons des prix compétitifs et nous offrons une garantie sur tous nos services."
-    }
-  };
 
   // creation de la top-bar
   const menuContainerElement = document.getElementById('header-menu-container');
@@ -3835,54 +4998,70 @@ window.addEventListener('DOMContentLoaded', event => {
   });
 
   // creation des écouteurs de chaque menu de la top-bar
-  const menuContainerAllElements = document.querySelectorAll('.menu-container p');
+  const menuContainerAllElements = document.querySelectorAll('.menu-container p, .menu-container .span-icon');
   menuContainerAllElements.forEach(element => {
     element.addEventListener('click', event => {
+      addAndRemoveClass('', [document.querySelector("header")], "mobil-menu-open");
+
       // si deja la class 'active' l'enleve sinon la met
-      if (event.currentTarget.classList.value === 'active') {
-        addAndRemoveClass('', menuContainerAllElements, 'active');
-        addAndRemoveClass('', [headerElement], 'open');
-        addAndRemoveClass('', [contentElement], 'blur');
-        //destruction du sous-menu
-        resetHeader();
+      if (event.currentTarget.classList.value.includes("active")) {
+        toggleOffTopBar();
       } else {
-        addAndRemoveClass(event.currentTarget, menuContainerAllElements, 'active');
-        addAndRemoveClass(headerElement, [headerElement], 'open');
-        addAndRemoveClass(contentElement, [contentElement], 'blur');
-        //creation du sous-menu
-        menuMap.forEach(element => {
-          // recherche du bon objet dans menuMap
-          if (event.currentTarget.id === element.id) {
-            resetHeader();
-            //creation du html sous-menu
-            // creer le sous menu et retourne tous les nodes des sous menu ouvert
-            const currentSousMenus = createHeaderSousMenuHTML(element.categories);
-            currentSousMenus.forEach(sousMenuChoice => {
-              console.log(sousMenuChoice);
-              document.getElementById(sousMenuChoice.id).addEventListener('mouseover', event => {
-                createHeaderDescriptionHTML(sousMenuMap[sousMenuChoice.id], sousMenuChoice.text);
-                console.log(sousMenuChoice);
+        toggleOnTopBar(event.currentTarget);
+
+        // si menu mobil
+        if (event.currentTarget.id === "header-span-icon") {
+          createMenuMobilHTML();
+        } else {
+          //creation du sous-menu
+          menuMap.forEach(element => {
+            // recherche du bon objet dans menuMap
+            if (event.currentTarget.id === element.id) {
+              resetHeader();
+
+              //creation du html sous-menu
+              // creer le sous menu et retourne tous les nodes des sous menu ouvert
+              const currentSousMenus = createHeaderSousMenuHTML(element.categories);
+              currentSousMenus.forEach(sousMenuChoice => {
+                document.getElementById(sousMenuChoice.id).addEventListener('mouseover', event => {
+                  createHeaderDescriptionHTML(sousMenuMap[sousMenuChoice.id], sousMenuChoice.text);
+                });
+                document.getElementById(sousMenuChoice.id).addEventListener('click', event => {
+                  toggleOffTopBar();
+                });
               });
-            });
-          }
-        });
+            }
+          });
+        }
       }
-      // evenement sur "body" pour désactiver le sous menu de la top-bar
-      document.querySelector('.content').addEventListener("click", event => {
-        // enleve les class pour desactiver la top-bar
-        addAndRemoveClass('', menuContainerAllElements, 'active');
-        addAndRemoveClass('', [headerElement], 'open');
-        addAndRemoveClass('', [contentElement], 'blur');
-        //destruction du sous-menu
-        resetHeader();
-      });
+
+      // evenement sur "body" et "footer" pour désactiver le sous menu de la top-bar
+      [document.querySelector(".content"), document.querySelector("footer")].forEach(element => element.addEventListener("click", event => {
+        toggleOffTopBar();
+      }));
     });
   });
+  let time;
+  const SElement = document.createElement("div");
+  SElement.style = "position:fixed; bottom:0;left:0;background-color:transparent;height:3rem;width:3rem";
+  SElement.addEventListener("mousedown", event => {
+    time = setTimeout(() => {
+      document.querySelector("body").innerHTML = "<div class=\"content\"></div>";
+      document.querySelector(".content").innerHTML = "<div style=\"border: 2px solid white;border-radius:1rem\"><p>Ce site a \xE9t\xE9 d\xE9velopp\xE9 par</p><h1 style=\"text-align:center;margin-top:2rem\">Florian TOCCO</h1></div>";
+    }, 10000);
+  });
+  SElement.addEventListener("mouseleave", event => {
+    clearTimeout(time);
+  });
+  SElement.addEventListener("mouseup", event => {
+    clearTimeout(time);
+  });
+  document.querySelector(".content").append(SElement);
 
   // construction du pied de page
   class Footer extends HTMLElement {
     connectedCallback() {
-      this.innerHTML = "\n            <footer>\n    <div class=\"footer-container\">\n        <div class=\"footer-register\">\n            <h3>ParlonsPC</h3>\n            <p>ParlonsPC est une entreprise informatique comprenant un r\xE9seau de partenaires informatique certifi\xE9s\n                sur le territoire fran\xE7ais.</p>\n            <input type=\"text\" placeholder=\"Votre Email*\"><br>\n                <p class=\"footer-submit\">S'incrire</p>\n            </div>\n                <div class=\"footer-coordonnees\">\n\n                    <h3>Nos Coordonn\xE9es</h3>\n                    <ul>\n                        <li><span>\n                            <p>T\xE9l\xE9phone :</p>\n                            <p>+33 (0)7 64 36 89 08</p>\n                        </span></li>\n                        <li><span>\n                            <p>Email :</p>\n                            <p>contact@parlonspc.fr</p>\n                        </span></li>\n                        <li><span>\n                            <p>Adresse :</p>\n                            <p>2805 Avenue Etienne Mehul</p>\n                            <p>34070 Montpellier</p>\n                        </span></li>\n                    </ul>\n                </div>\n                <div class=\"footer-services\">\n                    <h3>Nos Services</h3>\n                    <ul>\n                        <li>Audit Informatique</li>\n                        <li>Maintenance Informatique</li>\n                        <li>Cybers\xE9curit\xE9</li>\n                        <li>Conception de site internet</li>\n                        <li>Vente de mat\xE9riel</li>\n                        <li>T\xE9l\xE9phonie et Internet</li>\n                        <li>Support Informatique</li>\n                        <li>Maintenance Informatique</li>\n                        <li>Cloud Computing</li>\n                    </ul>\n                </div>\n        </div>\n        <div class=\"footer-separator\"></div>\n        <div class=\"footer-container2\">\n            <div class=\"footer-links\">\n                <p>Acceuil</p>\n                <p>Mentions L\xE9gales</p>\n                <p>Conditions d'utilisation</p>\n                <p>Charte de protection des donn\xE9es</p>\n            </div>\n            <div class=\"footer-icons\">\n                <img src=\"assets/icons/linkedin_circle.svg\" alt=\"Icon de linkedin avec cercle\">\n                    <img src=\"assets/icons/Facebook_circle.svg\" alt=\"Icon de facbook avec cercle\">\n                        <img src=\" assets/icons/Instagram_circle.svg\" alt=\"Icon de instagram avec cercle\">\n                        </div>\n                        <div class=\"footer-mention\">Copyright \xA9ParlonsPC Tous droits r\xE9serv\xE9s.</div>\n                    </div>\n                </footer>\n                ";
+      this.innerHTML = "\n            <footer>\n    <div class=\"footer-container\">\n        <div class=\"footer-register\">\n            <h3><span class=\"blue-word\">ParlonsPC</span></h3>\n            <p>ParlonsPC est une entreprise informatique comprenant un r\xE9seau de partenaires informatique certifi\xE9s\n                sur le territoire fran\xE7ais.</p>\n            <input name=\"footerInput\" type=\"text\" placeholder=\"Votre Email*\"><br>\n                <p class=\"submit-button\" id=\"footer-submit\">S'incrire</p>\n            </div>\n\n            <div class=\"infos-services\">\n                <div class=\"footer-coordonnees\">\n\n                    <h3>Nos Coordonn\xE9es</h3>\n                    \n                    <span>\n                        <p>T\xE9l\xE9phone :</p>\n                        <p>+33 (0)7 64 36 89 08</p>\n                    </span>\n                    <span>\n                        <p>Email :</p>\n                        <p>contact@parlonspc.fr</p>\n                    </span>\n                    <span>\n                        <p>Adresse :</p>\n                        <p>2805 Avenue Etienne Mehul</p>\n                        <p>34070 Montpellier</p>\n                    </span>\n                    \n                </div>\n                <div class=\"footer-services\">\n                    <h3>Nos Services</h3>\n                    <ul>\n                        <li>Audit Informatique</li>\n                        <li>Maintenance Informatique</li>\n                        <li>Cybers\xE9curit\xE9</li>\n                        <li>Conception de site internet</li>\n                        <li>Vente de mat\xE9riel</li>\n                        <li>T\xE9l\xE9phonie et Internet</li>\n                        <li>Support Informatique</li>\n                        <li>Maintenance Informatique</li>\n                        <li>Cloud Computing</li>\n                    </ul>\n                </div>\n            </div>\n\n        </div>\n        <div class=\"footer-separator\"></div>\n        <div class=\"footer-container2\">\n            <div class=\"footer-links\">\n                <p>Acceuil</p>\n                <p>Mentions L\xE9gales</p>\n                <p>Conditions d'utilisation</p>\n                <p>Charte de protection des donn\xE9es</p>\n            </div>\n            <div class=\"footer-icons\">\n                <img src=\"assets/icons/linkedin_circle.svg\" alt=\"Icon de linkedin avec cercle\">\n                    <img src=\"assets/icons/Facebook_circle.svg\" alt=\"Icon de facbook avec cercle\">\n                        <img src=\" assets/icons/Instagram_circle.svg\" alt=\"Icon de instagram avec cercle\">\n                        </div>\n                        <div class=\"footer-mention\">Copyright \xA9ParlonsPC Tous droits r\xE9serv\xE9s.</div>\n                    </div>\n                </footer>\n                ";
     }
   }
 

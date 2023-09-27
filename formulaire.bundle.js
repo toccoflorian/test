@@ -2,92 +2,189 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/nos_services/cybersecurite/cybersecurite.scss":
-/*!******************************************************************************************************************************************************!*\
-  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/nos_services/cybersecurite/cybersecurite.scss ***!
-  \******************************************************************************************************************************************************/
+/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/formulaire_contact/formulaire.scss":
+/*!*******************************************************************************************************************************************!*\
+  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/formulaire_contact/formulaire.scss ***!
+  \*******************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/images/wallhaven-nzx3rv.jpg */ "./assets/images/wallhaven-nzx3rv.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/images/wallhaven-45y5k7.png */ "./assets/images/wallhaven-45y5k7.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/images/visa.png */ "./assets/images/visa.png"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/images/wallhaven-47615v.png */ "./assets/images/wallhaven-47615v.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/icons/24heures.svg */ "./assets/icons/24heures.svg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
-var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
-var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
-var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `/* portrait phones and down */
 /* Landscape phone to portrait tablet */
 /* Portrait tablet to landscape and desktop */
 /* desktop */
 /* Large desktop */
-.content section {
-  display: flex;
+/* Large desktop */
+@media (min-width: 1200px) {
+  .content {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .content p:first-child {
+    margin-top: 80px;
+    font-size: 20px;
+  }
+  .content .container-1 {
+    display: flex;
+    justify-content: center;
+  }
+  .content .container-1 .span-icon {
+    height: 80px;
+    width: 80px;
+  }
+  .content .container-1 p {
+    padding-left: 25px;
+    font-size: 20px;
+  }
+  .content .container-2 .formulaire {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .content .container-2 .formulaire form .inputs {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .content .container-2 .formulaire form .inputs input {
+    width: 45%;
+    margin-bottom: 50px;
+    padding: 0.5rem 0.5rem;
+  }
+  .content .container-2 .formulaire form .selects {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  .content .container-2 .formulaire form .selects span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(45% + 16px);
+  }
+  .content .container-2 .formulaire form .selects span label {
+    width: max-content;
+  }
+  .content .container-2 .formulaire form .selects span select {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+  }
+  .content .container-2 .formulaire form .selects span select option {
+    padding-bottom: 10px;
+    background-color: var(--background-color-primary);
+  }
+  .content .container-2 .formulaire form textarea {
+    display: block;
+    background-color: var(--background-color-primary);
+    color: white;
+    width: calc(95% - 20px);
+    height: 225px;
+    margin: 0 auto 0 auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .content .container-2 .formulaire form .submit-button {
+    width: 25%;
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+  }
 }
-.content section .div-text {
-  flex: 6;
-  padding: 0 2rem;
+/*  desktop */
+@media (min-width: 980px) and (max-width: 1199.9px) {
+  .content {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .content p:first-child {
+    margin-top: 80px;
+    font-size: 20px;
+  }
+  .content .container-1 {
+    display: flex;
+    justify-content: center;
+  }
+  .content .container-1 .span-icon {
+    height: 80px;
+    width: 80px;
+  }
+  .content .container-1 p {
+    padding-left: 25px;
+    font-size: 20px;
+  }
+  .content .container-2 .formulaire form .inputs {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .content .container-2 .formulaire form .inputs input {
+    width: 45%;
+    margin-bottom: 50px;
+    padding: 0.5rem 0.5rem;
+  }
+  .content .container-2 .formulaire form .selects {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  .content .container-2 .formulaire form .selects span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(45% + 16px);
+  }
+  .content .container-2 .formulaire form .selects span label {
+    width: max-content;
+  }
+  .content .container-2 .formulaire form .selects span select {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+  }
+  .content .container-2 .formulaire form .selects span select option {
+    padding-bottom: 10px;
+    background-color: var(--background-color-primary);
+  }
+  .content .container-2 .formulaire form textarea {
+    display: block;
+    background-color: var(--background-color-primary);
+    color: white;
+    width: calc(95% - 20px);
+    height: 225px;
+    margin: 0 auto 0 auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .content .container-2 .formulaire form .submit-button {
+    width: 25%;
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+  }
 }
-.content section .div-text h2 {
-  margin-top: 0;
-  text-align: center;
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */
+/* portrait phones and down */
+.content .container-1 .span-icon {
+  background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center/contain no-repeat;
+  display: block;
 }
-.content section .div-text h3 {
-  padding-top: 8rem;
-  margin-top: -4rem;
-  text-align: center;
-}
-.content section .div-text p {
-  margin: 2rem;
-  text-align: left;
-}
-.content section .div-text li p span {
-  font-weight: 800;
-}
-.content section .span-image {
-  border-radius: 3px;
-}
-.content section.section-1 {
-  margin-top: 7rem;
-}
-.content section.section-1 .span-image {
-  flex: 4;
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center/cover;
-}
-.content section.section-2 .span-image {
-  flex: 4;
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center/cover;
-}
-.content section.section-3 .div-text {
-  display: flex;
-  flex-direction: column;
-}
-.content section.section-3 .div-text .span-image-2 {
-  height: 200px;
-  width: 100%;
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center no-repeat;
-  background-size: contain;
-}
-.content section.section-3 .span-image {
-  flex: 4;
-  background: url(${___CSS_LOADER_URL_REPLACEMENT_3___}) center/cover;
-}`, "",{"version":3,"sources":["webpack://./assets/styles/_media-queries.scss","webpack://./src/pages/nos_services/cybersecurite/cybersecurite.scss"],"names":[],"mappings":"AAAA,6BAAA;AAOA,uCAAA;AAOA,6CAAA;AAOA,YAAA;AAOA,kBAAA;ACKI;EACI,aAAA;AA3BR;AA6BQ;EACI,OAAA;EACA,eAAA;AA3BZ;AA6BY;EACI,aAAA;EACA,kBAAA;AA3BhB;AA8BY;EACI,iBAAA;EACA,iBAAA;EACA,kBAAA;AA5BhB;AA+BY;EACI,YAAA;EACA,gBAAA;AA7BhB;AAkCgB;EACI,gBAAA;AAhCpB;AAuCQ;EACI,kBAAA;AArCZ;AAwCQ;EACI,gBAAA;AAtCZ;AAwCY;EAEI,OAAA;EACA,gEAAA;AAvChB;AA6CY;EAEI,OAAA;EACA,gEAAA;AA5ChB;AAkDY;EACI,aAAA;EACA,sBAAA;AAhDhB;AAkDgB;EACI,aAAA;EACA,WAAA;EACA,oEAAA;EACA,wBAAA;AAhDpB;AAoDY;EAEI,OAAA;EACA,gEAAA;AAnDhB","sourcesContent":["/* portrait phones and down */\r\n@mixin xs {\r\n    @media (max-width: 480.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n    @media (min-width: 481px) and (max-width: 767.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n    @media (min-width: 767px) and (max-width: 979.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* desktop */\r\n@mixin standard {\r\n    @media (min-width: 980px) and (max-width: 1199.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Large desktop */\r\n@mixin xl {\r\n    @media (min-width: 1200px) {\r\n        @content;\r\n    }\r\n}","@use '../../../../assets/styles/media-queries' as MQueries;\r\n\r\n\r\n// /* Large desktop */\r\n// @include MQueries.xl {\r\n//     @import \"./responsive/xl\";\r\n// }\r\n\r\n\r\n// /*  desktop */\r\n// @include MQueries.standard {\r\n//     @import \"./responsive/standard\";\r\n// }\r\n\r\n\r\n// /* Portrait tablet to landscape and desktop */\r\n// @include MQueries.md {\r\n//     @import \"./responsive/md\";\r\n// }\r\n\r\n\r\n// /* Landscape phone to portrait tablet */\r\n// @include MQueries.sm {\r\n//     @import \"./responsive/sm\";\r\n// }\r\n\r\n\r\n// /* portrait phones and down */\r\n// @include MQueries.xs {\r\n//     @import \"./responsive/xs\";\r\n// }\r\n\r\n.content {\r\n    section {\r\n        display: flex;\r\n\r\n        .div-text {\r\n            flex: 6;\r\n            padding: 0 2rem;\r\n\r\n            h2 {\r\n                margin-top: 0;\r\n                text-align: center;\r\n            }\r\n\r\n            h3 {\r\n                padding-top: 8rem;\r\n                margin-top: -4rem;\r\n                text-align: center;\r\n            }\r\n\r\n            p {\r\n                margin: 2rem;\r\n                text-align: left;\r\n            }\r\n\r\n            li p {\r\n\r\n                span {\r\n                    font-weight: 800;\r\n\r\n                }\r\n            }\r\n\r\n        }\r\n\r\n        .span-image {\r\n            border-radius: 3px;\r\n        }\r\n\r\n        &.section-1 {\r\n            margin-top: 7rem;\r\n\r\n            .span-image {\r\n\r\n                flex: 4;\r\n                background: url('../../../../assets/images/wallhaven-nzx3rv.jpg') center/cover;\r\n            }\r\n        }\r\n\r\n        &.section-2 {\r\n\r\n            .span-image {\r\n\r\n                flex: 4;\r\n                background: url('../../../../assets/images/wallhaven-45y5k7.png') center/cover;\r\n\r\n            }\r\n        }\r\n\r\n        &.section-3 {\r\n            .div-text {\r\n                display: flex;\r\n                flex-direction: column;\r\n\r\n                .span-image-2 {\r\n                    height: 200px;\r\n                    width: 100%;\r\n                    background: url('../../../../assets/images/visa.png')center no-repeat;\r\n                    background-size: contain;\r\n                }\r\n            }\r\n\r\n            .span-image {\r\n\r\n                flex: 4;\r\n                background: url('../../../../assets/images/wallhaven-47615v.png') center/cover;\r\n\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
+.content .container-2 .formulaire form label {
+  color: var(--input-border-color);
+}`, "",{"version":3,"sources":["webpack://./assets/styles/_media-queries.scss","webpack://./src/pages/formulaire_contact/formulaire.scss","webpack://./src/pages/formulaire_contact/responsive/_xl.scss","webpack://./src/pages/formulaire_contact/responsive/_standard.scss"],"names":[],"mappings":"AAAA,6BAAA;AAOA,uCAAA;AAOA,6CAAA;AAOA,YAAA;AAOA,kBAAA;AC1BA,kBAAA;AD4BI;EE9BJ;IACI,gBAAA;IACA,iBAAA;EDQF;ECNE;IACI,gBAAA;IACA,eAAA;EDQN;ECLE;IACI,aAAA;IACA,uBAAA;EDON;ECLM;IACI,YAAA;IACA,WAAA;EDOV;ECJM;IACI,kBAAA;IACA,eAAA;EDMV;ECDM;IACI,iBAAA;IACA,cAAA;EDGV;ECIc;IACI,aAAA;IACA,6BAAA;EDFlB;ECIkB;IACI,UAAA;IACA,mBAAA;IACA,sBAAA;EDFtB;ECOc;IACI,aAAA;IACA,6BAAA;IACA,mBAAA;EDLlB;ECOkB;IACI,aAAA;IACA,sBAAA;IACA,6BAAA;IACA,mBAAA;IACA,uBAAA;EDLtB;ECOsB;IACI,kBAAA;EDL1B;ECQsB;IACI,sBAAA;IACA,WAAA;EDN1B;ECQ0B;IACI,oBAAA;IACA,iDAAA;EDN9B;ECkBc;IACI,cAAA;IACA,iDAAA;IACA,YAAA;IACA,uBAAA;IACA,aAAA;IACA,qBAAA;IACA,kBAAA;IACA,kBAAA;EDhBlB;ECmBc;IACI,UAAA;IACA,qBAAA;IACA,eAAA;EDjBlB;AACF;AAtEA,aAAA;ADeI;EGvBJ;IACI,gBAAA;IACA,iBAAA;EFkFF;EEhFE;IACI,gBAAA;IACA,eAAA;EFkFN;EE/EE;IACI,aAAA;IACA,uBAAA;EFiFN;EE/EM;IACI,YAAA;IACA,WAAA;EFiFV;EE9EM;IACI,kBAAA;IACA,eAAA;EFgFV;EErEc;IACI,aAAA;IACA,6BAAA;EFuElB;EErEkB;IACI,UAAA;IACA,mBAAA;IACA,sBAAA;EFuEtB;EElEc;IACI,aAAA;IACA,6BAAA;IACA,mBAAA;EFoElB;EElEkB;IACI,aAAA;IACA,sBAAA;IACA,6BAAA;IACA,mBAAA;IACA,uBAAA;EFoEtB;EElEsB;IACI,kBAAA;EFoE1B;EEjEsB;IACI,sBAAA;IACA,WAAA;EFmE1B;EEjE0B;IACI,oBAAA;IACA,iDAAA;EFmE9B;EEvDc;IACI,cAAA;IACA,iDAAA;IACA,YAAA;IACA,uBAAA;IACA,aAAA;IACA,qBAAA;IACA,kBAAA;IACA,kBAAA;EFyDlB;EEtDc;IACI,UAAA;IACA,qBAAA;IACA,eAAA;EFwDlB;AACF;AAtIA,6CAAA;AAMA,uCAAA;AAMA,6BAAA;AAQQ;EACI,4EAAA;EAEA,cAAA;AAsHZ;AA3GgB;EACI,gCAAA;AA6GpB","sourcesContent":["/* portrait phones and down */\r\n@mixin xs {\r\n    @media (max-width: 480.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n    @media (min-width: 481px) and (max-width: 767.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n    @media (min-width: 767px) and (max-width: 979.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* desktop */\r\n@mixin standard {\r\n    @media (min-width: 980px) and (max-width: 1199.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Large desktop */\r\n@mixin xl {\r\n    @media (min-width: 1200px) {\r\n        @content;\r\n    }\r\n}","@use \"../../../assets/styles/media-queries\" as MQueries;\r\n\r\n/* Large desktop */\r\n@include MQueries.xl {\r\n    @import \"./responsive/xl\";\r\n}\r\n\r\n\r\n/*  desktop */\r\n@include MQueries.standard {\r\n    @import \"./responsive/standard\";\r\n}\r\n\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@include MQueries.md {\r\n    @import \"./responsive/md\";\r\n}\r\n\r\n\r\n/* Landscape phone to portrait tablet */\r\n@include MQueries.sm {\r\n    @import \"./responsive/sm\";\r\n}\r\n\r\n\r\n/* portrait phones and down */\r\n@include MQueries.xs {\r\n    @import \"./responsive/xs\";\r\n}\r\n\r\n\r\n.content {\r\n    .container-1 {\r\n        .span-icon {\r\n            background: url(\"../../../assets/icons/24heures.svg\") center/contain no-repeat;\r\n\r\n            display: block;\r\n        }\r\n\r\n        p {}\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n                label {\r\n                    color: var(--input-border-color);\r\n                }\r\n\r\n                input {}\r\n\r\n                textarea {}\r\n\r\n                button {}\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            max-width: 1000px;\r\n            margin: 0 auto;\r\n\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n\r\n                    input {\r\n                        width: 45%;\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n                    margin-bottom: 50px;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(45% + 16px);\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 100%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}",".content {\r\n    padding-left: 1%;\r\n    padding-right: 1%;\r\n\r\n    p:first-child {\r\n        margin-top: 80px;\r\n        font-size: 20px;\r\n    }\r\n\r\n    .container-1 {\r\n        display: flex;\r\n        justify-content: center;\r\n\r\n        .span-icon {\r\n            height: 80px;\r\n            width: 80px;\r\n        }\r\n\r\n        p {\r\n            padding-left: 25px;\r\n            font-size: 20px;\r\n        }\r\n    }\r\n\r\n    .container-2 {\r\n        .formulaire {\r\n            h1 {}\r\n\r\n            form {\r\n\r\n\r\n                .inputs {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n\r\n                    input {\r\n                        width: 45%;\r\n                        margin-bottom: 50px;\r\n                        padding: 0.5rem 0.5rem;\r\n                    }\r\n\r\n                }\r\n\r\n                .selects {\r\n                    display: flex;\r\n                    justify-content: space-evenly;\r\n                    margin-bottom: 50px;\r\n\r\n                    span {\r\n                        display: flex;\r\n                        flex-direction: column;\r\n                        justify-content: space-evenly;\r\n                        align-items: center;\r\n                        width: calc(45% + 16px);\r\n\r\n                        label {\r\n                            width: max-content;\r\n                        }\r\n\r\n                        select {\r\n                            padding: 0.5rem 0.5rem;\r\n                            width: 100%;\r\n\r\n                            option {\r\n                                padding-bottom: 10px;\r\n                                background-color: var(--background-color-primary);\r\n                            }\r\n                        }\r\n\r\n\r\n                        // * {\r\n                        //     flex: 1;\r\n                        // }\r\n                    }\r\n\r\n                }\r\n\r\n                textarea {\r\n                    display: block;\r\n                    background-color: var(--background-color-primary);\r\n                    color: white;\r\n                    width: calc(95% - 20px);\r\n                    height: 225px;\r\n                    margin: 0 auto 0 auto;\r\n                    padding: 10px 10px;\r\n                    border-radius: 5px;\r\n                }\r\n\r\n                .submit-button {\r\n                    width: 25%;\r\n                    margin: 0 auto 0 auto;\r\n                    font-size: 20px;\r\n                }\r\n            }\r\n        }\r\n\r\n        .coordonnees {\r\n            p {}\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -248,29 +345,29 @@ module.exports = function (item) {
 
 /***/ }),
 
-/***/ "./src/pages/nos_services/cybersecurite/cybersecurite.scss":
-/*!*****************************************************************!*\
-  !*** ./src/pages/nos_services/cybersecurite/cybersecurite.scss ***!
-  \*****************************************************************/
+/***/ "./src/pages/formulaire_contact/formulaire.scss":
+/*!******************************************************!*\
+  !*** ./src/pages/formulaire_contact/formulaire.scss ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cybersecurite_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/sass-loader/dist/cjs.js!./cybersecurite.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/nos_services/cybersecurite/cybersecurite.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_formulaire_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js!./formulaire.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/formulaire_contact/formulaire.scss");
 
       
       
@@ -292,12 +389,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cybersecurite_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_formulaire_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cybersecurite_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cybersecurite_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cybersecurite_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_formulaire_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_formulaire_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_formulaire_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -569,43 +666,13 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./assets/images/visa.png":
-/*!********************************!*\
-  !*** ./assets/images/visa.png ***!
-  \********************************/
+/***/ "./assets/icons/24heures.svg":
+/*!***********************************!*\
+  !*** ./assets/icons/24heures.svg ***!
+  \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "428510dbf1d6f12d215c.png";
-
-/***/ }),
-
-/***/ "./assets/images/wallhaven-45y5k7.png":
-/*!********************************************!*\
-  !*** ./assets/images/wallhaven-45y5k7.png ***!
-  \********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "041bfc0c142ce69570ef.png";
-
-/***/ }),
-
-/***/ "./assets/images/wallhaven-47615v.png":
-/*!********************************************!*\
-  !*** ./assets/images/wallhaven-47615v.png ***!
-  \********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "18b59e8ce4fd9941a8db.png";
-
-/***/ }),
-
-/***/ "./assets/images/wallhaven-nzx3rv.jpg":
-/*!********************************************!*\
-  !*** ./assets/images/wallhaven-nzx3rv.jpg ***!
-  \********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "1f03a5dc7e3b6d678fcc.jpg";
+module.exports = __webpack_require__.p + "968e715015d81d9d7795.svg";
 
 /***/ })
 
@@ -722,7 +789,7 @@ module.exports = __webpack_require__.p + "1f03a5dc7e3b6d678fcc.jpg";
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"cybersecurite": 0
+/******/ 			"formulaire": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -749,14 +816,14 @@ module.exports = __webpack_require__.p + "1f03a5dc7e3b6d678fcc.jpg";
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!***************************************************************!*\
-  !*** ./src/pages/nos_services/cybersecurite/cybersecurite.js ***!
-  \***************************************************************/
+/*!****************************************************!*\
+  !*** ./src/pages/formulaire_contact/formulaire.js ***!
+  \****************************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cybersecurite_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cybersecurite.scss */ "./src/pages/nos_services/cybersecurite/cybersecurite.scss");
+/* harmony import */ var _formulaire_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formulaire.scss */ "./src/pages/formulaire_contact/formulaire.scss");
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=cybersecurite.bundle.js.map
+//# sourceMappingURL=formulaire.bundle.js.map

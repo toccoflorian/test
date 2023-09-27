@@ -6,6 +6,8 @@
         display: flex;
         align-items: center;
 
+
+
         /* Style pour la ligne grise */
         .trait {
             width: 3rem;
@@ -59,4 +61,31 @@
 
 .blue-word {
     color: var(--blue-primary);
+}
+
+input,
+select {
+    display: block;
+
+    background-color: var(--background-color-general);
+    border: none;
+    border-bottom: var(--input-border-color) solid 1px;
+    font-size: 15px;
+    color: var(--text-color-primary);
+    text-align: center;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+p.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-primary);
+    border-radius: 15px;
+    min-height: 48px;
 }

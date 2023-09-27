@@ -2,27 +2,27 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/models/loading-page.scss":
-/*!******************************************************************************************************************************!*\
-  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/models/loading-page.scss ***!
-  \******************************************************************************************************************************/
+/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/models/loading-screen/loading-screen.scss":
+/*!***********************************************************************************************************************************************!*\
+  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/models/loading-screen/loading-screen.scss ***!
+  \***********************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../images/cropped-image_2023-08-10_142556159-removebg-preview.png */ "./assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../images/cropped-image_2023-08-10_142556159-removebg-preview.png */ "./assets/images/cropped-image_2023-08-10_142556159-removebg-preview.png"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -36,7 +36,7 @@ html .loading-screen .section-0 {
   width: 100%;
   height: 100%;
   background-color: black;
-  padding: 4rem 0 10rem 0;
+  padding: 10% 0 10rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,34 +44,35 @@ html .loading-screen .section-0 {
 html .loading-screen .section-0 .span-image {
   background: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) no-repeat;
   background-size: contain;
-  display: block;
-  height: 12.5rem;
-  width: 25rem;
+  height: 20%;
+  width: 25%;
+  min-height: 200px;
+  min-width: 240px;
   margin: 4rem auto 0 auto;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-html .loading-screen .section-0 h1 {
+html .loading-screen .section-0 p {
   background-image: linear-gradient(to left, #94A4B0, #5F82A0, #3F6D97, #486078);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 1.5rem;
   margin: 0;
-}
-html .loading-screen .section-0 p {
-  width: 35%;
   text-align: center;
-  font-size: 0.8rem;
-  color: white;
+  font-family: "Times New Roman", serif;
 }
 html .loading-screen .section-0 .span-icon {
   margin-top: 3rem;
   display: flex;
   justify-content: space-evenly;
-  width: 35%;
+  width: 75%;
+  max-width: 1500px;
 }
 html .loading-screen .section-0 .span-icon * {
   height: 2.5rem;
-}`, "",{"version":3,"sources":["webpack://./assets/models/loading-page.scss"],"names":[],"mappings":"AAEI;EACI,eAAA;EACA,YAAA;EACA,WAAA;EACA,WAAA;AADR;AAGQ;EACI,WAAA;EACA,YAAA;EACA,uBAAA;EACA,uBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AADZ;AAIY;EACI,6DAAA;EACA,wBAAA;EACA,cAAA;EACA,eAAA;EACA,YAAA;EACA,wBAAA;EACA,gBAAA;AAFhB;AAKY;EACI,8EAAA;EACA,6BAAA;EACA,kBAAA;EACA,iBAAA;EACA,SAAA;AAHhB;AAMY;EACI,UAAA;EAEA,kBAAA;EACA,iBAAA;EACA,YAAA;AALhB;AAQY;EAEI,gBAAA;EACA,aAAA;EACA,6BAAA;EACA,UAAA;AAPhB;AASgB;EACI,cAAA;AAPpB","sourcesContent":["// page de chargement\r\nhtml {\r\n    .loading-screen {\r\n        position: fixed;\r\n        height: 100%;\r\n        width: 100%;\r\n        z-index: 10;\r\n\r\n        .section-0 {\r\n            width: 100%;\r\n            height: 100%;\r\n            background-color: black;\r\n            padding: 4rem 0 10rem 0;\r\n            display: flex;\r\n            flex-direction: column;\r\n            align-items: center;\r\n\r\n\r\n            .span-image {\r\n                background: url('../images/cropped-image_2023-08-10_142556159-removebg-preview.png') no-repeat;\r\n                background-size: contain;\r\n                display: block;\r\n                height: 12.5rem;\r\n                width: 25rem;\r\n                margin: 4rem auto 0 auto;\r\n                overflow: hidden;\r\n            }\r\n\r\n            h1 {\r\n                background-image: linear-gradient(to left, #94A4B0, #5F82A0, #3F6D97, #486078);\r\n                -webkit-background-clip: text;\r\n                color: transparent;\r\n                font-size: 1.5rem;\r\n                margin: 0\r\n            }\r\n\r\n            p {\r\n                width: 35%;\r\n\r\n                text-align: center;\r\n                font-size: 0.8rem;\r\n                color: white;\r\n            }\r\n\r\n            .span-icon {\r\n\r\n                margin-top: 3rem;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                width: 35%;\r\n\r\n                * {\r\n                    height: 2.5rem;\r\n                }\r\n            }\r\n        }\r\n\r\n    }\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./assets/models/loading-screen/loading-screen.scss"],"names":[],"mappings":"AAEI;EACI,eAAA;EACA,YAAA;EACA,WAAA;EACA,WAAA;AADR;AAGQ;EACI,WAAA;EACA,YAAA;EACA,uBAAA;EACA,sBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AADZ;AAIY;EACI,6DAAA;EACA,wBAAA;EACA,WAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,wBAAA;EACA,gBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAFhB;AAOY;EAEI,8EAAA;EACA,6BAAA;EACA,kBAAA;EACA,iBAAA;EACA,SAAA;EACA,kBAAA;EACA,qCAAA;AANhB;AASY;EAEI,gBAAA;EACA,aAAA;EACA,6BAAA;EACA,UAAA;EACA,iBAAA;AARhB;AAUgB;EACI,cAAA;AARpB","sourcesContent":["// page de chargement\r\nhtml {\r\n    .loading-screen {\r\n        position: fixed;\r\n        height: 100%;\r\n        width: 100%;\r\n        z-index: 10;\r\n\r\n        .section-0 {\r\n            width: 100%;\r\n            height: 100%;\r\n            background-color: black;\r\n            padding: 10% 0 10rem 0;\r\n            display: flex;\r\n            flex-direction: column;\r\n            align-items: center;\r\n\r\n\r\n            .span-image {\r\n                background: url('../../images/cropped-image_2023-08-10_142556159-removebg-preview.png') no-repeat;\r\n                background-size: contain;\r\n                height: 20%;\r\n                width: 25%;\r\n                min-height: 200px;\r\n                min-width: 240px;\r\n                margin: 4rem auto 0 auto;\r\n                overflow: hidden;\r\n                display: flex;\r\n                justify-content: center;\r\n                align-items: center;\r\n            }\r\n\r\n\r\n\r\n            p {\r\n\r\n                background-image: linear-gradient(to left, #94A4B0, #5F82A0, #3F6D97, #486078);\r\n                -webkit-background-clip: text;\r\n                color: transparent;\r\n                font-size: 1.5rem;\r\n                margin: 0;\r\n                text-align: center;\r\n                font-family: 'Times New Roman', serif;\r\n            }\r\n\r\n            .span-icon {\r\n\r\n                margin-top: 3rem;\r\n                display: flex;\r\n                justify-content: space-evenly;\r\n                width: 75%;\r\n                max-width: 1500px;\r\n\r\n                * {\r\n                    height: 2.5rem;\r\n                }\r\n            }\r\n        }\r\n\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -232,29 +233,29 @@ module.exports = function (item) {
 
 /***/ }),
 
-/***/ "./assets/models/loading-page.scss":
-/*!*****************************************!*\
-  !*** ./assets/models/loading-page.scss ***!
-  \*****************************************/
+/***/ "./assets/models/loading-screen/loading-screen.scss":
+/*!**********************************************************!*\
+  !*** ./assets/models/loading-screen/loading-screen.scss ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_page_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js!./loading-page.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/models/loading-page.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_screen_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js!./loading-screen.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./assets/models/loading-screen/loading-screen.scss");
 
       
       
@@ -276,12 +277,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_page_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_screen_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_page_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_page_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_page_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_screen_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_screen_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_loading_screen_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -703,30 +704,29 @@ module.exports = __webpack_require__.p + "0110caa060ca25a4c137.png";
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!***************************************!*\
-  !*** ./assets/models/loading-page.js ***!
-  \***************************************/
+/*!********************************************************!*\
+  !*** ./assets/models/loading-screen/loading-screen.js ***!
+  \********************************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _models_loading_page_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/loading-page.scss */ "./assets/models/loading-page.scss");
+/* harmony import */ var _loading_screen_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loading-screen.scss */ "./assets/models/loading-screen/loading-screen.scss");
 
-const body = document.createElement('div');
-body.classList.add('loading-screen');
-body.id = "loading-screen";
-console.log(body);
-body.innerHTML = "\n<!-- \xE9crans de chargement -->\n    <div class=\"loading-screen\" id=\"loading-screen\">\n        <section class=\"section-0\" id=\"section-0\">\n            <span class=\"span-image\">\n                <!-- image -->\n            </span>\n            <h1>ParlonsPC, votre entreprise informatique \xE0 Montpellier</h1>\n            <p>Nous simplifions et prenons en charge vos besoins informatiques depuis nos bureaux de Montpellier\n            </p>\n\n            <span class=\"span-icon\">\n                <img src=\"assets/icons/facebook.svg\" alt=\"icon Facebook\">\n                <img src=\"assets/icons/instagram.svg\" alt=\"icon Instagram\">\n                <img src=\"assets/icons/linkedin.svg\" alt=\"icon LinkedIn\">\n            </span>\n\n        </section>\n    </div>\n";
-document.querySelector('html').appendChild(body);
+console.log("loading script");
+const divElement = document.createElement('div');
+divElement.classList.add('loading-screen');
+divElement.id = "loading-screen";
+divElement.innerHTML = "\n<!-- \xE9crans de chargement -->\n    \n        <section class=\"section-0\" id=\"section-0\">\n            <span class=\"span-image\">\n                <!-- image -->\n            </span>\n            <h1></h1>\n            <p>\n            ParlonsPC, votre entreprise informatique \xE0 Montpellier <br><br>\n            Chargement...\n            </p>\n\n            <span class=\"span-icon\">\n                <img src=\"assets/icons/facebook.svg\" alt=\"icon Facebook\">\n                <img src=\"assets/icons/instagram.svg\" alt=\"icon Instagram\">\n                <img src=\"assets/icons/linkedin.svg\" alt=\"icon LinkedIn\">\n            </span>\n\n        </section>\n    \n";
+document.querySelector('html').appendChild(divElement);
 window.addEventListener('load', event => {
   const loadingScreenElement = document.querySelector('div.loading-screen');
-  setTimeout(() => {
-    loadingScreenElement.style.transition = "opacity 0.5s ease-out";
-    loadingScreenElement.style.transform = "matrix3D()";
-    loadingScreenElement.style.opacity = '0';
+  loadingScreenElement.style.transition = "opacity 0.25s ease-out";
+  loadingScreenElement.style.transform = "matrix3D()";
+  loadingScreenElement.style.opacity = '0';
 
-    // Retirez l'écran de chargement du DOM après une transition
-    setTimeout(() => {
-      loadingScreenElement.remove();
-    }, 250);
-  }, 0);
+  // Retirez l'écran de chargement du DOM après une transition
+
+  setTimeout(() => {
+    loadingScreenElement.remove();
+  }, 100);
 });
 })();
 

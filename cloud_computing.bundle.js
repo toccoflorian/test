@@ -2,35 +2,40 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss ***!
-  \**********************************************************************************************************************************************************************/
+/***/ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/nos_services/cloud_computing/cloud_computing.scss":
+/*!**********************************************************************************************************************************************************!*\
+  !*** ../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/nos_services/cloud_computing/cloud_computing.scss ***!
+  \**********************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "../../node_modules/css-loader/dist/runtime/sourceMaps.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "../../node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "../../node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/wallhaven-0jw8g5-768x480.jpg */ "./assets/images/wallhaven-0jw8g5-768x480.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/lignes_rouges.jpg */ "./assets/images/lignes_rouges.jpg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../assets/images/wallhaven-k7d7xm.jpg */ "./assets/images/wallhaven-k7d7xm.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/images/wallhaven-0jw8g5-768x480.jpg */ "./assets/images/wallhaven-0jw8g5-768x480.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/images/lignes_rouges.jpg */ "./assets/images/lignes_rouges.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/images/wallhaven-k7d7xm.jpg */ "./assets/images/wallhaven-k7d7xm.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.content section .span-image,
+___CSS_LOADER_EXPORT___.push([module.id, `/* portrait phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* desktop */
+/* Large desktop */
+.content section .span-image,
 .content section .span-text {
   flex: 1;
 }
@@ -41,11 +46,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.content section .span-image,
 .content section .span-text * .blue-word {
   margin: 1rem -1rem;
   padding: 0;
-}
-.content .section-1,
-.content .section-2,
-.content .section-3 {
-  margin-top: 10rem;
 }
 .content .section-1 div,
 .content .section-2 div,
@@ -92,7 +92,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.content section .span-image,
 }
 .content .section-3 .span-image {
   background: url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center/cover;
-}`, "",{"version":3,"sources":["webpack://./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss"],"names":[],"mappings":"AAKQ;;EAEI,OAAA;AAJZ;AAOQ;EACI,eAAA;EACA,cAAA;AALZ;AAOY;EACI,kBAAA;EACA,UAAA;AALhB;AAUI;;;EAGI,iBAAA;AARR;AAUQ;;;EACI,aAAA;AANZ;AASQ;;;EACI,mBAAA;AALZ;AAOY;;;EACI,aAAA;EACA,UAAA;EACA,kBAAA;AAHhB;AAMY;;;EACI,sBAAA;EACA,UAAA;EACA,0CAAA;EACA,kBAAA;EACA,gBAAA;AAFhB;AAQgB;;;EACI,gBAAA;AAJpB;AAYQ;EACI,gEAAA;AAVZ;AAkBgB;EACI,kBAAA;AAhBpB;AAmBgB;EACI,gBAAA;AAjBpB;AAqBY;EACI,gEAAA;AAnBhB;AA0BQ;EACI,gEAAA;AAxBZ","sourcesContent":[".content {\r\n\r\n    // toutes les sections de la page\r\n    section {\r\n\r\n        .span-image,\r\n        .span-text {\r\n            flex: 1;\r\n        }\r\n\r\n        .span-text * {\r\n            padding: 0 1rem;\r\n            margin: 1rem 0;\r\n\r\n            .blue-word {\r\n                margin: 1rem -1rem;\r\n                padding: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n    .section-1,\r\n    .section-2,\r\n    .section-3 {\r\n        margin-top: 10rem;\r\n\r\n        div {\r\n            display: flex;\r\n        }\r\n\r\n        .container-1 {\r\n            margin-bottom: 5rem;\r\n\r\n            h2 {\r\n                margin-top: 0;\r\n                width: 50%;\r\n                text-align: center;\r\n            }\r\n\r\n            p {\r\n                box-sizing: border-box;\r\n                width: 50%;\r\n                border-left: 1px solid var(--blue-primary);\r\n                padding-left: 1rem;\r\n                text-align: left;\r\n            }\r\n        }\r\n\r\n        .container-2 {\r\n            .span-text {\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 1\r\n    .section-1 {\r\n        .span-image {\r\n            background: url('../../../assets/images/wallhaven-0jw8g5-768x480.jpg') center/cover;\r\n        }\r\n    }\r\n\r\n    // section-2\r\n    .section-2 {\r\n        .container-2 {\r\n            .span-text {\r\n                h2 {\r\n                    text-align: center;\r\n                }\r\n\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n\r\n            .span-image {\r\n                background: url('../../../assets/images/lignes_rouges.jpg') center/cover;\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 3\r\n    .section-3 {\r\n        .span-image {\r\n            background: url('../../../assets/images/wallhaven-k7d7xm.jpg') center/cover;\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./assets/styles/_media-queries.scss","webpack://./src/pages/nos_services/cloud_computing/cloud_computing.scss"],"names":[],"mappings":"AAAA,6BAAA;AAOA,uCAAA;AAOA,6CAAA;AAOA,YAAA;AAOA,kBAAA;ACSQ;;EAEI,OAAA;AA/BZ;AAkCQ;EACI,eAAA;EACA,cAAA;AAhCZ;AAkCY;EACI,kBAAA;EACA,UAAA;AAhChB;AAyCQ;;;EACI,aAAA;AArCZ;AAwCQ;;;EACI,mBAAA;AApCZ;AAsCY;;;EACI,aAAA;EACA,UAAA;EACA,kBAAA;AAlChB;AAqCY;;;EACI,sBAAA;EACA,UAAA;EACA,0CAAA;EACA,kBAAA;EACA,gBAAA;AAjChB;AAuCgB;;;EACI,gBAAA;AAnCpB;AA2CQ;EACI,gEAAA;AAzCZ;AAiDgB;EACI,kBAAA;AA/CpB;AAkDgB;EACI,gBAAA;AAhDpB;AAoDY;EACI,gEAAA;AAlDhB;AAyDQ;EACI,gEAAA;AAvDZ","sourcesContent":["/* portrait phones and down */\r\n@mixin xs {\r\n    @media (max-width: 480.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Landscape phone to portrait tablet */\r\n@mixin sm {\r\n    @media (min-width: 481px) and (max-width: 767.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Portrait tablet to landscape and desktop */\r\n@mixin md {\r\n    @media (min-width: 767px) and (max-width: 979.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* desktop */\r\n@mixin standard {\r\n    @media (min-width: 980px) and (max-width: 1199.9px) {\r\n        @content;\r\n    }\r\n}\r\n\r\n/* Large desktop */\r\n@mixin xl {\r\n    @media (min-width: 1200px) {\r\n        @content;\r\n    }\r\n}","@use '../../../../assets/styles/media-queries' as MQueries;\r\n\r\n\r\n// /* Large desktop */\r\n// @include MQueries.xl {\r\n//     @import \"./responsive/xl\";\r\n// }\r\n\r\n\r\n// /*  desktop */\r\n// @include MQueries.standard {\r\n//     @import \"./responsive/standard\";\r\n// }\r\n\r\n\r\n// /* Portrait tablet to landscape and desktop */\r\n// @include MQueries.md {\r\n//     @import \"./responsive/md\";\r\n// }\r\n\r\n\r\n// /* Landscape phone to portrait tablet */\r\n// @include MQueries.sm {\r\n//     @import \"./responsive/sm\";\r\n// }\r\n\r\n\r\n// /* portrait phones and down */\r\n// @include MQueries.xs {\r\n//     @import \"./responsive/xs\";\r\n// }\r\n\r\n.content {\r\n\r\n    // toutes les sections de la page\r\n    section {\r\n\r\n        .span-image,\r\n        .span-text {\r\n            flex: 1;\r\n        }\r\n\r\n        .span-text * {\r\n            padding: 0 1rem;\r\n            margin: 1rem 0;\r\n\r\n            .blue-word {\r\n                margin: 1rem -1rem;\r\n                padding: 0;\r\n            }\r\n        }\r\n    }\r\n\r\n    .section-1,\r\n    .section-2,\r\n    .section-3 {\r\n\r\n        div {\r\n            display: flex;\r\n        }\r\n\r\n        .container-1 {\r\n            margin-bottom: 5rem;\r\n\r\n            h2 {\r\n                margin-top: 0;\r\n                width: 50%;\r\n                text-align: center;\r\n            }\r\n\r\n            p {\r\n                box-sizing: border-box;\r\n                width: 50%;\r\n                border-left: 1px solid var(--blue-primary);\r\n                padding-left: 1rem;\r\n                text-align: left;\r\n            }\r\n        }\r\n\r\n        .container-2 {\r\n            .span-text {\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 1\r\n    .section-1 {\r\n        .span-image {\r\n            background: url('../../../../assets/images/wallhaven-0jw8g5-768x480.jpg') center/cover;\r\n        }\r\n    }\r\n\r\n    // section-2\r\n    .section-2 {\r\n        .container-2 {\r\n            .span-text {\r\n                h2 {\r\n                    text-align: center;\r\n                }\r\n\r\n                p {\r\n                    text-align: left;\r\n                }\r\n            }\r\n\r\n            .span-image {\r\n                background: url('../../../../assets/images/lignes_rouges.jpg') center/cover;\r\n            }\r\n        }\r\n    }\r\n\r\n    // section 3\r\n    .section-3 {\r\n        .span-image {\r\n            background: url('../../../../assets/images/wallhaven-k7d7xm.jpg') center/cover;\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -253,29 +253,29 @@ module.exports = function (item) {
 
 /***/ }),
 
-/***/ "./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss":
-/*!*********************************************************************************!*\
-  !*** ./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss ***!
-  \*********************************************************************************/
+/***/ "./src/pages/nos_services/cloud_computing/cloud_computing.scss":
+/*!*********************************************************************!*\
+  !*** ./src/pages/nos_services/cloud_computing/cloud_computing.scss ***!
+  \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "../../node_modules/style-loader/dist/runtime/styleDomAPI.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "../../node_modules/style-loader/dist/runtime/insertBySelector.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "../../node_modules/style-loader/dist/runtime/insertStyleElement.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cloud_computing_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js!./cloud_computing.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_cloud_computing_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/sass-loader/dist/cjs.js!./cloud_computing.scss */ "../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./src/pages/nos_services/cloud_computing/cloud_computing.scss");
 
       
       
@@ -744,11 +744,11 @@ module.exports = __webpack_require__.p + "38a9f6b1331645807c62.jpg";
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!*******************************************************************************!*\
-  !*** ./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.js ***!
-  \*******************************************************************************/
+/*!*******************************************************************!*\
+  !*** ./src/pages/nos_services/cloud_computing/cloud_computing.js ***!
+  \*******************************************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cloud_computing_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cloud_computing.scss */ "./src/infogerance_et_cloud_computing/cloud_computing/cloud_computing.scss");
+/* harmony import */ var _cloud_computing_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cloud_computing.scss */ "./src/pages/nos_services/cloud_computing/cloud_computing.scss");
 
 })();
 
