@@ -28,8 +28,11 @@
                 <form action="">
 
                     <div class="inputs">
-                        <input type="text" name="firstname" id="firstname" class="firstname" placeholder="Nom">
-                        <input type="text" name="lastname" id="lastname" class="lastname" placeholder="Prenom">
+                        <span>
+                            <input type="text" name="firstname" id="firstname" class="firstname" placeholder="Nom">
+                            <input type="text" name="lastname" id="lastname" class="lastname" placeholder="Prenom">
+                        </span>
+                        <input type="text" name="societe" id="societe" class="societe" placeholder="Société">
                     </div>
 
                     <div class="inputs">
@@ -69,8 +72,14 @@
                     </div>
 
                     <textarea type="text" name="message" id="message" class="message" placeholder="Message"></textarea>
-                    <br>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox" checked>
+                        <label for="checkbox">Je souhaite un devis pour un audit de mon parc informatique</label>
+                    </div>
+
                     <p class="submit-button">Envoyer</p>
+
                 </form>
 
             </div>
